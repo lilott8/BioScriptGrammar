@@ -3,6 +3,6 @@
 // Generated from /Users/jason/Projects/java/BSPrototype/src/main/resources/BSParser.g4 by ANTLR 4.7
 
 
-#include "BSParserBaseListener.h"
+#include "BSParserVisitor.h"
 
 

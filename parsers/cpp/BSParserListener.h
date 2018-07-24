@@ -1,6 +1,6 @@
 /* parser/listener/visitor header section */
 
-// Generated from /Users/jason/Projects/java/bioscriptgrammar/src/main/resources/grammar/BSParser.g4 by ANTLR 4.7
+// Generated from /Users/jason/Projects/java/BSPrototype/src/main/resources/BSParser.g4 by ANTLR 4.7
 
 #pragma once
 
@@ -8,8 +8,6 @@
 #include "antlr4-runtime.h"
 #include "BSParser.h"
 
-
-namespace grammar {
 
 /**
  * This interface defines an abstract listener for a parse tree produced by BSParser.
@@ -144,4 +142,3 @@ public:
 private:  
 };
 
-}  // namespace grammar

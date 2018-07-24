@@ -1,5 +1,5 @@
 
-// Generated from /Users/jason/Projects/java/bioscriptgrammar/src/main/resources/grammar/BSLexer.g4 by ANTLR 4.7
+// Generated from /Users/jason/Projects/java/BSPrototype/src/main/resources/BSLexer.g4 by ANTLR 4.7
 
 #pragma once
 
@@ -7,7 +7,6 @@
 #include "antlr4-runtime.h"
 
 
-namespace grammar {
 
 
 class  BSLexer : public antlr4::Lexer {
@@ -71,4 +70,3 @@ private:
   static Initializer _init;
 };
 
-}  // namespace grammar

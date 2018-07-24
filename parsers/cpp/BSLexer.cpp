@@ -1,5 +1,5 @@
 
-// Generated from /Users/jason/Projects/java/bioscriptgrammar/src/main/resources/grammar/BSLexer.g4 by ANTLR 4.7
+// Generated from /Users/jason/Projects/java/BSPrototype/src/main/resources/BSLexer.g4 by ANTLR 4.7
 
 
 #include "BSLexer.h"
@@ -7,7 +7,6 @@
 
 using namespace antlr4;
 
-using namespace grammar;
 
 BSLexer::BSLexer(CharStream *input) : Lexer(input) {
   _interpreter = new atn::LexerATNSimulator(this, _atn, _decisionToDFA, _sharedContextCache);
