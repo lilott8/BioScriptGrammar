@@ -1,4 +1,4 @@
-# Generated from /Users/jason/Projects/java/bioscriptgrammar/src/main/resources/grammar/BSLexer.g4 by ANTLR 4.7
+# Generated from /Users/jason/Projects/java/BSPrototype/src/main/resources/BSLexer.g4 by ANTLR 4.7
 from antlr4 import *
 from io import StringIO
 from typing.io import TextIO
