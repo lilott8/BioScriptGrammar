@@ -1,0 +1,2 @@
+To regenerate the antlr configs for each of the builds, you must configure the antlr tool and
+do `Cpp` and `Python3` separately.  Then update the github and all the dependencies.

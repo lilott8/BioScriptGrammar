@@ -1,0 +1,154 @@
+/* parser/listener/visitor header section */
+
+// Generated from /Users/jason/Projects/java/bioscriptgrammar/src/main/resources/grammar/BSParser.g4 by ANTLR 4.7
+
+#pragma once
+
+
+#include "antlr4-runtime.h"
+#include "BSParserListener.h"
+
+
+namespace grammar {
+
+/**
+ * This class provides an empty implementation of BSParserListener,
+ * which can be extended to create a listener which only needs to handle a subset
+ * of the available methods.
+ */
+class  BSParserBaseListener : public BSParserListener {
+public:
+
+  virtual void enterProgram(BSParser::ProgramContext * /*ctx*/) override { }
+  virtual void exitProgram(BSParser::ProgramContext * /*ctx*/) override { }
+
+  virtual void enterModuleDeclaration(BSParser::ModuleDeclarationContext * /*ctx*/) override { }
+  virtual void exitModuleDeclaration(BSParser::ModuleDeclarationContext * /*ctx*/) override { }
+
+  virtual void enterManifestDeclaration(BSParser::ManifestDeclarationContext * /*ctx*/) override { }
+  virtual void exitManifestDeclaration(BSParser::ManifestDeclarationContext * /*ctx*/) override { }
+
+  virtual void enterStationaryDeclaration(BSParser::StationaryDeclarationContext * /*ctx*/) override { }
+  virtual void exitStationaryDeclaration(BSParser::StationaryDeclarationContext * /*ctx*/) override { }
+
+  virtual void enterFunctionDeclaration(BSParser::FunctionDeclarationContext * /*ctx*/) override { }
+  virtual void exitFunctionDeclaration(BSParser::FunctionDeclarationContext * /*ctx*/) override { }
+
+  virtual void enterFormalParameters(BSParser::FormalParametersContext * /*ctx*/) override { }
+  virtual void exitFormalParameters(BSParser::FormalParametersContext * /*ctx*/) override { }
+
+  virtual void enterFormalParameterList(BSParser::FormalParameterListContext * /*ctx*/) override { }
+  virtual void exitFormalParameterList(BSParser::FormalParameterListContext * /*ctx*/) override { }
+
+  virtual void enterFormalParameter(BSParser::FormalParameterContext * /*ctx*/) override { }
+  virtual void exitFormalParameter(BSParser::FormalParameterContext * /*ctx*/) override { }
+
+  virtual void enterFunctionTyping(BSParser::FunctionTypingContext * /*ctx*/) override { }
+  virtual void exitFunctionTyping(BSParser::FunctionTypingContext * /*ctx*/) override { }
+
+  virtual void enterReturnStatement(BSParser::ReturnStatementContext * /*ctx*/) override { }
+  virtual void exitReturnStatement(BSParser::ReturnStatementContext * /*ctx*/) override { }
+
+  virtual void enterBlockStatement(BSParser::BlockStatementContext * /*ctx*/) override { }
+  virtual void exitBlockStatement(BSParser::BlockStatementContext * /*ctx*/) override { }
+
+  virtual void enterAssignmentOperations(BSParser::AssignmentOperationsContext * /*ctx*/) override { }
+  virtual void exitAssignmentOperations(BSParser::AssignmentOperationsContext * /*ctx*/) override { }
+
+  virtual void enterStatements(BSParser::StatementsContext * /*ctx*/) override { }
+  virtual void exitStatements(BSParser::StatementsContext * /*ctx*/) override { }
+
+  virtual void enterIfStatement(BSParser::IfStatementContext * /*ctx*/) override { }
+  virtual void exitIfStatement(BSParser::IfStatementContext * /*ctx*/) override { }
+
+  virtual void enterWhileStatement(BSParser::WhileStatementContext * /*ctx*/) override { }
+  virtual void exitWhileStatement(BSParser::WhileStatementContext * /*ctx*/) override { }
+
+  virtual void enterRepeat(BSParser::RepeatContext * /*ctx*/) override { }
+  virtual void exitRepeat(BSParser::RepeatContext * /*ctx*/) override { }
+
+  virtual void enterMix(BSParser::MixContext * /*ctx*/) override { }
+  virtual void exitMix(BSParser::MixContext * /*ctx*/) override { }
+
+  virtual void enterDetect(BSParser::DetectContext * /*ctx*/) override { }
+  virtual void exitDetect(BSParser::DetectContext * /*ctx*/) override { }
+
+  virtual void enterHeat(BSParser::HeatContext * /*ctx*/) override { }
+  virtual void exitHeat(BSParser::HeatContext * /*ctx*/) override { }
+
+  virtual void enterSplit(BSParser::SplitContext * /*ctx*/) override { }
+  virtual void exitSplit(BSParser::SplitContext * /*ctx*/) override { }
+
+  virtual void enterDispense(BSParser::DispenseContext * /*ctx*/) override { }
+  virtual void exitDispense(BSParser::DispenseContext * /*ctx*/) override { }
+
+  virtual void enterDispose(BSParser::DisposeContext * /*ctx*/) override { }
+  virtual void exitDispose(BSParser::DisposeContext * /*ctx*/) override { }
+
+  virtual void enterExpression(BSParser::ExpressionContext * /*ctx*/) override { }
+  virtual void exitExpression(BSParser::ExpressionContext * /*ctx*/) override { }
+
+  virtual void enterParExpression(BSParser::ParExpressionContext * /*ctx*/) override { }
+  virtual void exitParExpression(BSParser::ParExpressionContext * /*ctx*/) override { }
+
+  virtual void enterMethodCall(BSParser::MethodCallContext * /*ctx*/) override { }
+  virtual void exitMethodCall(BSParser::MethodCallContext * /*ctx*/) override { }
+
+  virtual void enterExpressionList(BSParser::ExpressionListContext * /*ctx*/) override { }
+  virtual void exitExpressionList(BSParser::ExpressionListContext * /*ctx*/) override { }
+
+  virtual void enterTypeType(BSParser::TypeTypeContext * /*ctx*/) override { }
+  virtual void exitTypeType(BSParser::TypeTypeContext * /*ctx*/) override { }
+
+  virtual void enterUnionType(BSParser::UnionTypeContext * /*ctx*/) override { }
+  virtual void exitUnionType(BSParser::UnionTypeContext * /*ctx*/) override { }
+
+  virtual void enterAllTypesList(BSParser::AllTypesListContext * /*ctx*/) override { }
+  virtual void exitAllTypesList(BSParser::AllTypesListContext * /*ctx*/) override { }
+
+  virtual void enterAllTypes(BSParser::AllTypesContext * /*ctx*/) override { }
+  virtual void exitAllTypes(BSParser::AllTypesContext * /*ctx*/) override { }
+
+  virtual void enterVariableDeclaratorId(BSParser::VariableDeclaratorIdContext * /*ctx*/) override { }
+  virtual void exitVariableDeclaratorId(BSParser::VariableDeclaratorIdContext * /*ctx*/) override { }
+
+  virtual void enterVariableDeclarator(BSParser::VariableDeclaratorContext * /*ctx*/) override { }
+  virtual void exitVariableDeclarator(BSParser::VariableDeclaratorContext * /*ctx*/) override { }
+
+  virtual void enterVariableInitializer(BSParser::VariableInitializerContext * /*ctx*/) override { }
+  virtual void exitVariableInitializer(BSParser::VariableInitializerContext * /*ctx*/) override { }
+
+  virtual void enterArrayInitializer(BSParser::ArrayInitializerContext * /*ctx*/) override { }
+  virtual void exitArrayInitializer(BSParser::ArrayInitializerContext * /*ctx*/) override { }
+
+  virtual void enterLocalVariableDeclaration(BSParser::LocalVariableDeclarationContext * /*ctx*/) override { }
+  virtual void exitLocalVariableDeclaration(BSParser::LocalVariableDeclarationContext * /*ctx*/) override { }
+
+  virtual void enterPrimary(BSParser::PrimaryContext * /*ctx*/) override { }
+  virtual void exitPrimary(BSParser::PrimaryContext * /*ctx*/) override { }
+
+  virtual void enterLiteral(BSParser::LiteralContext * /*ctx*/) override { }
+  virtual void exitLiteral(BSParser::LiteralContext * /*ctx*/) override { }
+
+  virtual void enterPrimitiveType(BSParser::PrimitiveTypeContext * /*ctx*/) override { }
+  virtual void exitPrimitiveType(BSParser::PrimitiveTypeContext * /*ctx*/) override { }
+
+  virtual void enterVolumeIdentifier(BSParser::VolumeIdentifierContext * /*ctx*/) override { }
+  virtual void exitVolumeIdentifier(BSParser::VolumeIdentifierContext * /*ctx*/) override { }
+
+  virtual void enterTimeIdentifier(BSParser::TimeIdentifierContext * /*ctx*/) override { }
+  virtual void exitTimeIdentifier(BSParser::TimeIdentifierContext * /*ctx*/) override { }
+
+  virtual void enterTemperatureIdentifier(BSParser::TemperatureIdentifierContext * /*ctx*/) override { }
+  virtual void exitTemperatureIdentifier(BSParser::TemperatureIdentifierContext * /*ctx*/) override { }
+
+
+  virtual void enterEveryRule(antlr4::ParserRuleContext * /*ctx*/) override { }
+  virtual void exitEveryRule(antlr4::ParserRuleContext * /*ctx*/) override { }
+  virtual void visitTerminal(antlr4::tree::TerminalNode * /*node*/) override { }
+  virtual void visitErrorNode(antlr4::tree::ErrorNode * /*node*/) override { }
+
+private:  
+};
+
+}  // namespace grammar
