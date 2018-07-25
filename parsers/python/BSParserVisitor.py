@@ -4,7 +4,6 @@ if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
 else:
     from BSParser import BSParser
-/* parser/listener/visitor header section */
 
 # This class defines a complete generic visitor for a parse tree produced by BSParser.
 
