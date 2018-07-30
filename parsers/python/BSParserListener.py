@@ -261,21 +261,12 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by BSParser#allTypesList.
-    def enterAllTypesList(self, ctx:BSParser.AllTypesListContext):
+    # Enter a parse tree produced by BSParser#typesList.
+    def enterTypesList(self, ctx:BSParser.TypesListContext):
         pass
 
-    # Exit a parse tree produced by BSParser#allTypesList.
-    def exitAllTypesList(self, ctx:BSParser.AllTypesListContext):
-        pass
-
-
-    # Enter a parse tree produced by BSParser#allTypes.
-    def enterAllTypes(self, ctx:BSParser.AllTypesContext):
-        pass
-
-    # Exit a parse tree produced by BSParser#allTypes.
-    def exitAllTypes(self, ctx:BSParser.AllTypesContext):
+    # Exit a parse tree produced by BSParser#typesList.
+    def exitTypesList(self, ctx:BSParser.TypesListContext):
         pass
 
 

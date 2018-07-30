@@ -78,12 +78,12 @@ formalParameterList
     ;
 
 formalParameter
-    : (typeType)+ variableDeclaratorId
+    : (unionType)? variableDeclaratorId
     ;
 
 // TODO: make mat an id and repeatable
 functionTyping
-    : COLON LBRACKET primitiveType RBRACKET
+    : COLON unionType
     ;
 
 // This is mandatory so that we can
@@ -190,20 +190,16 @@ expressionList
 // https://github.com/jar/grammars-v4/blob/master/java/JavaParser.g4#L582
 typeType
     : primitiveType
-    | unionType
     ;
 
 unionType
-    : LBRACKET allTypesList RBRACKET
+    : LBRACKET typesList RBRACKET
     ;
 
-allTypesList
-    : allTypes (SEMICOLON allTypes)*
+typesList
+    : typeType (SEMICOLON typeType)*
     ;
 
-allTypes
-    : primitiveType
-    ;
 
 variableDeclaratorId
     : IDENTIFIER (LBRACKET RBRACKET)?
@@ -226,7 +222,7 @@ arrayInitializer
     ;
 
 localVariableDeclaration
-    : (typeType)? IDENTIFIER ASSIGN assignmentOperations
+    : (unionType)? IDENTIFIER ASSIGN assignmentOperations
     | arrayInitializer ASSIGN (split | IDENTIFIER)
     ;
 

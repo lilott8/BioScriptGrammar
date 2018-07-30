@@ -101,11 +101,8 @@ public:
   virtual void enterUnionType(BSParser::UnionTypeContext * /*ctx*/) override { }
   virtual void exitUnionType(BSParser::UnionTypeContext * /*ctx*/) override { }
 
-  virtual void enterAllTypesList(BSParser::AllTypesListContext * /*ctx*/) override { }
-  virtual void exitAllTypesList(BSParser::AllTypesListContext * /*ctx*/) override { }
-
-  virtual void enterAllTypes(BSParser::AllTypesContext * /*ctx*/) override { }
-  virtual void exitAllTypes(BSParser::AllTypesContext * /*ctx*/) override { }
+  virtual void enterTypesList(BSParser::TypesListContext * /*ctx*/) override { }
+  virtual void exitTypesList(BSParser::TypesListContext * /*ctx*/) override { }
 
   virtual void enterVariableDeclaratorId(BSParser::VariableDeclaratorIdContext * /*ctx*/) override { }
   virtual void exitVariableDeclaratorId(BSParser::VariableDeclaratorIdContext * /*ctx*/) override { }

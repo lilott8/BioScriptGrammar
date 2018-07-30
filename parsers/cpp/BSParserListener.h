@@ -99,11 +99,8 @@ public:
   virtual void enterUnionType(BSParser::UnionTypeContext *ctx) = 0;
   virtual void exitUnionType(BSParser::UnionTypeContext *ctx) = 0;
 
-  virtual void enterAllTypesList(BSParser::AllTypesListContext *ctx) = 0;
-  virtual void exitAllTypesList(BSParser::AllTypesListContext *ctx) = 0;
-
-  virtual void enterAllTypes(BSParser::AllTypesContext *ctx) = 0;
-  virtual void exitAllTypes(BSParser::AllTypesContext *ctx) = 0;
+  virtual void enterTypesList(BSParser::TypesListContext *ctx) = 0;
+  virtual void exitTypesList(BSParser::TypesListContext *ctx) = 0;
 
   virtual void enterVariableDeclaratorId(BSParser::VariableDeclaratorIdContext *ctx) = 0;
   virtual void exitVariableDeclaratorId(BSParser::VariableDeclaratorIdContext *ctx) = 0;

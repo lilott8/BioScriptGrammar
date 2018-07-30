@@ -128,11 +128,7 @@ public:
     return visitChildren(ctx);
   }
 
-  virtual antlrcpp::Any visitAllTypesList(BSParser::AllTypesListContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
-  virtual antlrcpp::Any visitAllTypes(BSParser::AllTypesContext *ctx) override {
+  virtual antlrcpp::Any visitTypesList(BSParser::TypesListContext *ctx) override {
     return visitChildren(ctx);
   }
 

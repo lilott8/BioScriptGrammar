@@ -76,9 +76,7 @@ public:
 
     virtual antlrcpp::Any visitUnionType(BSParser::UnionTypeContext *context) = 0;
 
-    virtual antlrcpp::Any visitAllTypesList(BSParser::AllTypesListContext *context) = 0;
-
-    virtual antlrcpp::Any visitAllTypes(BSParser::AllTypesContext *context) = 0;
+    virtual antlrcpp::Any visitTypesList(BSParser::TypesListContext *context) = 0;
 
     virtual antlrcpp::Any visitVariableDeclaratorId(BSParser::VariableDeclaratorIdContext *context) = 0;
 

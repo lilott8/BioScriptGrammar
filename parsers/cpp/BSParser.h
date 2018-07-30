@@ -43,11 +43,10 @@ public:
     RuleRepeat = 15, RuleMix = 16, RuleDetect = 17, RuleHeat = 18, RuleSplit = 19, 
     RuleDispense = 20, RuleDispose = 21, RuleExpression = 22, RuleParExpression = 23, 
     RuleMethodCall = 24, RuleExpressionList = 25, RuleTypeType = 26, RuleUnionType = 27, 
-    RuleAllTypesList = 28, RuleAllTypes = 29, RuleVariableDeclaratorId = 30, 
-    RuleVariableDeclarator = 31, RuleVariableInitializer = 32, RuleArrayInitializer = 33, 
-    RuleLocalVariableDeclaration = 34, RulePrimary = 35, RuleLiteral = 36, 
-    RulePrimitiveType = 37, RuleVolumeIdentifier = 38, RuleTimeIdentifier = 39, 
-    RuleTemperatureIdentifier = 40
+    RuleTypesList = 28, RuleVariableDeclaratorId = 29, RuleVariableDeclarator = 30, 
+    RuleVariableInitializer = 31, RuleArrayInitializer = 32, RuleLocalVariableDeclaration = 33, 
+    RulePrimary = 34, RuleLiteral = 35, RulePrimitiveType = 36, RuleVolumeIdentifier = 37, 
+    RuleTimeIdentifier = 38, RuleTemperatureIdentifier = 39
   };
 
   BSParser(antlr4::TokenStream *input);
@@ -88,8 +87,7 @@ public:
   class ExpressionListContext;
   class TypeTypeContext;
   class UnionTypeContext;
-  class AllTypesListContext;
-  class AllTypesContext;
+  class TypesListContext;
   class VariableDeclaratorIdContext;
   class VariableDeclaratorContext;
   class VariableInitializerContext;
@@ -245,8 +243,7 @@ public:
     FormalParameterContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     VariableDeclaratorIdContext *variableDeclaratorId();
-    std::vector<TypeTypeContext *> typeType();
-    TypeTypeContext* typeType(size_t i);
+    UnionTypeContext *unionType();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -262,9 +259,7 @@ public:
     FunctionTypingContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *COLON();
-    antlr4::tree::TerminalNode *LBRACKET();
-    PrimitiveTypeContext *primitiveType();
-    antlr4::tree::TerminalNode *RBRACKET();
+    UnionTypeContext *unionType();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -605,7 +600,6 @@ public:
     TypeTypeContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     PrimitiveTypeContext *primitiveType();
-    UnionTypeContext *unionType();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -621,7 +615,7 @@ public:
     UnionTypeContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *LBRACKET();
-    AllTypesListContext *allTypesList();
+    TypesListContext *typesList();
     antlr4::tree::TerminalNode *RBRACKET();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -633,12 +627,12 @@ public:
 
   UnionTypeContext* unionType();
 
-  class  AllTypesListContext : public antlr4::ParserRuleContext {
+  class  TypesListContext : public antlr4::ParserRuleContext {
   public:
-    AllTypesListContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    TypesListContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
-    std::vector<AllTypesContext *> allTypes();
-    AllTypesContext* allTypes(size_t i);
+    std::vector<TypeTypeContext *> typeType();
+    TypeTypeContext* typeType(size_t i);
     std::vector<antlr4::tree::TerminalNode *> SEMICOLON();
     antlr4::tree::TerminalNode* SEMICOLON(size_t i);
 
@@ -649,22 +643,7 @@ public:
    
   };
 
-  AllTypesListContext* allTypesList();
-
-  class  AllTypesContext : public antlr4::ParserRuleContext {
-  public:
-    AllTypesContext(antlr4::ParserRuleContext *parent, size_t invokingState);
-    virtual size_t getRuleIndex() const override;
-    PrimitiveTypeContext *primitiveType();
-
-    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
-    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
-
-    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
-  };
-
-  AllTypesContext* allTypes();
+  TypesListContext* typesList();
 
   class  VariableDeclaratorIdContext : public antlr4::ParserRuleContext {
   public:
@@ -741,7 +720,7 @@ public:
     antlr4::tree::TerminalNode *IDENTIFIER();
     antlr4::tree::TerminalNode *ASSIGN();
     AssignmentOperationsContext *assignmentOperations();
-    TypeTypeContext *typeType();
+    UnionTypeContext *unionType();
     ArrayInitializerContext *arrayInitializer();
     SplitContext *split();
 

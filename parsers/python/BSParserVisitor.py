@@ -150,13 +150,8 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by BSParser#allTypesList.
-    def visitAllTypesList(self, ctx:BSParser.AllTypesListContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by BSParser#allTypes.
-    def visitAllTypes(self, ctx:BSParser.AllTypesContext):
+    # Visit a parse tree produced by BSParser#typesList.
+    def visitTypesList(self, ctx:BSParser.TypesListContext):
         return self.visitChildren(ctx)
 
 
