@@ -102,6 +102,7 @@ blockStatement
 assignmentOperations
     : mix
     | detect
+    | dispense
     | split
     | expression
     | methodCall
@@ -145,7 +146,7 @@ split
     ;
 
 dispense
-    : DISPENSE
+    : DISPENSE IDENTIFIER
     ;
 
 dispose
