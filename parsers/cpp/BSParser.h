@@ -310,6 +310,7 @@ public:
     virtual size_t getRuleIndex() const override;
     MixContext *mix();
     DetectContext *detect();
+    DispenseContext *dispense();
     SplitContext *split();
     ExpressionContext *expression();
     MethodCallContext *methodCall();
@@ -481,6 +482,7 @@ public:
     DispenseContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *DISPENSE();
+    antlr4::tree::TerminalNode *IDENTIFIER();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
