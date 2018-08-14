@@ -1,9 +1,11 @@
 # Generated from /Users/jason/Projects/java/BSPrototype/src/main/resources/BSParser.g4 by ANTLR 4.7
 # encoding: utf-8
-from antlr4 import *
-from io import StringIO
-from typing.io import TextIO
 import sys
+from io import StringIO
+
+from antlr4 import *
+from typing.io import TextIO
+
 
 def serializedATN():
     with StringIO() as buf:
@@ -172,52 +174,51 @@ def serializedATN():
         return buf.getvalue()
 
 
-class BSParser ( Parser ):
-
+class BSParser(Parser):
     grammarFileName = "BSParser.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
-    decisionsToDFA = [ DFA(ds, i) for i, ds in enumerate(atn.decisionToState) ]
+    decisionsToDFA = [DFA(ds, i) for i, ds in enumerate(atn.decisionToState)]
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'if'", "'else'", "'repeat'", "'while'", 
-                     "'function'", "'return'", "'manifest'", "'module'", 
-                     "'stationary'", "'functions'", "'instructions'", "'detect'", 
-                     "'mix'", "'split'", "'heat'", "'drain'", "'dispense'", 
-                     "'dispose'", "'at'", "'with'", "'for'", "'into'", "'times'", 
-                     "'on'", "'of'", "'nat'", "'real'", "'mat'", "'bool'", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "'('", "')'", "'{'", "'}'", "'['", "']'", "';'", "','", 
-                     "'.'", "'='", "'>'", "'<'", "'!'", "'~'", "'?'", "':'", 
-                     "'=='", "'<='", "'>='", "'!='", "'&&'", "'||'", "'++'", 
-                     "'--'", "'+'", "'-'", "'*'", "'/'", "'&'", "'|'", "'^'", 
-                     "'%'", "'_'", "'ns'", "'us'", "'ms'", "'cs'", "'ds'", 
-                     "'s'", "'h'", "'d'", "'w'", "'mo'", "'y'", "'nL'", 
-                     "'uL'", "'mL'", "'cL'", "'dL'", "'L'", "'daL'", "'c'", 
-                     "'f'", "'k'" ]
+    literalNames = ["<INVALID>", "'if'", "'else'", "'repeat'", "'while'",
+                    "'function'", "'return'", "'manifest'", "'module'",
+                    "'stationary'", "'functions'", "'instructions'", "'detect'",
+                    "'mix'", "'split'", "'heat'", "'drain'", "'dispense'",
+                    "'dispose'", "'at'", "'with'", "'for'", "'into'", "'times'",
+                    "'on'", "'of'", "'nat'", "'real'", "'mat'", "'bool'",
+                    "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>",
+                    "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>",
+                    "'('", "')'", "'{'", "'}'", "'['", "']'", "';'", "','",
+                    "'.'", "'='", "'>'", "'<'", "'!'", "'~'", "'?'", "':'",
+                    "'=='", "'<='", "'>='", "'!='", "'&&'", "'||'", "'++'",
+                    "'--'", "'+'", "'-'", "'*'", "'/'", "'&'", "'|'", "'^'",
+                    "'%'", "'_'", "'ns'", "'us'", "'ms'", "'cs'", "'ds'",
+                    "'s'", "'h'", "'d'", "'w'", "'mo'", "'y'", "'nL'",
+                    "'uL'", "'mL'", "'cL'", "'dL'", "'L'", "'daL'", "'c'",
+                    "'f'", "'k'"]
 
-    symbolicNames = [ "<INVALID>", "IF", "ELSE", "REPEAT", "WHILE", "FUNCTION", 
-                      "RETURN", "MANIFEST", "MODULE", "STATIONARY", "FUNCTIONS", 
-                      "INSTRUCTIONS", "DETECT", "MIX", "SPLIT", "HEAT", 
-                      "DRAIN", "DISPENSE", "DISPOSE", "AT", "WITH", "FOR", 
-                      "INTO", "TIMES", "ON", "OF", "NAT", "REAL", "MAT", 
-                      "BOOL", "IDENTIFIER", "STRING_LITERAL", "BOOL_LITERAL", 
-                      "FLOAT_LITERAL", "INTEGER_LITERAL", "TIME_NUMBER", 
-                      "VOLUME_NUMBER", "TEMP_NUMBER", "LPAREN", "RPAREN", 
-                      "LBRACE", "RBRACE", "LBRACKET", "RBRACKET", "SEMICOLON", 
-                      "COMMA", "DOT", "ASSIGN", "GT", "LT", "BANG", "TILDE", 
-                      "QUESTION", "COLON", "EQUALITY", "LTE", "GTE", "NOTEQUAL", 
-                      "AND", "OR", "INC", "DEC", "ADDITION", "SUBTRACT", 
-                      "MULTIPLY", "DIVIDE", "BITAND", "BITOR", "CARET", 
-                      "MOD", "UNDERSCORE", "NANOSECOND", "MICROSECOND", 
-                      "MILLISECOND", "CENTISECOND", "DECISECOND", "SECOND", 
-                      "HOUR", "DAY", "WEEK", "MONTH", "YEAR", "NANOLITRE", 
-                      "MICROLITRE", "MILLILITRE", "CENTILITRE", "DECILITRE", 
-                      "LITRE", "DECALITRE", "CELSIUS", "FAHRENHEIT", "KELVIN", 
-                      "WS", "COMMENT", "LINE_COMMENT" ]
+    symbolicNames = ["<INVALID>", "IF", "ELSE", "REPEAT", "WHILE", "FUNCTION",
+                     "RETURN", "MANIFEST", "MODULE", "STATIONARY", "FUNCTIONS",
+                     "INSTRUCTIONS", "DETECT", "MIX", "SPLIT", "HEAT",
+                     "DRAIN", "DISPENSE", "DISPOSE", "AT", "WITH", "FOR",
+                     "INTO", "TIMES", "ON", "OF", "NAT", "REAL", "MAT",
+                     "BOOL", "IDENTIFIER", "STRING_LITERAL", "BOOL_LITERAL",
+                     "FLOAT_LITERAL", "INTEGER_LITERAL", "TIME_NUMBER",
+                     "VOLUME_NUMBER", "TEMP_NUMBER", "LPAREN", "RPAREN",
+                     "LBRACE", "RBRACE", "LBRACKET", "RBRACKET", "SEMICOLON",
+                     "COMMA", "DOT", "ASSIGN", "GT", "LT", "BANG", "TILDE",
+                     "QUESTION", "COLON", "EQUALITY", "LTE", "GTE", "NOTEQUAL",
+                     "AND", "OR", "INC", "DEC", "ADDITION", "SUBTRACT",
+                     "MULTIPLY", "DIVIDE", "BITAND", "BITOR", "CARET",
+                     "MOD", "UNDERSCORE", "NANOSECOND", "MICROSECOND",
+                     "MILLISECOND", "CENTISECOND", "DECISECOND", "SECOND",
+                     "HOUR", "DAY", "WEEK", "MONTH", "YEAR", "NANOLITRE",
+                     "MICROLITRE", "MILLILITRE", "CENTILITRE", "DECILITRE",
+                     "LITRE", "DECALITRE", "CELSIUS", "FAHRENHEIT", "KELVIN",
+                     "WS", "COMMENT", "LINE_COMMENT"]
 
     RULE_program = 0
     RULE_moduleDeclaration = 1
@@ -260,144 +261,139 @@ class BSParser ( Parser ):
     RULE_timeIdentifier = 38
     RULE_temperatureIdentifier = 39
 
-    ruleNames =  [ "program", "moduleDeclaration", "manifestDeclaration", 
-                   "stationaryDeclaration", "functionDeclaration", "formalParameters", 
-                   "formalParameterList", "formalParameter", "functionTyping", 
-                   "returnStatement", "blockStatement", "assignmentOperations", 
-                   "statements", "ifStatement", "whileStatement", "repeat", 
-                   "mix", "detect", "heat", "split", "dispense", "dispose", 
-                   "expression", "parExpression", "methodCall", "expressionList", 
-                   "typeType", "unionType", "typesList", "variableDeclaratorId", 
-                   "variableDeclarator", "variableInitializer", "arrayInitializer", 
-                   "localVariableDeclaration", "primary", "literal", "primitiveType", 
-                   "volumeIdentifier", "timeIdentifier", "temperatureIdentifier" ]
+    ruleNames = ["program", "moduleDeclaration", "manifestDeclaration",
+                 "stationaryDeclaration", "functionDeclaration", "formalParameters",
+                 "formalParameterList", "formalParameter", "functionTyping",
+                 "returnStatement", "blockStatement", "assignmentOperations",
+                 "statements", "ifStatement", "whileStatement", "repeat",
+                 "mix", "detect", "heat", "split", "dispense", "dispose",
+                 "expression", "parExpression", "methodCall", "expressionList",
+                 "typeType", "unionType", "typesList", "variableDeclaratorId",
+                 "variableDeclarator", "variableInitializer", "arrayInitializer",
+                 "localVariableDeclaration", "primary", "literal", "primitiveType",
+                 "volumeIdentifier", "timeIdentifier", "temperatureIdentifier"]
 
     EOF = Token.EOF
-    IF=1
-    ELSE=2
-    REPEAT=3
-    WHILE=4
-    FUNCTION=5
-    RETURN=6
-    MANIFEST=7
-    MODULE=8
-    STATIONARY=9
-    FUNCTIONS=10
-    INSTRUCTIONS=11
-    DETECT=12
-    MIX=13
-    SPLIT=14
-    HEAT=15
-    DRAIN=16
-    DISPENSE=17
-    DISPOSE=18
-    AT=19
-    WITH=20
-    FOR=21
-    INTO=22
-    TIMES=23
-    ON=24
-    OF=25
-    NAT=26
-    REAL=27
-    MAT=28
-    BOOL=29
-    IDENTIFIER=30
-    STRING_LITERAL=31
-    BOOL_LITERAL=32
-    FLOAT_LITERAL=33
-    INTEGER_LITERAL=34
-    TIME_NUMBER=35
-    VOLUME_NUMBER=36
-    TEMP_NUMBER=37
-    LPAREN=38
-    RPAREN=39
-    LBRACE=40
-    RBRACE=41
-    LBRACKET=42
-    RBRACKET=43
-    SEMICOLON=44
-    COMMA=45
-    DOT=46
-    ASSIGN=47
-    GT=48
-    LT=49
-    BANG=50
-    TILDE=51
-    QUESTION=52
-    COLON=53
-    EQUALITY=54
-    LTE=55
-    GTE=56
-    NOTEQUAL=57
-    AND=58
-    OR=59
-    INC=60
-    DEC=61
-    ADDITION=62
-    SUBTRACT=63
-    MULTIPLY=64
-    DIVIDE=65
-    BITAND=66
-    BITOR=67
-    CARET=68
-    MOD=69
-    UNDERSCORE=70
-    NANOSECOND=71
-    MICROSECOND=72
-    MILLISECOND=73
-    CENTISECOND=74
-    DECISECOND=75
-    SECOND=76
-    HOUR=77
-    DAY=78
-    WEEK=79
-    MONTH=80
-    YEAR=81
-    NANOLITRE=82
-    MICROLITRE=83
-    MILLILITRE=84
-    CENTILITRE=85
-    DECILITRE=86
-    LITRE=87
-    DECALITRE=88
-    CELSIUS=89
-    FAHRENHEIT=90
-    KELVIN=91
-    WS=92
-    COMMENT=93
-    LINE_COMMENT=94
+    IF = 1
+    ELSE = 2
+    REPEAT = 3
+    WHILE = 4
+    FUNCTION = 5
+    RETURN = 6
+    MANIFEST = 7
+    MODULE = 8
+    STATIONARY = 9
+    FUNCTIONS = 10
+    INSTRUCTIONS = 11
+    DETECT = 12
+    MIX = 13
+    SPLIT = 14
+    HEAT = 15
+    DRAIN = 16
+    DISPENSE = 17
+    DISPOSE = 18
+    AT = 19
+    WITH = 20
+    FOR = 21
+    INTO = 22
+    TIMES = 23
+    ON = 24
+    OF = 25
+    NAT = 26
+    REAL = 27
+    MAT = 28
+    BOOL = 29
+    IDENTIFIER = 30
+    STRING_LITERAL = 31
+    BOOL_LITERAL = 32
+    FLOAT_LITERAL = 33
+    INTEGER_LITERAL = 34
+    TIME_NUMBER = 35
+    VOLUME_NUMBER = 36
+    TEMP_NUMBER = 37
+    LPAREN = 38
+    RPAREN = 39
+    LBRACE = 40
+    RBRACE = 41
+    LBRACKET = 42
+    RBRACKET = 43
+    SEMICOLON = 44
+    COMMA = 45
+    DOT = 46
+    ASSIGN = 47
+    GT = 48
+    LT = 49
+    BANG = 50
+    TILDE = 51
+    QUESTION = 52
+    COLON = 53
+    EQUALITY = 54
+    LTE = 55
+    GTE = 56
+    NOTEQUAL = 57
+    AND = 58
+    OR = 59
+    INC = 60
+    DEC = 61
+    ADDITION = 62
+    SUBTRACT = 63
+    MULTIPLY = 64
+    DIVIDE = 65
+    BITAND = 66
+    BITOR = 67
+    CARET = 68
+    MOD = 69
+    UNDERSCORE = 70
+    NANOSECOND = 71
+    MICROSECOND = 72
+    MILLISECOND = 73
+    CENTISECOND = 74
+    DECISECOND = 75
+    SECOND = 76
+    HOUR = 77
+    DAY = 78
+    WEEK = 79
+    MONTH = 80
+    YEAR = 81
+    NANOLITRE = 82
+    MICROLITRE = 83
+    MILLILITRE = 84
+    CENTILITRE = 85
+    DECILITRE = 86
+    LITRE = 87
+    DECALITRE = 88
+    CELSIUS = 89
+    FAHRENHEIT = 90
+    KELVIN = 91
+    WS = 92
+    COMMENT = 93
+    LINE_COMMENT = 94
 
-    def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
+    def __init__(self, input: TokenStream, output: TextIO = sys.stdout):
         super().__init__(input, output)
         self.checkVersion("4.7")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
-
-
     class ProgramContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def moduleDeclaration(self):
-            return self.getTypedRuleContext(BSParser.ModuleDeclarationContext,0)
-
+            return self.getTypedRuleContext(BSParser.ModuleDeclarationContext, 0)
 
         def stationaryDeclaration(self):
-            return self.getTypedRuleContext(BSParser.StationaryDeclarationContext,0)
-
+            return self.getTypedRuleContext(BSParser.StationaryDeclarationContext, 0)
 
         def manifestDeclaration(self):
-            return self.getTypedRuleContext(BSParser.ManifestDeclarationContext,0)
-
+            return self.getTypedRuleContext(BSParser.ManifestDeclarationContext, 0)
 
         def FUNCTIONS(self):
             return self.getToken(BSParser.FUNCTIONS, 0)
 
-        def COLON(self, i:int=None):
+        def COLON(self, i: int = None):
             if i is None:
                 return self.getTokens(BSParser.COLON)
             else:
@@ -409,45 +405,40 @@ class BSParser ( Parser ):
         def EOF(self):
             return self.getToken(BSParser.EOF, 0)
 
-        def functionDeclaration(self, i:int=None):
+        def functionDeclaration(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(BSParser.FunctionDeclarationContext)
             else:
-                return self.getTypedRuleContext(BSParser.FunctionDeclarationContext,i)
+                return self.getTypedRuleContext(BSParser.FunctionDeclarationContext, i)
 
-
-        def statements(self, i:int=None):
+        def statements(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(BSParser.StatementsContext)
             else:
-                return self.getTypedRuleContext(BSParser.StatementsContext,i)
-
+                return self.getTypedRuleContext(BSParser.StatementsContext, i)
 
         def getRuleIndex(self):
             return BSParser.RULE_program
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterProgram" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterProgram"):
                 listener.enterProgram(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitProgram" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitProgram"):
                 listener.exitProgram(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProgram" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitProgram"):
                 return visitor.visitProgram(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def program(self):
 
         localctx = BSParser.ProgramContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_program)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 80
@@ -463,7 +454,7 @@ class BSParser ( Parser ):
             self.state = 88
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==BSParser.FUNCTION:
+            while _la == BSParser.FUNCTION:
                 self.state = 85
                 self.functionDeclaration()
                 self.state = 90
@@ -477,7 +468,10 @@ class BSParser ( Parser ):
             self.state = 96
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BSParser.IF) | (1 << BSParser.REPEAT) | (1 << BSParser.WHILE) | (1 << BSParser.HEAT) | (1 << BSParser.DRAIN) | (1 << BSParser.DISPOSE) | (1 << BSParser.IDENTIFIER) | (1 << BSParser.LBRACKET))) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                    (1 << BSParser.IF) | (1 << BSParser.REPEAT) | (1 << BSParser.WHILE) | (1 << BSParser.HEAT) | (
+                    1 << BSParser.DRAIN) | (1 << BSParser.DISPOSE) | (1 << BSParser.IDENTIFIER) | (
+                            1 << BSParser.LBRACKET))) != 0):
                 self.state = 93
                 self.statements()
                 self.state = 98
@@ -496,17 +490,17 @@ class BSParser ( Parser ):
 
     class ModuleDeclarationContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def MODULE(self, i:int=None):
+        def MODULE(self, i: int = None):
             if i is None:
                 return self.getTokens(BSParser.MODULE)
             else:
                 return self.getToken(BSParser.MODULE, i)
 
-        def IDENTIFIER(self, i:int=None):
+        def IDENTIFIER(self, i: int = None):
             if i is None:
                 return self.getTokens(BSParser.IDENTIFIER)
             else:
@@ -515,34 +509,31 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_moduleDeclaration
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterModuleDeclaration" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterModuleDeclaration"):
                 listener.enterModuleDeclaration(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitModuleDeclaration" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitModuleDeclaration"):
                 listener.exitModuleDeclaration(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitModuleDeclaration" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitModuleDeclaration"):
                 return visitor.visitModuleDeclaration(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def moduleDeclaration(self):
 
         localctx = BSParser.ModuleDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_moduleDeclaration)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 105
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==BSParser.MODULE:
+            while _la == BSParser.MODULE:
                 self.state = 101
                 self.match(BSParser.MODULE)
                 self.state = 102
@@ -561,17 +552,17 @@ class BSParser ( Parser ):
 
     class ManifestDeclarationContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def MANIFEST(self, i:int=None):
+        def MANIFEST(self, i: int = None):
             if i is None:
                 return self.getTokens(BSParser.MANIFEST)
             else:
                 return self.getToken(BSParser.MANIFEST, i)
 
-        def IDENTIFIER(self, i:int=None):
+        def IDENTIFIER(self, i: int = None):
             if i is None:
                 return self.getTokens(BSParser.IDENTIFIER)
             else:
@@ -580,31 +571,28 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_manifestDeclaration
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterManifestDeclaration" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterManifestDeclaration"):
                 listener.enterManifestDeclaration(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitManifestDeclaration" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitManifestDeclaration"):
                 listener.exitManifestDeclaration(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitManifestDeclaration" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitManifestDeclaration"):
                 return visitor.visitManifestDeclaration(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def manifestDeclaration(self):
 
         localctx = BSParser.ManifestDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 4, self.RULE_manifestDeclaration)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 110 
+            self.state = 110
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
@@ -612,10 +600,10 @@ class BSParser ( Parser ):
                 self.match(BSParser.MANIFEST)
                 self.state = 109
                 self.match(BSParser.IDENTIFIER)
-                self.state = 112 
+                self.state = 112
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (_la==BSParser.MANIFEST):
+                if not (_la == BSParser.MANIFEST):
                     break
 
         except RecognitionException as re:
@@ -628,17 +616,17 @@ class BSParser ( Parser ):
 
     class StationaryDeclarationContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def STATIONARY(self, i:int=None):
+        def STATIONARY(self, i: int = None):
             if i is None:
                 return self.getTokens(BSParser.STATIONARY)
             else:
                 return self.getToken(BSParser.STATIONARY, i)
 
-        def IDENTIFIER(self, i:int=None):
+        def IDENTIFIER(self, i: int = None):
             if i is None:
                 return self.getTokens(BSParser.IDENTIFIER)
             else:
@@ -647,34 +635,31 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_stationaryDeclaration
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStationaryDeclaration" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterStationaryDeclaration"):
                 listener.enterStationaryDeclaration(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStationaryDeclaration" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitStationaryDeclaration"):
                 listener.exitStationaryDeclaration(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStationaryDeclaration" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitStationaryDeclaration"):
                 return visitor.visitStationaryDeclaration(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def stationaryDeclaration(self):
 
         localctx = BSParser.StationaryDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_stationaryDeclaration)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 118
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==BSParser.STATIONARY:
+            while _la == BSParser.STATIONARY:
                 self.state = 114
                 self.match(BSParser.STATIONARY)
                 self.state = 115
@@ -693,7 +678,7 @@ class BSParser ( Parser ):
 
     class FunctionDeclarationContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -704,55 +689,48 @@ class BSParser ( Parser ):
             return self.getToken(BSParser.IDENTIFIER, 0)
 
         def formalParameters(self):
-            return self.getTypedRuleContext(BSParser.FormalParametersContext,0)
-
+            return self.getTypedRuleContext(BSParser.FormalParametersContext, 0)
 
         def LBRACE(self):
             return self.getToken(BSParser.LBRACE, 0)
 
         def returnStatement(self):
-            return self.getTypedRuleContext(BSParser.ReturnStatementContext,0)
-
+            return self.getTypedRuleContext(BSParser.ReturnStatementContext, 0)
 
         def RBRACE(self):
             return self.getToken(BSParser.RBRACE, 0)
 
         def functionTyping(self):
-            return self.getTypedRuleContext(BSParser.FunctionTypingContext,0)
+            return self.getTypedRuleContext(BSParser.FunctionTypingContext, 0)
 
-
-        def statements(self, i:int=None):
+        def statements(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(BSParser.StatementsContext)
             else:
-                return self.getTypedRuleContext(BSParser.StatementsContext,i)
-
+                return self.getTypedRuleContext(BSParser.StatementsContext, i)
 
         def getRuleIndex(self):
             return BSParser.RULE_functionDeclaration
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFunctionDeclaration" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFunctionDeclaration"):
                 listener.enterFunctionDeclaration(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFunctionDeclaration" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFunctionDeclaration"):
                 listener.exitFunctionDeclaration(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunctionDeclaration" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitFunctionDeclaration"):
                 return visitor.visitFunctionDeclaration(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def functionDeclaration(self):
 
         localctx = BSParser.FunctionDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_functionDeclaration)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 121
@@ -764,23 +742,25 @@ class BSParser ( Parser ):
             self.state = 125
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==BSParser.COLON:
+            if _la == BSParser.COLON:
                 self.state = 124
                 self.functionTyping()
 
-
             self.state = 127
             self.match(BSParser.LBRACE)
-            self.state = 129 
+            self.state = 129
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
                 self.state = 128
                 self.statements()
-                self.state = 131 
+                self.state = 131
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BSParser.IF) | (1 << BSParser.REPEAT) | (1 << BSParser.WHILE) | (1 << BSParser.HEAT) | (1 << BSParser.DRAIN) | (1 << BSParser.DISPOSE) | (1 << BSParser.IDENTIFIER) | (1 << BSParser.LBRACKET))) != 0)):
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                        (1 << BSParser.IF) | (1 << BSParser.REPEAT) | (1 << BSParser.WHILE) | (1 << BSParser.HEAT) | (
+                        1 << BSParser.DRAIN) | (1 << BSParser.DISPOSE) | (1 << BSParser.IDENTIFIER) | (
+                                1 << BSParser.LBRACKET))) != 0)):
                     break
 
             self.state = 133
@@ -797,7 +777,7 @@ class BSParser ( Parser ):
 
     class FormalParametersContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -808,34 +788,30 @@ class BSParser ( Parser ):
             return self.getToken(BSParser.RPAREN, 0)
 
         def formalParameterList(self):
-            return self.getTypedRuleContext(BSParser.FormalParameterListContext,0)
-
+            return self.getTypedRuleContext(BSParser.FormalParameterListContext, 0)
 
         def getRuleIndex(self):
             return BSParser.RULE_formalParameters
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFormalParameters" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFormalParameters"):
                 listener.enterFormalParameters(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFormalParameters" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFormalParameters"):
                 listener.exitFormalParameters(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFormalParameters" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitFormalParameters"):
                 return visitor.visitFormalParameters(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def formalParameters(self):
 
         localctx = BSParser.FormalParametersContext(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_formalParameters)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 136
@@ -843,10 +819,9 @@ class BSParser ( Parser ):
             self.state = 138
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==BSParser.IDENTIFIER or _la==BSParser.LBRACKET:
+            if _la == BSParser.IDENTIFIER or _la == BSParser.LBRACKET:
                 self.state = 137
                 self.formalParameterList()
-
 
             self.state = 140
             self.match(BSParser.RPAREN)
@@ -860,18 +835,17 @@ class BSParser ( Parser ):
 
     class FormalParameterListContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def formalParameter(self, i:int=None):
+        def formalParameter(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(BSParser.FormalParameterContext)
             else:
-                return self.getTypedRuleContext(BSParser.FormalParameterContext,i)
+                return self.getTypedRuleContext(BSParser.FormalParameterContext, i)
 
-
-        def COMMA(self, i:int=None):
+        def COMMA(self, i: int = None):
             if i is None:
                 return self.getTokens(BSParser.COMMA)
             else:
@@ -880,28 +854,25 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_formalParameterList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFormalParameterList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFormalParameterList"):
                 listener.enterFormalParameterList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFormalParameterList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFormalParameterList"):
                 listener.exitFormalParameterList(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFormalParameterList" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitFormalParameterList"):
                 return visitor.visitFormalParameterList(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def formalParameterList(self):
 
         localctx = BSParser.FormalParameterListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_formalParameterList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 142
@@ -909,7 +880,7 @@ class BSParser ( Parser ):
             self.state = 147
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==BSParser.COMMA:
+            while _la == BSParser.COMMA:
                 self.state = 143
                 self.match(BSParser.COMMA)
                 self.state = 144
@@ -928,52 +899,46 @@ class BSParser ( Parser ):
 
     class FormalParameterContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def variableDeclaratorId(self):
-            return self.getTypedRuleContext(BSParser.VariableDeclaratorIdContext,0)
-
+            return self.getTypedRuleContext(BSParser.VariableDeclaratorIdContext, 0)
 
         def unionType(self):
-            return self.getTypedRuleContext(BSParser.UnionTypeContext,0)
-
+            return self.getTypedRuleContext(BSParser.UnionTypeContext, 0)
 
         def getRuleIndex(self):
             return BSParser.RULE_formalParameter
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFormalParameter" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFormalParameter"):
                 listener.enterFormalParameter(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFormalParameter" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFormalParameter"):
                 listener.exitFormalParameter(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFormalParameter" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitFormalParameter"):
                 return visitor.visitFormalParameter(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def formalParameter(self):
 
         localctx = BSParser.FormalParameterContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_formalParameter)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 151
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==BSParser.LBRACKET:
+            if _la == BSParser.LBRACKET:
                 self.state = 150
                 self.unionType()
-
 
             self.state = 153
             self.variableDeclaratorId()
@@ -987,7 +952,7 @@ class BSParser ( Parser ):
 
     class FunctionTypingContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -995,28 +960,24 @@ class BSParser ( Parser ):
             return self.getToken(BSParser.COLON, 0)
 
         def unionType(self):
-            return self.getTypedRuleContext(BSParser.UnionTypeContext,0)
-
+            return self.getTypedRuleContext(BSParser.UnionTypeContext, 0)
 
         def getRuleIndex(self):
             return BSParser.RULE_functionTyping
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFunctionTyping" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFunctionTyping"):
                 listener.enterFunctionTyping(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFunctionTyping" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFunctionTyping"):
                 listener.exitFunctionTyping(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunctionTyping" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitFunctionTyping"):
                 return visitor.visitFunctionTyping(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def functionTyping(self):
 
@@ -1038,7 +999,7 @@ class BSParser ( Parser ):
 
     class ReturnStatementContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -1051,22 +1012,19 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_returnStatement
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterReturnStatement" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterReturnStatement"):
                 listener.enterReturnStatement(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitReturnStatement" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitReturnStatement"):
                 listener.exitReturnStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReturnStatement" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitReturnStatement"):
                 return visitor.visitReturnStatement(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def returnStatement(self):
 
@@ -1088,7 +1046,7 @@ class BSParser ( Parser ):
 
     class BlockStatementContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -1098,38 +1056,34 @@ class BSParser ( Parser ):
         def RBRACE(self):
             return self.getToken(BSParser.RBRACE, 0)
 
-        def statements(self, i:int=None):
+        def statements(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(BSParser.StatementsContext)
             else:
-                return self.getTypedRuleContext(BSParser.StatementsContext,i)
-
+                return self.getTypedRuleContext(BSParser.StatementsContext, i)
 
         def getRuleIndex(self):
             return BSParser.RULE_blockStatement
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBlockStatement" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterBlockStatement"):
                 listener.enterBlockStatement(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBlockStatement" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitBlockStatement"):
                 listener.exitBlockStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitBlockStatement" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitBlockStatement"):
                 return visitor.visitBlockStatement(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def blockStatement(self):
 
         localctx = BSParser.BlockStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 20, self.RULE_blockStatement)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 161
@@ -1137,7 +1091,10 @@ class BSParser ( Parser ):
             self.state = 165
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BSParser.IF) | (1 << BSParser.REPEAT) | (1 << BSParser.WHILE) | (1 << BSParser.HEAT) | (1 << BSParser.DRAIN) | (1 << BSParser.DISPOSE) | (1 << BSParser.IDENTIFIER) | (1 << BSParser.LBRACKET))) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                    (1 << BSParser.IF) | (1 << BSParser.REPEAT) | (1 << BSParser.WHILE) | (1 << BSParser.HEAT) | (
+                    1 << BSParser.DRAIN) | (1 << BSParser.DISPOSE) | (1 << BSParser.IDENTIFIER) | (
+                            1 << BSParser.LBRACKET))) != 0):
                 self.state = 162
                 self.statements()
                 self.state = 167
@@ -1156,49 +1113,41 @@ class BSParser ( Parser ):
 
     class AssignmentOperationsContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def mix(self):
-            return self.getTypedRuleContext(BSParser.MixContext,0)
-
+            return self.getTypedRuleContext(BSParser.MixContext, 0)
 
         def detect(self):
-            return self.getTypedRuleContext(BSParser.DetectContext,0)
-
+            return self.getTypedRuleContext(BSParser.DetectContext, 0)
 
         def split(self):
-            return self.getTypedRuleContext(BSParser.SplitContext,0)
-
+            return self.getTypedRuleContext(BSParser.SplitContext, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(BSParser.ExpressionContext,0)
-
+            return self.getTypedRuleContext(BSParser.ExpressionContext, 0)
 
         def methodCall(self):
-            return self.getTypedRuleContext(BSParser.MethodCallContext,0)
-
+            return self.getTypedRuleContext(BSParser.MethodCallContext, 0)
 
         def getRuleIndex(self):
             return BSParser.RULE_assignmentOperations
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAssignmentOperations" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAssignmentOperations"):
                 listener.enterAssignmentOperations(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAssignmentOperations" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAssignmentOperations"):
                 listener.exitAssignmentOperations(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAssignmentOperations" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitAssignmentOperations"):
                 return visitor.visitAssignmentOperations(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def assignmentOperations(self):
 
@@ -1207,7 +1156,7 @@ class BSParser ( Parser ):
         try:
             self.state = 175
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 11, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 170
@@ -1249,53 +1198,44 @@ class BSParser ( Parser ):
 
     class StatementsContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def ifStatement(self):
-            return self.getTypedRuleContext(BSParser.IfStatementContext,0)
-
+            return self.getTypedRuleContext(BSParser.IfStatementContext, 0)
 
         def whileStatement(self):
-            return self.getTypedRuleContext(BSParser.WhileStatementContext,0)
-
+            return self.getTypedRuleContext(BSParser.WhileStatementContext, 0)
 
         def localVariableDeclaration(self):
-            return self.getTypedRuleContext(BSParser.LocalVariableDeclarationContext,0)
-
+            return self.getTypedRuleContext(BSParser.LocalVariableDeclarationContext, 0)
 
         def repeat(self):
-            return self.getTypedRuleContext(BSParser.RepeatContext,0)
-
+            return self.getTypedRuleContext(BSParser.RepeatContext, 0)
 
         def heat(self):
-            return self.getTypedRuleContext(BSParser.HeatContext,0)
-
+            return self.getTypedRuleContext(BSParser.HeatContext, 0)
 
         def dispose(self):
-            return self.getTypedRuleContext(BSParser.DisposeContext,0)
-
+            return self.getTypedRuleContext(BSParser.DisposeContext, 0)
 
         def getRuleIndex(self):
             return BSParser.RULE_statements
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStatements" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterStatements"):
                 listener.enterStatements(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStatements" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitStatements"):
                 listener.exitStatements(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStatements" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitStatements"):
                 return visitor.visitStatements(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def statements(self):
 
@@ -1348,7 +1288,7 @@ class BSParser ( Parser ):
 
     class IfStatementContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -1356,15 +1296,13 @@ class BSParser ( Parser ):
             return self.getToken(BSParser.IF, 0)
 
         def parExpression(self):
-            return self.getTypedRuleContext(BSParser.ParExpressionContext,0)
+            return self.getTypedRuleContext(BSParser.ParExpressionContext, 0)
 
-
-        def blockStatement(self, i:int=None):
+        def blockStatement(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(BSParser.BlockStatementContext)
             else:
-                return self.getTypedRuleContext(BSParser.BlockStatementContext,i)
-
+                return self.getTypedRuleContext(BSParser.BlockStatementContext, i)
 
         def ELSE(self):
             return self.getToken(BSParser.ELSE, 0)
@@ -1372,28 +1310,25 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_ifStatement
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIfStatement" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIfStatement"):
                 listener.enterIfStatement(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIfStatement" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIfStatement"):
                 listener.exitIfStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIfStatement" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitIfStatement"):
                 return visitor.visitIfStatement(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def ifStatement(self):
 
         localctx = BSParser.IfStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 26, self.RULE_ifStatement)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 185
@@ -1405,7 +1340,7 @@ class BSParser ( Parser ):
             self.state = 190
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==BSParser.ELSE:
+            if _la == BSParser.ELSE:
                 self.state = 188
                 self.match(BSParser.ELSE)
                 self.state = 189
@@ -1422,7 +1357,7 @@ class BSParser ( Parser ):
 
     class WhileStatementContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -1430,32 +1365,27 @@ class BSParser ( Parser ):
             return self.getToken(BSParser.WHILE, 0)
 
         def parExpression(self):
-            return self.getTypedRuleContext(BSParser.ParExpressionContext,0)
-
+            return self.getTypedRuleContext(BSParser.ParExpressionContext, 0)
 
         def blockStatement(self):
-            return self.getTypedRuleContext(BSParser.BlockStatementContext,0)
-
+            return self.getTypedRuleContext(BSParser.BlockStatementContext, 0)
 
         def getRuleIndex(self):
             return BSParser.RULE_whileStatement
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWhileStatement" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterWhileStatement"):
                 listener.enterWhileStatement(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWhileStatement" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitWhileStatement"):
                 listener.exitWhileStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWhileStatement" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitWhileStatement"):
                 return visitor.visitWhileStatement(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def whileStatement(self):
 
@@ -1479,7 +1409,7 @@ class BSParser ( Parser ):
 
     class RepeatContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -1490,8 +1420,7 @@ class BSParser ( Parser ):
             return self.getToken(BSParser.TIMES, 0)
 
         def blockStatement(self):
-            return self.getTypedRuleContext(BSParser.BlockStatementContext,0)
-
+            return self.getTypedRuleContext(BSParser.BlockStatementContext, 0)
 
         def IDENTIFIER(self):
             return self.getToken(BSParser.IDENTIFIER, 0)
@@ -1502,35 +1431,32 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_repeat
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRepeat" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRepeat"):
                 listener.enterRepeat(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRepeat" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRepeat"):
                 listener.exitRepeat(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRepeat" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitRepeat"):
                 return visitor.visitRepeat(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def repeat(self):
 
         localctx = BSParser.RepeatContext(self, self._ctx, self.state)
         self.enterRule(localctx, 30, self.RULE_repeat)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 196
             self.match(BSParser.REPEAT)
             self.state = 197
             _la = self._input.LA(1)
-            if not(_la==BSParser.IDENTIFIER or _la==BSParser.INTEGER_LITERAL):
+            if not (_la == BSParser.IDENTIFIER or _la == BSParser.INTEGER_LITERAL):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -1549,19 +1475,18 @@ class BSParser ( Parser ):
 
     class MixContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def MIX(self):
             return self.getToken(BSParser.MIX, 0)
 
-        def volumeIdentifier(self, i:int=None):
+        def volumeIdentifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(BSParser.VolumeIdentifierContext)
             else:
-                return self.getTypedRuleContext(BSParser.VolumeIdentifierContext,i)
-
+                return self.getTypedRuleContext(BSParser.VolumeIdentifierContext, i)
 
         def WITH(self):
             return self.getToken(BSParser.WITH, 0)
@@ -1570,34 +1495,30 @@ class BSParser ( Parser ):
             return self.getToken(BSParser.FOR, 0)
 
         def timeIdentifier(self):
-            return self.getTypedRuleContext(BSParser.TimeIdentifierContext,0)
-
+            return self.getTypedRuleContext(BSParser.TimeIdentifierContext, 0)
 
         def getRuleIndex(self):
             return BSParser.RULE_mix
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterMix" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterMix"):
                 listener.enterMix(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitMix" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitMix"):
                 listener.exitMix(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMix" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitMix"):
                 return visitor.visitMix(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def mix(self):
 
         localctx = BSParser.MixContext(self, self._ctx, self.state)
         self.enterRule(localctx, 32, self.RULE_mix)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 201
@@ -1611,7 +1532,7 @@ class BSParser ( Parser ):
             self.state = 207
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==BSParser.FOR:
+            if _la == BSParser.FOR:
                 self.state = 205
                 self.match(BSParser.FOR)
                 self.state = 206
@@ -1628,14 +1549,14 @@ class BSParser ( Parser ):
 
     class DetectContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def DETECT(self):
             return self.getToken(BSParser.DETECT, 0)
 
-        def IDENTIFIER(self, i:int=None):
+        def IDENTIFIER(self, i: int = None):
             if i is None:
                 return self.getTokens(BSParser.IDENTIFIER)
             else:
@@ -1648,34 +1569,30 @@ class BSParser ( Parser ):
             return self.getToken(BSParser.FOR, 0)
 
         def timeIdentifier(self):
-            return self.getTypedRuleContext(BSParser.TimeIdentifierContext,0)
-
+            return self.getTypedRuleContext(BSParser.TimeIdentifierContext, 0)
 
         def getRuleIndex(self):
             return BSParser.RULE_detect
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDetect" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDetect"):
                 listener.enterDetect(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDetect" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDetect"):
                 listener.exitDetect(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDetect" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitDetect"):
                 return visitor.visitDetect(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def detect(self):
 
         localctx = BSParser.DetectContext(self, self._ctx, self.state)
         self.enterRule(localctx, 34, self.RULE_detect)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 209
@@ -1689,7 +1606,7 @@ class BSParser ( Parser ):
             self.state = 215
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==BSParser.FOR:
+            if _la == BSParser.FOR:
                 self.state = 213
                 self.match(BSParser.FOR)
                 self.state = 214
@@ -1706,7 +1623,7 @@ class BSParser ( Parser ):
 
     class HeatContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -1720,41 +1637,36 @@ class BSParser ( Parser ):
             return self.getToken(BSParser.AT, 0)
 
         def temperatureIdentifier(self):
-            return self.getTypedRuleContext(BSParser.TemperatureIdentifierContext,0)
-
+            return self.getTypedRuleContext(BSParser.TemperatureIdentifierContext, 0)
 
         def FOR(self):
             return self.getToken(BSParser.FOR, 0)
 
         def timeIdentifier(self):
-            return self.getTypedRuleContext(BSParser.TimeIdentifierContext,0)
-
+            return self.getTypedRuleContext(BSParser.TimeIdentifierContext, 0)
 
         def getRuleIndex(self):
             return BSParser.RULE_heat
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterHeat" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterHeat"):
                 listener.enterHeat(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitHeat" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitHeat"):
                 listener.exitHeat(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitHeat" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitHeat"):
                 return visitor.visitHeat(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def heat(self):
 
         localctx = BSParser.HeatContext(self, self._ctx, self.state)
         self.enterRule(localctx, 36, self.RULE_heat)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 217
@@ -1768,7 +1680,7 @@ class BSParser ( Parser ):
             self.state = 223
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==BSParser.FOR:
+            if _la == BSParser.FOR:
                 self.state = 221
                 self.match(BSParser.FOR)
                 self.state = 222
@@ -1785,7 +1697,7 @@ class BSParser ( Parser ):
 
     class SplitContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -1804,22 +1716,19 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_split
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSplit" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSplit"):
                 listener.enterSplit(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSplit" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSplit"):
                 listener.exitSplit(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSplit" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitSplit"):
                 return visitor.visitSplit(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def split(self):
 
@@ -1845,7 +1754,7 @@ class BSParser ( Parser ):
 
     class DispenseContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -1855,22 +1764,19 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_dispense
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDispense" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDispense"):
                 listener.enterDispense(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDispense" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDispense"):
                 listener.exitDispense(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDispense" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitDispense"):
                 return visitor.visitDispense(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def dispense(self):
 
@@ -1890,7 +1796,7 @@ class BSParser ( Parser ):
 
     class DisposeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -1906,22 +1812,19 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_dispose
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDispose" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDispose"):
                 listener.enterDispose(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDispose" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDispose"):
                 listener.exitDispose(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDispose" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitDispose"):
                 return visitor.visitDispose(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def dispose(self):
 
@@ -1958,21 +1861,19 @@ class BSParser ( Parser ):
 
     class ExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.bop = None # Token
+            self.bop = None  # Token
 
         def primary(self):
-            return self.getTypedRuleContext(BSParser.PrimaryContext,0)
+            return self.getTypedRuleContext(BSParser.PrimaryContext, 0)
 
-
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(BSParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(BSParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(BSParser.ExpressionContext, i)
 
         def MULTIPLY(self):
             return self.getToken(BSParser.MULTIPLY, 0)
@@ -1986,13 +1887,13 @@ class BSParser ( Parser ):
         def SUBTRACT(self):
             return self.getToken(BSParser.SUBTRACT, 0)
 
-        def LT(self, i:int=None):
+        def LT(self, i: int = None):
             if i is None:
                 return self.getTokens(BSParser.LT)
             else:
                 return self.getToken(BSParser.LT, i)
 
-        def GT(self, i:int=None):
+        def GT(self, i: int = None):
             if i is None:
                 return self.getTokens(BSParser.GT)
             else:
@@ -2025,30 +1926,28 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_expression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterExpression"):
                 listener.enterExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitExpression"):
                 listener.exitExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitExpression"):
                 return visitor.visitExpression(self)
             else:
                 return visitor.visitChildren(self)
 
-
-
-    def expression(self, _p:int=0):
+    def expression(self, _p: int = 0):
         _parentctx = self._ctx
         _parentState = self.state
         localctx = BSParser.ExpressionContext(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 44
         self.enterRecursionRule(localctx, 44, self.RULE_expression, _p)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 239
@@ -2056,15 +1955,15 @@ class BSParser ( Parser ):
             self._ctx.stop = self._input.LT(-1)
             self.state = 277
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,20,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 20, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
                     self.state = 275
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,19,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 19, self._ctx)
                     if la_ == 1:
                         localctx = BSParser.ExpressionContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
@@ -2075,7 +1974,9 @@ class BSParser ( Parser ):
                         self.state = 242
                         localctx.bop = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not(((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (BSParser.MULTIPLY - 64)) | (1 << (BSParser.DIVIDE - 64)) | (1 << (BSParser.MOD - 64)))) != 0)):
+                        if not (((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & (
+                                (1 << (BSParser.MULTIPLY - 64)) | (1 << (BSParser.DIVIDE - 64)) | (
+                                1 << (BSParser.MOD - 64)))) != 0)):
                             localctx.bop = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -2094,7 +1995,7 @@ class BSParser ( Parser ):
                         self.state = 245
                         localctx.bop = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not(_la==BSParser.ADDITION or _la==BSParser.SUBTRACT):
+                        if not (_la == BSParser.ADDITION or _la == BSParser.SUBTRACT):
                             localctx.bop = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -2112,7 +2013,7 @@ class BSParser ( Parser ):
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
                         self.state = 255
                         self._errHandler.sync(self)
-                        la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
+                        la_ = self._interp.adaptivePredict(self._input, 18, self._ctx)
                         if la_ == 1:
                             self.state = 248
                             self.match(BSParser.LT)
@@ -2136,7 +2037,6 @@ class BSParser ( Parser ):
                             self.match(BSParser.GT)
                             pass
 
-
                         self.state = 257
                         self.expression(6)
                         pass
@@ -2151,7 +2051,9 @@ class BSParser ( Parser ):
                         self.state = 259
                         localctx.bop = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BSParser.GT) | (1 << BSParser.LT) | (1 << BSParser.LTE) | (1 << BSParser.GTE))) != 0)):
+                        if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                (1 << BSParser.GT) | (1 << BSParser.LT) | (1 << BSParser.LTE) | (
+                                1 << BSParser.GTE))) != 0)):
                             localctx.bop = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -2170,7 +2072,7 @@ class BSParser ( Parser ):
                         self.state = 262
                         localctx.bop = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not(_la==BSParser.EQUALITY or _la==BSParser.NOTEQUAL):
+                        if not (_la == BSParser.EQUALITY or _la == BSParser.NOTEQUAL):
                             localctx.bop = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -2220,10 +2122,9 @@ class BSParser ( Parser ):
                         self.match(BSParser.RBRACKET)
                         pass
 
-             
                 self.state = 279
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,20,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 20, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2235,7 +2136,7 @@ class BSParser ( Parser ):
 
     class ParExpressionContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2243,8 +2144,7 @@ class BSParser ( Parser ):
             return self.getToken(BSParser.LPAREN, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(BSParser.ExpressionContext,0)
-
+            return self.getTypedRuleContext(BSParser.ExpressionContext, 0)
 
         def RPAREN(self):
             return self.getToken(BSParser.RPAREN, 0)
@@ -2252,22 +2152,19 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_parExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterParExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterParExpression"):
                 listener.enterParExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitParExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitParExpression"):
                 listener.exitParExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitParExpression" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitParExpression"):
                 return visitor.visitParExpression(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def parExpression(self):
 
@@ -2291,7 +2188,7 @@ class BSParser ( Parser ):
 
     class MethodCallContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2305,34 +2202,30 @@ class BSParser ( Parser ):
             return self.getToken(BSParser.RPAREN, 0)
 
         def expressionList(self):
-            return self.getTypedRuleContext(BSParser.ExpressionListContext,0)
-
+            return self.getTypedRuleContext(BSParser.ExpressionListContext, 0)
 
         def getRuleIndex(self):
             return BSParser.RULE_methodCall
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterMethodCall" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterMethodCall"):
                 listener.enterMethodCall(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitMethodCall" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitMethodCall"):
                 listener.exitMethodCall(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMethodCall" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitMethodCall"):
                 return visitor.visitMethodCall(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def methodCall(self):
 
         localctx = BSParser.MethodCallContext(self, self._ctx, self.state)
         self.enterRule(localctx, 48, self.RULE_methodCall)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 284
@@ -2342,10 +2235,11 @@ class BSParser ( Parser ):
             self.state = 287
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BSParser.IDENTIFIER) | (1 << BSParser.STRING_LITERAL) | (1 << BSParser.BOOL_LITERAL) | (1 << BSParser.FLOAT_LITERAL) | (1 << BSParser.INTEGER_LITERAL) | (1 << BSParser.LPAREN))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                    (1 << BSParser.IDENTIFIER) | (1 << BSParser.STRING_LITERAL) | (1 << BSParser.BOOL_LITERAL) | (
+                    1 << BSParser.FLOAT_LITERAL) | (1 << BSParser.INTEGER_LITERAL) | (1 << BSParser.LPAREN))) != 0):
                 self.state = 286
                 self.expressionList()
-
 
             self.state = 289
             self.match(BSParser.RPAREN)
@@ -2359,18 +2253,17 @@ class BSParser ( Parser ):
 
     class ExpressionListContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(BSParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(BSParser.ExpressionContext,i)
+                return self.getTypedRuleContext(BSParser.ExpressionContext, i)
 
-
-        def COMMA(self, i:int=None):
+        def COMMA(self, i: int = None):
             if i is None:
                 return self.getTokens(BSParser.COMMA)
             else:
@@ -2379,28 +2272,25 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_expressionList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExpressionList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterExpressionList"):
                 listener.enterExpressionList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExpressionList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitExpressionList"):
                 listener.exitExpressionList(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpressionList" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitExpressionList"):
                 return visitor.visitExpressionList(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def expressionList(self):
 
         localctx = BSParser.ExpressionListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 50, self.RULE_expressionList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 291
@@ -2408,7 +2298,7 @@ class BSParser ( Parser ):
             self.state = 296
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==BSParser.COMMA:
+            while _la == BSParser.COMMA:
                 self.state = 292
                 self.match(BSParser.COMMA)
                 self.state = 293
@@ -2427,33 +2317,29 @@ class BSParser ( Parser ):
 
     class TypeTypeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def primitiveType(self):
-            return self.getTypedRuleContext(BSParser.PrimitiveTypeContext,0)
-
+            return self.getTypedRuleContext(BSParser.PrimitiveTypeContext, 0)
 
         def getRuleIndex(self):
             return BSParser.RULE_typeType
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTypeType" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTypeType"):
                 listener.enterTypeType(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTypeType" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTypeType"):
                 listener.exitTypeType(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTypeType" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitTypeType"):
                 return visitor.visitTypeType(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def typeType(self):
 
@@ -2473,7 +2359,7 @@ class BSParser ( Parser ):
 
     class UnionTypeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2481,8 +2367,7 @@ class BSParser ( Parser ):
             return self.getToken(BSParser.LBRACKET, 0)
 
         def typesList(self):
-            return self.getTypedRuleContext(BSParser.TypesListContext,0)
-
+            return self.getTypedRuleContext(BSParser.TypesListContext, 0)
 
         def RBRACKET(self):
             return self.getToken(BSParser.RBRACKET, 0)
@@ -2490,22 +2375,19 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_unionType
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterUnionType" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterUnionType"):
                 listener.enterUnionType(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitUnionType" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitUnionType"):
                 listener.exitUnionType(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUnionType" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitUnionType"):
                 return visitor.visitUnionType(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def unionType(self):
 
@@ -2529,18 +2411,17 @@ class BSParser ( Parser ):
 
     class TypesListContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def typeType(self, i:int=None):
+        def typeType(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(BSParser.TypeTypeContext)
             else:
-                return self.getTypedRuleContext(BSParser.TypeTypeContext,i)
+                return self.getTypedRuleContext(BSParser.TypeTypeContext, i)
 
-
-        def SEMICOLON(self, i:int=None):
+        def SEMICOLON(self, i: int = None):
             if i is None:
                 return self.getTokens(BSParser.SEMICOLON)
             else:
@@ -2549,28 +2430,25 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_typesList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTypesList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTypesList"):
                 listener.enterTypesList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTypesList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTypesList"):
                 listener.exitTypesList(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTypesList" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitTypesList"):
                 return visitor.visitTypesList(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def typesList(self):
 
         localctx = BSParser.TypesListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 56, self.RULE_typesList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 305
@@ -2578,7 +2456,7 @@ class BSParser ( Parser ):
             self.state = 310
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==BSParser.SEMICOLON:
+            while _la == BSParser.SEMICOLON:
                 self.state = 306
                 self.match(BSParser.SEMICOLON)
                 self.state = 307
@@ -2597,7 +2475,7 @@ class BSParser ( Parser ):
 
     class VariableDeclaratorIdContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2613,28 +2491,25 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_variableDeclaratorId
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterVariableDeclaratorId" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterVariableDeclaratorId"):
                 listener.enterVariableDeclaratorId(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitVariableDeclaratorId" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitVariableDeclaratorId"):
                 listener.exitVariableDeclaratorId(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVariableDeclaratorId" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitVariableDeclaratorId"):
                 return visitor.visitVariableDeclaratorId(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def variableDeclaratorId(self):
 
         localctx = BSParser.VariableDeclaratorIdContext(self, self._ctx, self.state)
         self.enterRule(localctx, 58, self.RULE_variableDeclaratorId)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 313
@@ -2642,7 +2517,7 @@ class BSParser ( Parser ):
             self.state = 316
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==BSParser.LBRACKET:
+            if _la == BSParser.LBRACKET:
                 self.state = 314
                 self.match(BSParser.LBRACKET)
                 self.state = 315
@@ -2659,40 +2534,35 @@ class BSParser ( Parser ):
 
     class VariableDeclaratorContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def variableDeclaratorId(self):
-            return self.getTypedRuleContext(BSParser.VariableDeclaratorIdContext,0)
-
+            return self.getTypedRuleContext(BSParser.VariableDeclaratorIdContext, 0)
 
         def ASSIGN(self):
             return self.getToken(BSParser.ASSIGN, 0)
 
         def variableInitializer(self):
-            return self.getTypedRuleContext(BSParser.VariableInitializerContext,0)
-
+            return self.getTypedRuleContext(BSParser.VariableInitializerContext, 0)
 
         def getRuleIndex(self):
             return BSParser.RULE_variableDeclarator
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterVariableDeclarator" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterVariableDeclarator"):
                 listener.enterVariableDeclarator(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitVariableDeclarator" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitVariableDeclarator"):
                 listener.exitVariableDeclarator(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVariableDeclarator" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitVariableDeclarator"):
                 return visitor.visitVariableDeclarator(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def variableDeclarator(self):
 
@@ -2716,37 +2586,32 @@ class BSParser ( Parser ):
 
     class VariableInitializerContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def arrayInitializer(self):
-            return self.getTypedRuleContext(BSParser.ArrayInitializerContext,0)
-
+            return self.getTypedRuleContext(BSParser.ArrayInitializerContext, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(BSParser.ExpressionContext,0)
-
+            return self.getTypedRuleContext(BSParser.ExpressionContext, 0)
 
         def getRuleIndex(self):
             return BSParser.RULE_variableInitializer
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterVariableInitializer" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterVariableInitializer"):
                 listener.enterVariableInitializer(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitVariableInitializer" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitVariableInitializer"):
                 listener.exitVariableInitializer(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVariableInitializer" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitVariableInitializer"):
                 return visitor.visitVariableInitializer(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def variableInitializer(self):
 
@@ -2755,7 +2620,7 @@ class BSParser ( Parser ):
         try:
             self.state = 324
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,25,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 25, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 322
@@ -2779,7 +2644,7 @@ class BSParser ( Parser ):
 
     class ArrayInitializerContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2798,22 +2663,19 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_arrayInitializer
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterArrayInitializer" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterArrayInitializer"):
                 listener.enterArrayInitializer(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitArrayInitializer" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitArrayInitializer"):
                 listener.exitArrayInitializer(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitArrayInitializer" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitArrayInitializer"):
                 return visitor.visitArrayInitializer(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def arrayInitializer(self):
 
@@ -2839,7 +2701,7 @@ class BSParser ( Parser ):
 
     class LocalVariableDeclarationContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2850,59 +2712,51 @@ class BSParser ( Parser ):
             return self.getToken(BSParser.ASSIGN, 0)
 
         def assignmentOperations(self):
-            return self.getTypedRuleContext(BSParser.AssignmentOperationsContext,0)
-
+            return self.getTypedRuleContext(BSParser.AssignmentOperationsContext, 0)
 
         def unionType(self):
-            return self.getTypedRuleContext(BSParser.UnionTypeContext,0)
-
+            return self.getTypedRuleContext(BSParser.UnionTypeContext, 0)
 
         def arrayInitializer(self):
-            return self.getTypedRuleContext(BSParser.ArrayInitializerContext,0)
-
+            return self.getTypedRuleContext(BSParser.ArrayInitializerContext, 0)
 
         def split(self):
-            return self.getTypedRuleContext(BSParser.SplitContext,0)
-
+            return self.getTypedRuleContext(BSParser.SplitContext, 0)
 
         def getRuleIndex(self):
             return BSParser.RULE_localVariableDeclaration
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLocalVariableDeclaration" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterLocalVariableDeclaration"):
                 listener.enterLocalVariableDeclaration(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLocalVariableDeclaration" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitLocalVariableDeclaration"):
                 listener.exitLocalVariableDeclaration(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLocalVariableDeclaration" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitLocalVariableDeclaration"):
                 return visitor.visitLocalVariableDeclaration(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def localVariableDeclaration(self):
 
         localctx = BSParser.LocalVariableDeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 66, self.RULE_localVariableDeclaration)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 343
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,28,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 28, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 332
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==BSParser.LBRACKET:
+                if _la == BSParser.LBRACKET:
                     self.state = 331
                     self.unionType()
-
 
                 self.state = 334
                 self.match(BSParser.IDENTIFIER)
@@ -2945,7 +2799,7 @@ class BSParser ( Parser ):
 
     class PrimaryContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -2953,15 +2807,13 @@ class BSParser ( Parser ):
             return self.getToken(BSParser.LPAREN, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(BSParser.ExpressionContext,0)
-
+            return self.getTypedRuleContext(BSParser.ExpressionContext, 0)
 
         def RPAREN(self):
             return self.getToken(BSParser.RPAREN, 0)
 
         def literal(self):
-            return self.getTypedRuleContext(BSParser.LiteralContext,0)
-
+            return self.getTypedRuleContext(BSParser.LiteralContext, 0)
 
         def IDENTIFIER(self):
             return self.getToken(BSParser.IDENTIFIER, 0)
@@ -2969,22 +2821,19 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_primary
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPrimary" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPrimary"):
                 listener.enterPrimary(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPrimary" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPrimary"):
                 listener.exitPrimary(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPrimary" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitPrimary"):
                 return visitor.visitPrimary(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def primary(self):
 
@@ -3003,7 +2852,8 @@ class BSParser ( Parser ):
                 self.state = 347
                 self.match(BSParser.RPAREN)
                 pass
-            elif token in [BSParser.STRING_LITERAL, BSParser.BOOL_LITERAL, BSParser.FLOAT_LITERAL, BSParser.INTEGER_LITERAL]:
+            elif token in [BSParser.STRING_LITERAL, BSParser.BOOL_LITERAL, BSParser.FLOAT_LITERAL,
+                           BSParser.INTEGER_LITERAL]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 349
                 self.literal()
@@ -3026,7 +2876,7 @@ class BSParser ( Parser ):
 
     class LiteralContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -3045,33 +2895,32 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_literal
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterLiteral"):
                 listener.enterLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitLiteral"):
                 listener.exitLiteral(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLiteral" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitLiteral"):
                 return visitor.visitLiteral(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def literal(self):
 
         localctx = BSParser.LiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 70, self.RULE_literal)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 353
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BSParser.STRING_LITERAL) | (1 << BSParser.BOOL_LITERAL) | (1 << BSParser.FLOAT_LITERAL) | (1 << BSParser.INTEGER_LITERAL))) != 0)):
+            if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                    (1 << BSParser.STRING_LITERAL) | (1 << BSParser.BOOL_LITERAL) | (1 << BSParser.FLOAT_LITERAL) | (
+                    1 << BSParser.INTEGER_LITERAL))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -3086,7 +2935,7 @@ class BSParser ( Parser ):
 
     class PrimitiveTypeContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -3105,33 +2954,31 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_primitiveType
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPrimitiveType" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPrimitiveType"):
                 listener.enterPrimitiveType(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPrimitiveType" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPrimitiveType"):
                 listener.exitPrimitiveType(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPrimitiveType" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitPrimitiveType"):
                 return visitor.visitPrimitiveType(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def primitiveType(self):
 
         localctx = BSParser.PrimitiveTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 72, self.RULE_primitiveType)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 355
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BSParser.NAT) | (1 << BSParser.REAL) | (1 << BSParser.MAT) | (1 << BSParser.BOOL))) != 0)):
+            if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                    (1 << BSParser.NAT) | (1 << BSParser.REAL) | (1 << BSParser.MAT) | (1 << BSParser.BOOL))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -3146,7 +2993,7 @@ class BSParser ( Parser ):
 
     class VolumeIdentifierContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -3162,39 +3009,35 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_volumeIdentifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterVolumeIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterVolumeIdentifier"):
                 listener.enterVolumeIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitVolumeIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitVolumeIdentifier"):
                 listener.exitVolumeIdentifier(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVolumeIdentifier" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitVolumeIdentifier"):
                 return visitor.visitVolumeIdentifier(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def volumeIdentifier(self):
 
         localctx = BSParser.VolumeIdentifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 74, self.RULE_volumeIdentifier)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 359
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==BSParser.VOLUME_NUMBER:
+            if _la == BSParser.VOLUME_NUMBER:
                 self.state = 357
                 self.match(BSParser.VOLUME_NUMBER)
                 self.state = 358
                 self.match(BSParser.OF)
-
 
             self.state = 361
             self.match(BSParser.IDENTIFIER)
@@ -3208,7 +3051,7 @@ class BSParser ( Parser ):
 
     class TimeIdentifierContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -3218,22 +3061,19 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_timeIdentifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTimeIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTimeIdentifier"):
                 listener.enterTimeIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTimeIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTimeIdentifier"):
                 listener.exitTimeIdentifier(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTimeIdentifier" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitTimeIdentifier"):
                 return visitor.visitTimeIdentifier(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def timeIdentifier(self):
 
@@ -3253,7 +3093,7 @@ class BSParser ( Parser ):
 
     class TemperatureIdentifierContext(ParserRuleContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(self, parser, parent: ParserRuleContext = None, invokingState: int = -1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -3263,22 +3103,19 @@ class BSParser ( Parser ):
         def getRuleIndex(self):
             return BSParser.RULE_temperatureIdentifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTemperatureIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTemperatureIdentifier"):
                 listener.enterTemperatureIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTemperatureIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTemperatureIdentifier"):
                 listener.exitTemperatureIdentifier(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTemperatureIdentifier" ):
+        def accept(self, visitor: ParseTreeVisitor):
+            if hasattr(visitor, "visitTemperatureIdentifier"):
                 return visitor.visitTemperatureIdentifier(self)
             else:
                 return visitor.visitChildren(self)
-
-
-
 
     def temperatureIdentifier(self):
 
@@ -3296,9 +3133,7 @@ class BSParser ( Parser ):
             self.exitRule()
         return localctx
 
-
-
-    def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
+    def sempred(self, localctx: RuleContext, ruleIndex: int, predIndex: int):
         if self._predicates == None:
             self._predicates = dict()
         self._predicates[22] = self.expression_sempred
@@ -3308,39 +3143,27 @@ class BSParser ( Parser ):
         else:
             return pred(localctx, predIndex)
 
-    def expression_sempred(self, localctx:ExpressionContext, predIndex:int):
-            if predIndex == 0:
-                return self.precpred(self._ctx, 7)
-         
+    def expression_sempred(self, localctx: ExpressionContext, predIndex: int):
+        if predIndex == 0:
+            return self.precpred(self._ctx, 7)
 
-            if predIndex == 1:
-                return self.precpred(self._ctx, 6)
-         
+        if predIndex == 1:
+            return self.precpred(self._ctx, 6)
 
-            if predIndex == 2:
-                return self.precpred(self._ctx, 5)
-         
+        if predIndex == 2:
+            return self.precpred(self._ctx, 5)
 
-            if predIndex == 3:
-                return self.precpred(self._ctx, 4)
-         
+        if predIndex == 3:
+            return self.precpred(self._ctx, 4)
 
-            if predIndex == 4:
-                return self.precpred(self._ctx, 3)
-         
+        if predIndex == 4:
+            return self.precpred(self._ctx, 3)
 
-            if predIndex == 5:
-                return self.precpred(self._ctx, 2)
-         
+        if predIndex == 5:
+            return self.precpred(self._ctx, 2)
 
-            if predIndex == 6:
-                return self.precpred(self._ctx, 1)
-         
+        if predIndex == 6:
+            return self.precpred(self._ctx, 1)
 
-            if predIndex == 7:
-                return self.precpred(self._ctx, 8)
-         
-
-
-
-
+        if predIndex == 7:
+            return self.precpred(self._ctx, 8)

@@ -1,213 +1,175 @@
 # Generated from /Users/jason/Projects/java/BSPrototype/src/main/resources/BSParser.g4 by ANTLR 4.7
 from antlr4 import *
+
 if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
 else:
     from BSParser import BSParser
+
 
 # This class defines a complete generic visitor for a parse tree produced by BSParser.
 
 class BSParserVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by BSParser#program.
-    def visitProgram(self, ctx:BSParser.ProgramContext):
+    def visitProgram(self, ctx: BSParser.ProgramContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#moduleDeclaration.
-    def visitModuleDeclaration(self, ctx:BSParser.ModuleDeclarationContext):
+    def visitModuleDeclaration(self, ctx: BSParser.ModuleDeclarationContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#manifestDeclaration.
-    def visitManifestDeclaration(self, ctx:BSParser.ManifestDeclarationContext):
+    def visitManifestDeclaration(self, ctx: BSParser.ManifestDeclarationContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#stationaryDeclaration.
-    def visitStationaryDeclaration(self, ctx:BSParser.StationaryDeclarationContext):
+    def visitStationaryDeclaration(self, ctx: BSParser.StationaryDeclarationContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#functionDeclaration.
-    def visitFunctionDeclaration(self, ctx:BSParser.FunctionDeclarationContext):
+    def visitFunctionDeclaration(self, ctx: BSParser.FunctionDeclarationContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#formalParameters.
-    def visitFormalParameters(self, ctx:BSParser.FormalParametersContext):
+    def visitFormalParameters(self, ctx: BSParser.FormalParametersContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#formalParameterList.
-    def visitFormalParameterList(self, ctx:BSParser.FormalParameterListContext):
+    def visitFormalParameterList(self, ctx: BSParser.FormalParameterListContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#formalParameter.
-    def visitFormalParameter(self, ctx:BSParser.FormalParameterContext):
+    def visitFormalParameter(self, ctx: BSParser.FormalParameterContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#functionTyping.
-    def visitFunctionTyping(self, ctx:BSParser.FunctionTypingContext):
+    def visitFunctionTyping(self, ctx: BSParser.FunctionTypingContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#returnStatement.
-    def visitReturnStatement(self, ctx:BSParser.ReturnStatementContext):
+    def visitReturnStatement(self, ctx: BSParser.ReturnStatementContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#blockStatement.
-    def visitBlockStatement(self, ctx:BSParser.BlockStatementContext):
+    def visitBlockStatement(self, ctx: BSParser.BlockStatementContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#assignmentOperations.
-    def visitAssignmentOperations(self, ctx:BSParser.AssignmentOperationsContext):
+    def visitAssignmentOperations(self, ctx: BSParser.AssignmentOperationsContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#statements.
-    def visitStatements(self, ctx:BSParser.StatementsContext):
+    def visitStatements(self, ctx: BSParser.StatementsContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#ifStatement.
-    def visitIfStatement(self, ctx:BSParser.IfStatementContext):
+    def visitIfStatement(self, ctx: BSParser.IfStatementContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#whileStatement.
-    def visitWhileStatement(self, ctx:BSParser.WhileStatementContext):
+    def visitWhileStatement(self, ctx: BSParser.WhileStatementContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#repeat.
-    def visitRepeat(self, ctx:BSParser.RepeatContext):
+    def visitRepeat(self, ctx: BSParser.RepeatContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#mix.
-    def visitMix(self, ctx:BSParser.MixContext):
+    def visitMix(self, ctx: BSParser.MixContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#detect.
-    def visitDetect(self, ctx:BSParser.DetectContext):
+    def visitDetect(self, ctx: BSParser.DetectContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#heat.
-    def visitHeat(self, ctx:BSParser.HeatContext):
+    def visitHeat(self, ctx: BSParser.HeatContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#split.
-    def visitSplit(self, ctx:BSParser.SplitContext):
+    def visitSplit(self, ctx: BSParser.SplitContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#dispense.
-    def visitDispense(self, ctx:BSParser.DispenseContext):
+    def visitDispense(self, ctx: BSParser.DispenseContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#dispose.
-    def visitDispose(self, ctx:BSParser.DisposeContext):
+    def visitDispose(self, ctx: BSParser.DisposeContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#expression.
-    def visitExpression(self, ctx:BSParser.ExpressionContext):
+    def visitExpression(self, ctx: BSParser.ExpressionContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#parExpression.
-    def visitParExpression(self, ctx:BSParser.ParExpressionContext):
+    def visitParExpression(self, ctx: BSParser.ParExpressionContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#methodCall.
-    def visitMethodCall(self, ctx:BSParser.MethodCallContext):
+    def visitMethodCall(self, ctx: BSParser.MethodCallContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#expressionList.
-    def visitExpressionList(self, ctx:BSParser.ExpressionListContext):
+    def visitExpressionList(self, ctx: BSParser.ExpressionListContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#typeType.
-    def visitTypeType(self, ctx:BSParser.TypeTypeContext):
+    def visitTypeType(self, ctx: BSParser.TypeTypeContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#unionType.
-    def visitUnionType(self, ctx:BSParser.UnionTypeContext):
+    def visitUnionType(self, ctx: BSParser.UnionTypeContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#typesList.
-    def visitTypesList(self, ctx:BSParser.TypesListContext):
+    def visitTypesList(self, ctx: BSParser.TypesListContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#variableDeclaratorId.
-    def visitVariableDeclaratorId(self, ctx:BSParser.VariableDeclaratorIdContext):
+    def visitVariableDeclaratorId(self, ctx: BSParser.VariableDeclaratorIdContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#variableDeclarator.
-    def visitVariableDeclarator(self, ctx:BSParser.VariableDeclaratorContext):
+    def visitVariableDeclarator(self, ctx: BSParser.VariableDeclaratorContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#variableInitializer.
-    def visitVariableInitializer(self, ctx:BSParser.VariableInitializerContext):
+    def visitVariableInitializer(self, ctx: BSParser.VariableInitializerContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#arrayInitializer.
-    def visitArrayInitializer(self, ctx:BSParser.ArrayInitializerContext):
+    def visitArrayInitializer(self, ctx: BSParser.ArrayInitializerContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#localVariableDeclaration.
-    def visitLocalVariableDeclaration(self, ctx:BSParser.LocalVariableDeclarationContext):
+    def visitLocalVariableDeclaration(self, ctx: BSParser.LocalVariableDeclarationContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#primary.
-    def visitPrimary(self, ctx:BSParser.PrimaryContext):
+    def visitPrimary(self, ctx: BSParser.PrimaryContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#literal.
-    def visitLiteral(self, ctx:BSParser.LiteralContext):
+    def visitLiteral(self, ctx: BSParser.LiteralContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#primitiveType.
-    def visitPrimitiveType(self, ctx:BSParser.PrimitiveTypeContext):
+    def visitPrimitiveType(self, ctx: BSParser.PrimitiveTypeContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#volumeIdentifier.
-    def visitVolumeIdentifier(self, ctx:BSParser.VolumeIdentifierContext):
+    def visitVolumeIdentifier(self, ctx: BSParser.VolumeIdentifierContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#timeIdentifier.
-    def visitTimeIdentifier(self, ctx:BSParser.TimeIdentifierContext):
+    def visitTimeIdentifier(self, ctx: BSParser.TimeIdentifierContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BSParser#temperatureIdentifier.
-    def visitTemperatureIdentifier(self, ctx:BSParser.TemperatureIdentifierContext):
+    def visitTemperatureIdentifier(self, ctx: BSParser.TemperatureIdentifierContext):
         return self.visitChildren(ctx)
-
 
 
 del BSParser

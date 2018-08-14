@@ -1,8 +1,9 @@
 # Generated from /Users/jason/Projects/java/BSPrototype/src/main/resources/BSLexer.g4 by ANTLR 4.7
-from antlr4 import *
-from io import StringIO
-from typing.io import TextIO
 import sys
+from io import StringIO
+
+from antlr4 import *
+from typing.io import TextIO
 
 
 def serializedATN():
@@ -314,10 +315,9 @@ def serializedATN():
 
 
 class BSLexer(Lexer):
-
     atn = ATNDeserializer().deserialize(serializedATN())
 
-    decisionsToDFA = [ DFA(ds, i) for i, ds in enumerate(atn.decisionToState) ]
+    decisionsToDFA = [DFA(ds, i) for i, ds in enumerate(atn.decisionToState)]
 
     IF = 1
     ELSE = 2
@@ -414,68 +414,66 @@ class BSLexer(Lexer):
     COMMENT = 93
     LINE_COMMENT = 94
 
-    channelNames = [ u"DEFAULT_TOKEN_CHANNEL", u"HIDDEN" ]
+    channelNames = [u"DEFAULT_TOKEN_CHANNEL", u"HIDDEN"]
 
-    modeNames = [ "DEFAULT_MODE" ]
+    modeNames = ["DEFAULT_MODE"]
 
-    literalNames = [ "<INVALID>",
-            "'if'", "'else'", "'repeat'", "'while'", "'function'", "'return'", 
-            "'manifest'", "'module'", "'stationary'", "'functions'", "'instructions'", 
-            "'detect'", "'mix'", "'split'", "'heat'", "'drain'", "'dispense'", 
-            "'dispose'", "'at'", "'with'", "'for'", "'into'", "'times'", 
-            "'on'", "'of'", "'nat'", "'real'", "'mat'", "'bool'", "'('", 
-            "')'", "'{'", "'}'", "'['", "']'", "';'", "','", "'.'", "'='", 
-            "'>'", "'<'", "'!'", "'~'", "'?'", "':'", "'=='", "'<='", "'>='", 
-            "'!='", "'&&'", "'||'", "'++'", "'--'", "'+'", "'-'", "'*'", 
-            "'/'", "'&'", "'|'", "'^'", "'%'", "'_'", "'ns'", "'us'", "'ms'", 
-            "'cs'", "'ds'", "'s'", "'h'", "'d'", "'w'", "'mo'", "'y'", "'nL'", 
-            "'uL'", "'mL'", "'cL'", "'dL'", "'L'", "'daL'", "'c'", "'f'", 
-            "'k'" ]
+    literalNames = ["<INVALID>",
+                    "'if'", "'else'", "'repeat'", "'while'", "'function'", "'return'",
+                    "'manifest'", "'module'", "'stationary'", "'functions'", "'instructions'",
+                    "'detect'", "'mix'", "'split'", "'heat'", "'drain'", "'dispense'",
+                    "'dispose'", "'at'", "'with'", "'for'", "'into'", "'times'",
+                    "'on'", "'of'", "'nat'", "'real'", "'mat'", "'bool'", "'('",
+                    "')'", "'{'", "'}'", "'['", "']'", "';'", "','", "'.'", "'='",
+                    "'>'", "'<'", "'!'", "'~'", "'?'", "':'", "'=='", "'<='", "'>='",
+                    "'!='", "'&&'", "'||'", "'++'", "'--'", "'+'", "'-'", "'*'",
+                    "'/'", "'&'", "'|'", "'^'", "'%'", "'_'", "'ns'", "'us'", "'ms'",
+                    "'cs'", "'ds'", "'s'", "'h'", "'d'", "'w'", "'mo'", "'y'", "'nL'",
+                    "'uL'", "'mL'", "'cL'", "'dL'", "'L'", "'daL'", "'c'", "'f'",
+                    "'k'"]
 
-    symbolicNames = [ "<INVALID>",
-            "IF", "ELSE", "REPEAT", "WHILE", "FUNCTION", "RETURN", "MANIFEST", 
-            "MODULE", "STATIONARY", "FUNCTIONS", "INSTRUCTIONS", "DETECT", 
-            "MIX", "SPLIT", "HEAT", "DRAIN", "DISPENSE", "DISPOSE", "AT", 
-            "WITH", "FOR", "INTO", "TIMES", "ON", "OF", "NAT", "REAL", "MAT", 
-            "BOOL", "IDENTIFIER", "STRING_LITERAL", "BOOL_LITERAL", "FLOAT_LITERAL", 
-            "INTEGER_LITERAL", "TIME_NUMBER", "VOLUME_NUMBER", "TEMP_NUMBER", 
-            "LPAREN", "RPAREN", "LBRACE", "RBRACE", "LBRACKET", "RBRACKET", 
-            "SEMICOLON", "COMMA", "DOT", "ASSIGN", "GT", "LT", "BANG", "TILDE", 
-            "QUESTION", "COLON", "EQUALITY", "LTE", "GTE", "NOTEQUAL", "AND", 
-            "OR", "INC", "DEC", "ADDITION", "SUBTRACT", "MULTIPLY", "DIVIDE", 
-            "BITAND", "BITOR", "CARET", "MOD", "UNDERSCORE", "NANOSECOND", 
-            "MICROSECOND", "MILLISECOND", "CENTISECOND", "DECISECOND", "SECOND", 
-            "HOUR", "DAY", "WEEK", "MONTH", "YEAR", "NANOLITRE", "MICROLITRE", 
-            "MILLILITRE", "CENTILITRE", "DECILITRE", "LITRE", "DECALITRE", 
-            "CELSIUS", "FAHRENHEIT", "KELVIN", "WS", "COMMENT", "LINE_COMMENT" ]
+    symbolicNames = ["<INVALID>",
+                     "IF", "ELSE", "REPEAT", "WHILE", "FUNCTION", "RETURN", "MANIFEST",
+                     "MODULE", "STATIONARY", "FUNCTIONS", "INSTRUCTIONS", "DETECT",
+                     "MIX", "SPLIT", "HEAT", "DRAIN", "DISPENSE", "DISPOSE", "AT",
+                     "WITH", "FOR", "INTO", "TIMES", "ON", "OF", "NAT", "REAL", "MAT",
+                     "BOOL", "IDENTIFIER", "STRING_LITERAL", "BOOL_LITERAL", "FLOAT_LITERAL",
+                     "INTEGER_LITERAL", "TIME_NUMBER", "VOLUME_NUMBER", "TEMP_NUMBER",
+                     "LPAREN", "RPAREN", "LBRACE", "RBRACE", "LBRACKET", "RBRACKET",
+                     "SEMICOLON", "COMMA", "DOT", "ASSIGN", "GT", "LT", "BANG", "TILDE",
+                     "QUESTION", "COLON", "EQUALITY", "LTE", "GTE", "NOTEQUAL", "AND",
+                     "OR", "INC", "DEC", "ADDITION", "SUBTRACT", "MULTIPLY", "DIVIDE",
+                     "BITAND", "BITOR", "CARET", "MOD", "UNDERSCORE", "NANOSECOND",
+                     "MICROSECOND", "MILLISECOND", "CENTISECOND", "DECISECOND", "SECOND",
+                     "HOUR", "DAY", "WEEK", "MONTH", "YEAR", "NANOLITRE", "MICROLITRE",
+                     "MILLILITRE", "CENTILITRE", "DECILITRE", "LITRE", "DECALITRE",
+                     "CELSIUS", "FAHRENHEIT", "KELVIN", "WS", "COMMENT", "LINE_COMMENT"]
 
-    ruleNames = [ "IF", "ELSE", "REPEAT", "WHILE", "FUNCTION", "RETURN", 
-                  "MANIFEST", "MODULE", "STATIONARY", "FUNCTIONS", "INSTRUCTIONS", 
-                  "DETECT", "MIX", "SPLIT", "HEAT", "DRAIN", "DISPENSE", 
-                  "DISPOSE", "AT", "WITH", "FOR", "INTO", "TIMES", "ON", 
-                  "OF", "NAT", "REAL", "MAT", "BOOL", "IDENTIFIER", "STRING_LITERAL", 
-                  "BOOL_LITERAL", "FLOAT_LITERAL", "INTEGER_LITERAL", "TIME_NUMBER", 
-                  "VOLUME_NUMBER", "TEMP_NUMBER", "LPAREN", "RPAREN", "LBRACE", 
-                  "RBRACE", "LBRACKET", "RBRACKET", "SEMICOLON", "COMMA", 
-                  "DOT", "ASSIGN", "GT", "LT", "BANG", "TILDE", "QUESTION", 
-                  "COLON", "EQUALITY", "LTE", "GTE", "NOTEQUAL", "AND", 
-                  "OR", "INC", "DEC", "ADDITION", "SUBTRACT", "MULTIPLY", 
-                  "DIVIDE", "BITAND", "BITOR", "CARET", "MOD", "UNDERSCORE", 
-                  "NANOSECOND", "MICROSECOND", "MILLISECOND", "CENTISECOND", 
-                  "DECISECOND", "SECOND", "HOUR", "DAY", "WEEK", "MONTH", 
-                  "YEAR", "NANOLITRE", "MICROLITRE", "MILLILITRE", "CENTILITRE", 
-                  "DECILITRE", "LITRE", "DECALITRE", "CELSIUS", "FAHRENHEIT", 
-                  "KELVIN", "WS", "COMMENT", "LINE_COMMENT", "TimeUnits", 
-                  "VolumeUnits", "TempUnits", "Digits", "LetterOrDigit", 
-                  "Letter", "EscapeSequence", "SPACES", "NEWLINE" ]
+    ruleNames = ["IF", "ELSE", "REPEAT", "WHILE", "FUNCTION", "RETURN",
+                 "MANIFEST", "MODULE", "STATIONARY", "FUNCTIONS", "INSTRUCTIONS",
+                 "DETECT", "MIX", "SPLIT", "HEAT", "DRAIN", "DISPENSE",
+                 "DISPOSE", "AT", "WITH", "FOR", "INTO", "TIMES", "ON",
+                 "OF", "NAT", "REAL", "MAT", "BOOL", "IDENTIFIER", "STRING_LITERAL",
+                 "BOOL_LITERAL", "FLOAT_LITERAL", "INTEGER_LITERAL", "TIME_NUMBER",
+                 "VOLUME_NUMBER", "TEMP_NUMBER", "LPAREN", "RPAREN", "LBRACE",
+                 "RBRACE", "LBRACKET", "RBRACKET", "SEMICOLON", "COMMA",
+                 "DOT", "ASSIGN", "GT", "LT", "BANG", "TILDE", "QUESTION",
+                 "COLON", "EQUALITY", "LTE", "GTE", "NOTEQUAL", "AND",
+                 "OR", "INC", "DEC", "ADDITION", "SUBTRACT", "MULTIPLY",
+                 "DIVIDE", "BITAND", "BITOR", "CARET", "MOD", "UNDERSCORE",
+                 "NANOSECOND", "MICROSECOND", "MILLISECOND", "CENTISECOND",
+                 "DECISECOND", "SECOND", "HOUR", "DAY", "WEEK", "MONTH",
+                 "YEAR", "NANOLITRE", "MICROLITRE", "MILLILITRE", "CENTILITRE",
+                 "DECILITRE", "LITRE", "DECALITRE", "CELSIUS", "FAHRENHEIT",
+                 "KELVIN", "WS", "COMMENT", "LINE_COMMENT", "TimeUnits",
+                 "VolumeUnits", "TempUnits", "Digits", "LetterOrDigit",
+                 "Letter", "EscapeSequence", "SPACES", "NEWLINE"]
 
     grammarFileName = "BSLexer.g4"
 
-    def __init__(self, input=None, output:TextIO = sys.stdout):
+    def __init__(self, input=None, output: TextIO = sys.stdout):
         super().__init__(input, output)
         self.checkVersion("4.7")
         self._interp = LexerATNSimulator(self, self.atn, self.decisionsToDFA, PredictionContextCache())
         self._actions = None
         self._predicates = None
-
-
