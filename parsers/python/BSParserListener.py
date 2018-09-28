@@ -1,10 +1,10 @@
-# Generated from /Users/jason/Projects/java/BSPrototype/src/main/resources/BSParser.g4 by ANTLR 4.7
+# Generated from bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
 else:
     from BSParser import BSParser
-/* parser/listener/visitor header section */
+# parser/listener/visitor header section
 
 # This class defines a complete listener for a parse tree produced by BSParser.
 class BSParserListener(ParseTreeListener):
@@ -267,33 +267,6 @@ class BSParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by BSParser#typesList.
     def exitTypesList(self, ctx:BSParser.TypesListContext):
-        pass
-
-
-    # Enter a parse tree produced by BSParser#variableDeclaratorId.
-    def enterVariableDeclaratorId(self, ctx:BSParser.VariableDeclaratorIdContext):
-        pass
-
-    # Exit a parse tree produced by BSParser#variableDeclaratorId.
-    def exitVariableDeclaratorId(self, ctx:BSParser.VariableDeclaratorIdContext):
-        pass
-
-
-    # Enter a parse tree produced by BSParser#variableDeclarator.
-    def enterVariableDeclarator(self, ctx:BSParser.VariableDeclaratorContext):
-        pass
-
-    # Exit a parse tree produced by BSParser#variableDeclarator.
-    def exitVariableDeclarator(self, ctx:BSParser.VariableDeclaratorContext):
-        pass
-
-
-    # Enter a parse tree produced by BSParser#variableInitializer.
-    def enterVariableInitializer(self, ctx:BSParser.VariableInitializerContext):
-        pass
-
-    # Exit a parse tree produced by BSParser#variableInitializer.
-    def exitVariableInitializer(self, ctx:BSParser.VariableInitializerContext):
         pass
 
 
