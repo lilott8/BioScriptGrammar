@@ -5,8 +5,8 @@ This is the grammar defining BioScript
 
 Configure this such that:
     
-    1) `output directory`: path/to/parser/[language]
-    2) `language`: `Cpp` | `Python3`
+1) `output directory`: path/to/parser/[language]
+2) `language`: `Cpp` | `Python3`
 
 ### Usage
 
