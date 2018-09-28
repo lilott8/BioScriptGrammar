@@ -1,6 +1,6 @@
 /* parser/listener/visitor header section */
 
-// Generated from /Users/jason/Projects/java/BSPrototype/src/main/resources/BSParser.g4 by ANTLR 4.7
+// Generated from /Users/jason/Projects/java/bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
 
 #pragma once
 
@@ -101,15 +101,6 @@ public:
 
   virtual void enterTypesList(BSParser::TypesListContext *ctx) = 0;
   virtual void exitTypesList(BSParser::TypesListContext *ctx) = 0;
-
-  virtual void enterVariableDeclaratorId(BSParser::VariableDeclaratorIdContext *ctx) = 0;
-  virtual void exitVariableDeclaratorId(BSParser::VariableDeclaratorIdContext *ctx) = 0;
-
-  virtual void enterVariableDeclarator(BSParser::VariableDeclaratorContext *ctx) = 0;
-  virtual void exitVariableDeclarator(BSParser::VariableDeclaratorContext *ctx) = 0;
-
-  virtual void enterVariableInitializer(BSParser::VariableInitializerContext *ctx) = 0;
-  virtual void exitVariableInitializer(BSParser::VariableInitializerContext *ctx) = 0;
 
   virtual void enterArrayInitializer(BSParser::ArrayInitializerContext *ctx) = 0;
   virtual void exitArrayInitializer(BSParser::ArrayInitializerContext *ctx) = 0;

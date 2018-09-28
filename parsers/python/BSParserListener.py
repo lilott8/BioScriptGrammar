@@ -1,14 +1,11 @@
-# Generated from /Users/jason/Projects/java/BSPrototype/src/main/resources/BSParser.g4 by ANTLR 4.7
+# Generated from bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
 from antlr4 import *
 
 if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
 else:
     from BSParser import BSParser
-/ *parser / listener / visitor
-header
-section * /
-
+# parser/listener/visitor header section
 
 # This class defines a complete listener for a parse tree produced by BSParser.
 class BSParserListener(ParseTreeListener):
@@ -245,6 +242,7 @@ class BSParserListener(ParseTreeListener):
     def exitTypesList(self, ctx: BSParser.TypesListContext):
         pass
 
+<<<<<<< HEAD
     # Enter a parse tree produced by BSParser#variableDeclaratorId.
     def enterVariableDeclaratorId(self, ctx: BSParser.VariableDeclaratorIdContext):
         pass
@@ -268,6 +266,8 @@ class BSParserListener(ParseTreeListener):
     # Exit a parse tree produced by BSParser#variableInitializer.
     def exitVariableInitializer(self, ctx: BSParser.VariableInitializerContext):
         pass
+=======
+>>>>>>> aca6462409f14d01f4b9d0305b354b3ea51cec5f
 
     # Enter a parse tree produced by BSParser#arrayInitializer.
     def enterArrayInitializer(self, ctx: BSParser.ArrayInitializerContext):

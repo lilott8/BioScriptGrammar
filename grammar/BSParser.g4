@@ -78,7 +78,7 @@ formalParameterList
     ;
 
 formalParameter
-    : (unionType)? variableDeclaratorId
+    : (unionType)? IDENTIFIER (LBRACKET RBRACKET)?
     ;
 
 // TODO: make mat an id and repeatable
@@ -201,20 +201,6 @@ typesList
     : typeType (SEMICOLON typeType)*
     ;
 
-
-variableDeclaratorId
-    : IDENTIFIER (LBRACKET RBRACKET)?
-    ;
-
-variableDeclarator
-    : variableDeclaratorId ASSIGN variableInitializer
-    ;
-
-variableInitializer
-    : arrayInitializer
-    | expression
-    ;
-
 // What we do here is assume that
 // Each element in the array maps
 // to the identifier.
@@ -224,7 +210,10 @@ arrayInitializer
 
 localVariableDeclaration
     : (unionType)? IDENTIFIER ASSIGN assignmentOperations
-    | arrayInitializer ASSIGN (split | IDENTIFIER)
+    // We can infer the quantity from the split.
+    | (unionType)? IDENTIFIER LBRACKET RBRACKET ASSIGN split
+    // This is separate because we need  anumber for a multi-operation
+    | (unionType)? arrayInitializer ASSIGN assignmentOperations
     ;
 
 primary

@@ -1,5 +1,5 @@
 
-// Generated from /Users/jason/Projects/java/BSPrototype/src/main/resources/BSLexer.g4 by ANTLR 4.7
+// Generated from /Users/jason/Projects/java/bioscriptgrammar/grammar/BSLexer.g4 by ANTLR 4.7
 
 #pragma once
 
