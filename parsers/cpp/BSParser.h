@@ -43,9 +43,9 @@ public:
     RuleRepeat = 15, RuleMix = 16, RuleDetect = 17, RuleHeat = 18, RuleSplit = 19, 
     RuleDispense = 20, RuleDispose = 21, RuleExpression = 22, RuleParExpression = 23, 
     RuleMethodCall = 24, RuleExpressionList = 25, RuleTypeType = 26, RuleUnionType = 27, 
-    RuleTypesList = 28, RuleArrayInitializer = 29, RuleLocalVariableDeclaration = 30, 
-    RulePrimary = 31, RuleLiteral = 32, RulePrimitiveType = 33, RuleVolumeIdentifier = 34, 
-    RuleTimeIdentifier = 35, RuleTemperatureIdentifier = 36
+    RuleTypesList = 28, RuleLocalVariableDeclaration = 29, RulePrimary = 30, 
+    RuleLiteral = 31, RulePrimitiveType = 32, RuleVolumeIdentifier = 33, 
+    RuleTimeIdentifier = 34, RuleTemperatureIdentifier = 35
   };
 
   BSParser(antlr4::TokenStream *input);
@@ -87,7 +87,6 @@ public:
   class TypeTypeContext;
   class UnionTypeContext;
   class TypesListContext;
-  class ArrayInitializerContext;
   class LocalVariableDeclarationContext;
   class PrimaryContext;
   class LiteralContext;
@@ -645,24 +644,6 @@ public:
 
   TypesListContext* typesList();
 
-  class  ArrayInitializerContext : public antlr4::ParserRuleContext {
-  public:
-    ArrayInitializerContext(antlr4::ParserRuleContext *parent, size_t invokingState);
-    virtual size_t getRuleIndex() const override;
-    antlr4::tree::TerminalNode *IDENTIFIER();
-    antlr4::tree::TerminalNode *LBRACKET();
-    antlr4::tree::TerminalNode *INTEGER_LITERAL();
-    antlr4::tree::TerminalNode *RBRACKET();
-
-    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
-    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
-
-    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
-  };
-
-  ArrayInitializerContext* arrayInitializer();
-
   class  LocalVariableDeclarationContext : public antlr4::ParserRuleContext {
   public:
     LocalVariableDeclarationContext(antlr4::ParserRuleContext *parent, size_t invokingState);
@@ -672,9 +653,9 @@ public:
     AssignmentOperationsContext *assignmentOperations();
     UnionTypeContext *unionType();
     antlr4::tree::TerminalNode *LBRACKET();
+    antlr4::tree::TerminalNode *INTEGER_LITERAL();
     antlr4::tree::TerminalNode *RBRACKET();
     SplitContext *split();
-    ArrayInitializerContext *arrayInitializer();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;

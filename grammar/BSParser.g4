@@ -201,19 +201,10 @@ typesList
     : typeType (SEMICOLON typeType)*
     ;
 
-// What we do here is assume that
-// Each element in the array maps
-// to the identifier.
-arrayInitializer
-    : IDENTIFIER LBRACKET INTEGER_LITERAL RBRACKET
-    ;
-
 localVariableDeclaration
-    : (unionType)? IDENTIFIER ASSIGN assignmentOperations
+    : (unionType)? IDENTIFIER (LBRACKET INTEGER_LITERAL RBRACKET)? ASSIGN assignmentOperations
     // We can infer the quantity from the split.
     | (unionType)? IDENTIFIER LBRACKET RBRACKET ASSIGN split
-    // This is separate because we need  anumber for a multi-operation
-    | (unionType)? arrayInitializer ASSIGN assignmentOperations
     ;
 
 primary

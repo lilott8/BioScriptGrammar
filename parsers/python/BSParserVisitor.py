@@ -4,7 +4,7 @@ if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
 else:
     from BSParser import BSParser
-# parser/listener/visitor header section
+/* parser/listener/visitor header section */
 
 # This class defines a complete generic visitor for a parse tree produced by BSParser.
 
@@ -152,11 +152,6 @@ class BSParserVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by BSParser#typesList.
     def visitTypesList(self, ctx:BSParser.TypesListContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by BSParser#arrayInitializer.
-    def visitArrayInitializer(self, ctx:BSParser.ArrayInitializerContext):
         return self.visitChildren(ctx)
 
 

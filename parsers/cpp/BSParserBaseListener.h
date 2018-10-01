@@ -104,9 +104,6 @@ public:
   virtual void enterTypesList(BSParser::TypesListContext * /*ctx*/) override { }
   virtual void exitTypesList(BSParser::TypesListContext * /*ctx*/) override { }
 
-  virtual void enterArrayInitializer(BSParser::ArrayInitializerContext * /*ctx*/) override { }
-  virtual void exitArrayInitializer(BSParser::ArrayInitializerContext * /*ctx*/) override { }
-
   virtual void enterLocalVariableDeclaration(BSParser::LocalVariableDeclarationContext * /*ctx*/) override { }
   virtual void exitLocalVariableDeclaration(BSParser::LocalVariableDeclarationContext * /*ctx*/) override { }
 

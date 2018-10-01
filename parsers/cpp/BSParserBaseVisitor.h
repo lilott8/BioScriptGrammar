@@ -132,10 +132,6 @@ public:
     return visitChildren(ctx);
   }
 
-  virtual antlrcpp::Any visitArrayInitializer(BSParser::ArrayInitializerContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
   virtual antlrcpp::Any visitLocalVariableDeclaration(BSParser::LocalVariableDeclarationContext *ctx) override {
     return visitChildren(ctx);
   }

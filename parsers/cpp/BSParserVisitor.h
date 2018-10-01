@@ -78,8 +78,6 @@ public:
 
     virtual antlrcpp::Any visitTypesList(BSParser::TypesListContext *context) = 0;
 
-    virtual antlrcpp::Any visitArrayInitializer(BSParser::ArrayInitializerContext *context) = 0;
-
     virtual antlrcpp::Any visitLocalVariableDeclaration(BSParser::LocalVariableDeclarationContext *context) = 0;
 
     virtual antlrcpp::Any visitPrimary(BSParser::PrimaryContext *context) = 0;

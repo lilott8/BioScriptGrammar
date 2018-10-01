@@ -102,9 +102,6 @@ public:
   virtual void enterTypesList(BSParser::TypesListContext *ctx) = 0;
   virtual void exitTypesList(BSParser::TypesListContext *ctx) = 0;
 
-  virtual void enterArrayInitializer(BSParser::ArrayInitializerContext *ctx) = 0;
-  virtual void exitArrayInitializer(BSParser::ArrayInitializerContext *ctx) = 0;
-
   virtual void enterLocalVariableDeclaration(BSParser::LocalVariableDeclarationContext *ctx) = 0;
   virtual void exitLocalVariableDeclaration(BSParser::LocalVariableDeclarationContext *ctx) = 0;
 
