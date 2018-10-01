@@ -1,11 +1,11 @@
-# Generated from /java/bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
+# Generated from /Users/jason/Projects/java/bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
-from typing import TextIO
+from typing.io import TextIO
 import sys
 
-# parser/listener/visitor header section
+/* parser/listener/visitor header section */
 def serializedATN():
     with StringIO() as buf:
         buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3`")
@@ -182,41 +182,41 @@ class BSParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'if'", "'else'", "'repeat'", "'while'",
-                     "'function'", "'return'", "'manifest'", "'module'",
-                     "'stationary'", "'functions'", "'instructions'", "'detect'",
-                     "'mix'", "'split'", "'heat'", "'drain'", "'dispense'",
-                     "'dispose'", "'at'", "'with'", "'for'", "'into'", "'times'",
-                     "'on'", "'of'", "'nat'", "'real'", "'mat'", "'bool'",
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>",
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>",
-                     "'('", "')'", "'{'", "'}'", "'['", "']'", "';'", "','",
-                     "'.'", "'='", "'>'", "'<'", "'!'", "'~'", "'?'", "':'",
-                     "'=='", "'<='", "'>='", "'!='", "'&&'", "'||'", "'++'",
-                     "'--'", "'+'", "'-'", "'*'", "'/'", "'&'", "'|'", "'^'",
-                     "'%'", "'_'", "'ns'", "'us'", "'ms'", "'cs'", "'ds'",
-                     "'s'", "'h'", "'d'", "'w'", "'mo'", "'y'", "'nL'",
-                     "'uL'", "'mL'", "'cL'", "'dL'", "'L'", "'daL'", "'c'",
+    literalNames = [ "<INVALID>", "'if'", "'else'", "'repeat'", "'while'", 
+                     "'function'", "'return'", "'manifest'", "'module'", 
+                     "'stationary'", "'functions'", "'instructions'", "'detect'", 
+                     "'mix'", "'split'", "'heat'", "'drain'", "'dispense'", 
+                     "'dispose'", "'at'", "'with'", "'for'", "'into'", "'times'", 
+                     "'on'", "'of'", "'nat'", "'real'", "'mat'", "'bool'", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                     "'('", "')'", "'{'", "'}'", "'['", "']'", "';'", "','", 
+                     "'.'", "'='", "'>'", "'<'", "'!'", "'~'", "'?'", "':'", 
+                     "'=='", "'<='", "'>='", "'!='", "'&&'", "'||'", "'++'", 
+                     "'--'", "'+'", "'-'", "'*'", "'/'", "'&'", "'|'", "'^'", 
+                     "'%'", "'_'", "'ns'", "'us'", "'ms'", "'cs'", "'ds'", 
+                     "'s'", "'h'", "'d'", "'w'", "'mo'", "'y'", "'nL'", 
+                     "'uL'", "'mL'", "'cL'", "'dL'", "'L'", "'daL'", "'c'", 
                      "'f'", "'k'" ]
 
-    symbolicNames = [ "<INVALID>", "IF", "ELSE", "REPEAT", "WHILE", "FUNCTION",
-                      "RETURN", "MANIFEST", "MODULE", "STATIONARY", "FUNCTIONS",
-                      "INSTRUCTIONS", "DETECT", "MIX", "SPLIT", "HEAT",
-                      "DRAIN", "DISPENSE", "DISPOSE", "AT", "WITH", "FOR",
-                      "INTO", "TIMES", "ON", "OF", "NAT", "REAL", "MAT",
-                      "BOOL", "IDENTIFIER", "STRING_LITERAL", "BOOL_LITERAL",
-                      "FLOAT_LITERAL", "INTEGER_LITERAL", "TIME_NUMBER",
-                      "VOLUME_NUMBER", "TEMP_NUMBER", "LPAREN", "RPAREN",
-                      "LBRACE", "RBRACE", "LBRACKET", "RBRACKET", "SEMICOLON",
-                      "COMMA", "DOT", "ASSIGN", "GT", "LT", "BANG", "TILDE",
-                      "QUESTION", "COLON", "EQUALITY", "LTE", "GTE", "NOTEQUAL",
-                      "AND", "OR", "INC", "DEC", "ADDITION", "SUBTRACT",
-                      "MULTIPLY", "DIVIDE", "BITAND", "BITOR", "CARET",
-                      "MOD", "UNDERSCORE", "NANOSECOND", "MICROSECOND",
-                      "MILLISECOND", "CENTISECOND", "DECISECOND", "SECOND",
-                      "HOUR", "DAY", "WEEK", "MONTH", "YEAR", "NANOLITRE",
-                      "MICROLITRE", "MILLILITRE", "CENTILITRE", "DECILITRE",
-                      "LITRE", "DECALITRE", "CELSIUS", "FAHRENHEIT", "KELVIN",
+    symbolicNames = [ "<INVALID>", "IF", "ELSE", "REPEAT", "WHILE", "FUNCTION", 
+                      "RETURN", "MANIFEST", "MODULE", "STATIONARY", "FUNCTIONS", 
+                      "INSTRUCTIONS", "DETECT", "MIX", "SPLIT", "HEAT", 
+                      "DRAIN", "DISPENSE", "DISPOSE", "AT", "WITH", "FOR", 
+                      "INTO", "TIMES", "ON", "OF", "NAT", "REAL", "MAT", 
+                      "BOOL", "IDENTIFIER", "STRING_LITERAL", "BOOL_LITERAL", 
+                      "FLOAT_LITERAL", "INTEGER_LITERAL", "TIME_NUMBER", 
+                      "VOLUME_NUMBER", "TEMP_NUMBER", "LPAREN", "RPAREN", 
+                      "LBRACE", "RBRACE", "LBRACKET", "RBRACKET", "SEMICOLON", 
+                      "COMMA", "DOT", "ASSIGN", "GT", "LT", "BANG", "TILDE", 
+                      "QUESTION", "COLON", "EQUALITY", "LTE", "GTE", "NOTEQUAL", 
+                      "AND", "OR", "INC", "DEC", "ADDITION", "SUBTRACT", 
+                      "MULTIPLY", "DIVIDE", "BITAND", "BITOR", "CARET", 
+                      "MOD", "UNDERSCORE", "NANOSECOND", "MICROSECOND", 
+                      "MILLISECOND", "CENTISECOND", "DECISECOND", "SECOND", 
+                      "HOUR", "DAY", "WEEK", "MONTH", "YEAR", "NANOLITRE", 
+                      "MICROLITRE", "MILLILITRE", "CENTILITRE", "DECILITRE", 
+                      "LITRE", "DECALITRE", "CELSIUS", "FAHRENHEIT", "KELVIN", 
                       "WS", "COMMENT", "LINE_COMMENT" ]
 
     RULE_program = 0
@@ -257,15 +257,15 @@ class BSParser ( Parser ):
     RULE_timeIdentifier = 35
     RULE_temperatureIdentifier = 36
 
-    ruleNames =  [ "program", "moduleDeclaration", "manifestDeclaration",
-                   "stationaryDeclaration", "functionDeclaration", "formalParameters",
-                   "formalParameterList", "formalParameter", "functionTyping",
-                   "returnStatement", "blockStatement", "assignmentOperations",
-                   "statements", "ifStatement", "whileStatement", "repeat",
-                   "mix", "detect", "heat", "split", "dispense", "dispose",
-                   "expression", "parExpression", "methodCall", "expressionList",
-                   "typeType", "unionType", "typesList", "arrayInitializer",
-                   "localVariableDeclaration", "primary", "literal", "primitiveType",
+    ruleNames =  [ "program", "moduleDeclaration", "manifestDeclaration", 
+                   "stationaryDeclaration", "functionDeclaration", "formalParameters", 
+                   "formalParameterList", "formalParameter", "functionTyping", 
+                   "returnStatement", "blockStatement", "assignmentOperations", 
+                   "statements", "ifStatement", "whileStatement", "repeat", 
+                   "mix", "detect", "heat", "split", "dispense", "dispose", 
+                   "expression", "parExpression", "methodCall", "expressionList", 
+                   "typeType", "unionType", "typesList", "arrayInitializer", 
+                   "localVariableDeclaration", "primary", "literal", "primitiveType", 
                    "volumeIdentifier", "timeIdentifier", "temperatureIdentifier" ]
 
     EOF = Token.EOF
@@ -430,6 +430,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitProgram" ):
                 listener.exitProgram(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProgram" ):
+                return visitor.visitProgram(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -513,6 +519,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitModuleDeclaration" ):
                 listener.exitModuleDeclaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitModuleDeclaration" ):
+                return visitor.visitModuleDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -572,6 +584,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitManifestDeclaration" ):
                 listener.exitManifestDeclaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitManifestDeclaration" ):
+                return visitor.visitManifestDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -582,7 +600,7 @@ class BSParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 104
+            self.state = 104 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
@@ -590,7 +608,7 @@ class BSParser ( Parser ):
                 self.match(BSParser.MANIFEST)
                 self.state = 103
                 self.match(BSParser.IDENTIFIER)
-                self.state = 106
+                self.state = 106 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not (_la==BSParser.MANIFEST):
@@ -632,6 +650,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStationaryDeclaration" ):
                 listener.exitStationaryDeclaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStationaryDeclaration" ):
+                return visitor.visitStationaryDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -711,6 +735,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitFunctionDeclaration" ):
                 listener.exitFunctionDeclaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionDeclaration" ):
+                return visitor.visitFunctionDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -737,13 +767,13 @@ class BSParser ( Parser ):
 
             self.state = 121
             self.match(BSParser.LBRACE)
-            self.state = 123
+            self.state = 123 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
                 self.state = 122
                 self.statements()
-                self.state = 125
+                self.state = 125 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BSParser.IF) | (1 << BSParser.REPEAT) | (1 << BSParser.WHILE) | (1 << BSParser.HEAT) | (1 << BSParser.DRAIN) | (1 << BSParser.DISPOSE) | (1 << BSParser.IDENTIFIER) | (1 << BSParser.LBRACKET))) != 0)):
@@ -787,6 +817,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFormalParameters" ):
                 listener.exitFormalParameters(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFormalParameters" ):
+                return visitor.visitFormalParameters(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -847,6 +883,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFormalParameterList" ):
                 listener.exitFormalParameterList(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFormalParameterList" ):
+                return visitor.visitFormalParameterList(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -910,6 +952,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitFormalParameter" ):
                 listener.exitFormalParameter(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFormalParameter" ):
+                return visitor.visitFormalParameter(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -972,6 +1020,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitFunctionTyping" ):
                 listener.exitFunctionTyping(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionTyping" ):
+                return visitor.visitFunctionTyping(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1015,6 +1069,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReturnStatement" ):
                 listener.exitReturnStatement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReturnStatement" ):
+                return visitor.visitReturnStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1066,6 +1126,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBlockStatement" ):
                 listener.exitBlockStatement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlockStatement" ):
+                return visitor.visitBlockStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1139,6 +1205,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAssignmentOperations" ):
                 listener.exitAssignmentOperations(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAssignmentOperations" ):
+                return visitor.visitAssignmentOperations(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1237,6 +1309,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitStatements" ):
                 listener.exitStatements(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStatements" ):
+                return visitor.visitStatements(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1323,6 +1401,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitIfStatement" ):
                 listener.exitIfStatement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIfStatement" ):
+                return visitor.visitIfStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1385,6 +1469,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitWhileStatement" ):
                 listener.exitWhileStatement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWhileStatement" ):
+                return visitor.visitWhileStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1440,6 +1530,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRepeat" ):
                 listener.exitRepeat(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRepeat" ):
+                return visitor.visitRepeat(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1508,6 +1604,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMix" ):
                 listener.exitMix(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMix" ):
+                return visitor.visitMix(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1580,6 +1682,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDetect" ):
                 listener.exitDetect(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDetect" ):
+                return visitor.visitDetect(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1654,6 +1762,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitHeat" ):
                 listener.exitHeat(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitHeat" ):
+                return visitor.visitHeat(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1719,6 +1833,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitSplit" ):
                 listener.exitSplit(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSplit" ):
+                return visitor.visitSplit(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1767,6 +1887,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitDispense" ):
                 listener.exitDispense(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDispense" ):
+                return visitor.visitDispense(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1813,6 +1939,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDispose" ):
                 listener.exitDispose(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDispose" ):
+                return visitor.visitDispose(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1926,6 +2058,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExpression" ):
                 listener.exitExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExpression" ):
+                return visitor.visitExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2108,7 +2246,7 @@ class BSParser ( Parser ):
                         self.match(BSParser.RBRACKET)
                         pass
 
-
+             
                 self.state = 278
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,21,self._ctx)
@@ -2147,6 +2285,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitParExpression" ):
                 listener.exitParExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParExpression" ):
+                return visitor.visitParExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2200,6 +2344,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMethodCall" ):
                 listener.exitMethodCall(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMethodCall" ):
+                return visitor.visitMethodCall(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2263,6 +2413,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitExpressionList" ):
                 listener.exitExpressionList(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExpressionList" ):
+                return visitor.visitExpressionList(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2316,6 +2472,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitTypeType" ):
                 listener.exitTypeType(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeType" ):
+                return visitor.visitTypeType(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2361,6 +2523,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUnionType" ):
                 listener.exitUnionType(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnionType" ):
+                return visitor.visitUnionType(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2414,6 +2582,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypesList" ):
                 listener.exitTypesList(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypesList" ):
+                return visitor.visitTypesList(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2475,6 +2649,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitArrayInitializer" ):
                 listener.exitArrayInitializer(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArrayInitializer" ):
+                return visitor.visitArrayInitializer(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2545,6 +2725,12 @@ class BSParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLocalVariableDeclaration" ):
                 listener.exitLocalVariableDeclaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLocalVariableDeclaration" ):
+                return visitor.visitLocalVariableDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2659,6 +2845,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitPrimary" ):
                 listener.exitPrimary(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrimary" ):
+                return visitor.visitPrimary(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2729,6 +2921,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitLiteral" ):
                 listener.exitLiteral(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLiteral" ):
+                return visitor.visitLiteral(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2783,6 +2981,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitPrimitiveType" ):
                 listener.exitPrimitiveType(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrimitiveType" ):
+                return visitor.visitPrimitiveType(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2834,6 +3038,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitVolumeIdentifier" ):
                 listener.exitVolumeIdentifier(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVolumeIdentifier" ):
+                return visitor.visitVolumeIdentifier(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2884,6 +3094,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitTimeIdentifier" ):
                 listener.exitTimeIdentifier(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTimeIdentifier" ):
+                return visitor.visitTimeIdentifier(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2923,6 +3139,12 @@ class BSParser ( Parser ):
             if hasattr( listener, "exitTemperatureIdentifier" ):
                 listener.exitTemperatureIdentifier(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTemperatureIdentifier" ):
+                return visitor.visitTemperatureIdentifier(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2957,35 +3179,35 @@ class BSParser ( Parser ):
     def expression_sempred(self, localctx:ExpressionContext, predIndex:int):
             if predIndex == 0:
                 return self.precpred(self._ctx, 7)
-
+         
 
             if predIndex == 1:
                 return self.precpred(self._ctx, 6)
-
+         
 
             if predIndex == 2:
                 return self.precpred(self._ctx, 5)
-
+         
 
             if predIndex == 3:
                 return self.precpred(self._ctx, 4)
-
+         
 
             if predIndex == 4:
                 return self.precpred(self._ctx, 3)
-
+         
 
             if predIndex == 5:
                 return self.precpred(self._ctx, 2)
-
+         
 
             if predIndex == 6:
                 return self.precpred(self._ctx, 1)
-
+         
 
             if predIndex == 7:
                 return self.precpred(self._ctx, 8)
-
+         
 
 
 

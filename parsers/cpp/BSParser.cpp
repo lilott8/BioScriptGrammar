@@ -5,6 +5,7 @@
 /* parser precinclude section */
 
 #include "BSParserListener.h"
+#include "BSParserVisitor.h"
 
 #include "BSParser.h"
 
@@ -103,6 +104,14 @@ void BSParser::ProgramContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitProgram(this);
+}
+
+
+antlrcpp::Any BSParser::ProgramContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitProgram(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 BSParser::ProgramContext* BSParser::program() {
@@ -209,6 +218,14 @@ void BSParser::ModuleDeclarationContext::exitRule(tree::ParseTreeListener *liste
     parserListener->exitModuleDeclaration(this);
 }
 
+
+antlrcpp::Any BSParser::ModuleDeclarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitModuleDeclaration(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::ModuleDeclarationContext* BSParser::moduleDeclaration() {
   ModuleDeclarationContext *_localctx = _tracker.createInstance<ModuleDeclarationContext>(_ctx, getState());
   enterRule(_localctx, 2, BSParser::RuleModuleDeclaration);
@@ -281,6 +298,14 @@ void BSParser::ManifestDeclarationContext::exitRule(tree::ParseTreeListener *lis
     parserListener->exitManifestDeclaration(this);
 }
 
+
+antlrcpp::Any BSParser::ManifestDeclarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitManifestDeclaration(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::ManifestDeclarationContext* BSParser::manifestDeclaration() {
   ManifestDeclarationContext *_localctx = _tracker.createInstance<ManifestDeclarationContext>(_ctx, getState());
   enterRule(_localctx, 4, BSParser::RuleManifestDeclaration);
@@ -351,6 +376,14 @@ void BSParser::StationaryDeclarationContext::exitRule(tree::ParseTreeListener *l
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitStationaryDeclaration(this);
+}
+
+
+antlrcpp::Any BSParser::StationaryDeclarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitStationaryDeclaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 BSParser::StationaryDeclarationContext* BSParser::stationaryDeclaration() {
@@ -443,6 +476,14 @@ void BSParser::FunctionDeclarationContext::exitRule(tree::ParseTreeListener *lis
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitFunctionDeclaration(this);
+}
+
+
+antlrcpp::Any BSParser::FunctionDeclarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitFunctionDeclaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 BSParser::FunctionDeclarationContext* BSParser::functionDeclaration() {
@@ -539,6 +580,14 @@ void BSParser::FormalParametersContext::exitRule(tree::ParseTreeListener *listen
     parserListener->exitFormalParameters(this);
 }
 
+
+antlrcpp::Any BSParser::FormalParametersContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitFormalParameters(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::FormalParametersContext* BSParser::formalParameters() {
   FormalParametersContext *_localctx = _tracker.createInstance<FormalParametersContext>(_ctx, getState());
   enterRule(_localctx, 10, BSParser::RuleFormalParameters);
@@ -611,6 +660,14 @@ void BSParser::FormalParameterListContext::exitRule(tree::ParseTreeListener *lis
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitFormalParameterList(this);
+}
+
+
+antlrcpp::Any BSParser::FormalParameterListContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitFormalParameterList(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 BSParser::FormalParameterListContext* BSParser::formalParameterList() {
@@ -687,6 +744,14 @@ void BSParser::FormalParameterContext::exitRule(tree::ParseTreeListener *listene
     parserListener->exitFormalParameter(this);
 }
 
+
+antlrcpp::Any BSParser::FormalParameterContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitFormalParameter(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::FormalParameterContext* BSParser::formalParameter() {
   FormalParameterContext *_localctx = _tracker.createInstance<FormalParameterContext>(_ctx, getState());
   enterRule(_localctx, 14, BSParser::RuleFormalParameter);
@@ -759,6 +824,14 @@ void BSParser::FunctionTypingContext::exitRule(tree::ParseTreeListener *listener
     parserListener->exitFunctionTyping(this);
 }
 
+
+antlrcpp::Any BSParser::FunctionTypingContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitFunctionTyping(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::FunctionTypingContext* BSParser::functionTyping() {
   FunctionTypingContext *_localctx = _tracker.createInstance<FunctionTypingContext>(_ctx, getState());
   enterRule(_localctx, 16, BSParser::RuleFunctionTyping);
@@ -812,6 +885,14 @@ void BSParser::ReturnStatementContext::exitRule(tree::ParseTreeListener *listene
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitReturnStatement(this);
+}
+
+
+antlrcpp::Any BSParser::ReturnStatementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitReturnStatement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 BSParser::ReturnStatementContext* BSParser::returnStatement() {
@@ -875,6 +956,14 @@ void BSParser::BlockStatementContext::exitRule(tree::ParseTreeListener *listener
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitBlockStatement(this);
+}
+
+
+antlrcpp::Any BSParser::BlockStatementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitBlockStatement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 BSParser::BlockStatementContext* BSParser::blockStatement() {
@@ -965,6 +1054,14 @@ void BSParser::AssignmentOperationsContext::exitRule(tree::ParseTreeListener *li
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitAssignmentOperations(this);
+}
+
+
+antlrcpp::Any BSParser::AssignmentOperationsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitAssignmentOperations(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 BSParser::AssignmentOperationsContext* BSParser::assignmentOperations() {
@@ -1079,6 +1176,14 @@ void BSParser::StatementsContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitStatements(this);
 }
 
+
+antlrcpp::Any BSParser::StatementsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitStatements(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::StatementsContext* BSParser::statements() {
   StatementsContext *_localctx = _tracker.createInstance<StatementsContext>(_ctx, getState());
   enterRule(_localctx, 24, BSParser::RuleStatements);
@@ -1191,6 +1296,14 @@ void BSParser::IfStatementContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitIfStatement(this);
 }
 
+
+antlrcpp::Any BSParser::IfStatementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitIfStatement(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::IfStatementContext* BSParser::ifStatement() {
   IfStatementContext *_localctx = _tracker.createInstance<IfStatementContext>(_ctx, getState());
   enterRule(_localctx, 26, BSParser::RuleIfStatement);
@@ -1263,6 +1376,14 @@ void BSParser::WhileStatementContext::exitRule(tree::ParseTreeListener *listener
     parserListener->exitWhileStatement(this);
 }
 
+
+antlrcpp::Any BSParser::WhileStatementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitWhileStatement(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::WhileStatementContext* BSParser::whileStatement() {
   WhileStatementContext *_localctx = _tracker.createInstance<WhileStatementContext>(_ctx, getState());
   enterRule(_localctx, 28, BSParser::RuleWhileStatement);
@@ -1330,6 +1451,14 @@ void BSParser::RepeatContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitRepeat(this);
+}
+
+
+antlrcpp::Any BSParser::RepeatContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitRepeat(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 BSParser::RepeatContext* BSParser::repeat() {
@@ -1415,6 +1544,14 @@ void BSParser::MixContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitMix(this);
+}
+
+
+antlrcpp::Any BSParser::MixContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitMix(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 BSParser::MixContext* BSParser::mix() {
@@ -1503,6 +1640,14 @@ void BSParser::DetectContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitDetect(this);
 }
 
+
+antlrcpp::Any BSParser::DetectContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitDetect(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::DetectContext* BSParser::detect() {
   DetectContext *_localctx = _tracker.createInstance<DetectContext>(_ctx, getState());
   enterRule(_localctx, 34, BSParser::RuleDetect);
@@ -1589,6 +1734,14 @@ void BSParser::HeatContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitHeat(this);
 }
 
+
+antlrcpp::Any BSParser::HeatContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitHeat(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::HeatContext* BSParser::heat() {
   HeatContext *_localctx = _tracker.createInstance<HeatContext>(_ctx, getState());
   enterRule(_localctx, 36, BSParser::RuleHeat);
@@ -1667,6 +1820,14 @@ void BSParser::SplitContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitSplit(this);
 }
 
+
+antlrcpp::Any BSParser::SplitContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitSplit(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::SplitContext* BSParser::split() {
   SplitContext *_localctx = _tracker.createInstance<SplitContext>(_ctx, getState());
   enterRule(_localctx, 38, BSParser::RuleSplit);
@@ -1726,6 +1887,14 @@ void BSParser::DispenseContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitDispense(this);
 }
 
+
+antlrcpp::Any BSParser::DispenseContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitDispense(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::DispenseContext* BSParser::dispense() {
   DispenseContext *_localctx = _tracker.createInstance<DispenseContext>(_ctx, getState());
   enterRule(_localctx, 40, BSParser::RuleDispense);
@@ -1783,6 +1952,14 @@ void BSParser::DisposeContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitDispose(this);
+}
+
+
+antlrcpp::Any BSParser::DisposeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitDispose(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 BSParser::DisposeContext* BSParser::dispose() {
@@ -1925,6 +2102,14 @@ void BSParser::ExpressionContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitExpression(this);
+}
+
+
+antlrcpp::Any BSParser::ExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitExpression(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 
@@ -2189,6 +2374,14 @@ void BSParser::ParExpressionContext::exitRule(tree::ParseTreeListener *listener)
     parserListener->exitParExpression(this);
 }
 
+
+antlrcpp::Any BSParser::ParExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitParExpression(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::ParExpressionContext* BSParser::parExpression() {
   ParExpressionContext *_localctx = _tracker.createInstance<ParExpressionContext>(_ctx, getState());
   enterRule(_localctx, 46, BSParser::RuleParExpression);
@@ -2252,6 +2445,14 @@ void BSParser::MethodCallContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitMethodCall(this);
+}
+
+
+antlrcpp::Any BSParser::MethodCallContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitMethodCall(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 BSParser::MethodCallContext* BSParser::methodCall() {
@@ -2334,6 +2535,14 @@ void BSParser::ExpressionListContext::exitRule(tree::ParseTreeListener *listener
     parserListener->exitExpressionList(this);
 }
 
+
+antlrcpp::Any BSParser::ExpressionListContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitExpressionList(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::ExpressionListContext* BSParser::expressionList() {
   ExpressionListContext *_localctx = _tracker.createInstance<ExpressionListContext>(_ctx, getState());
   enterRule(_localctx, 50, BSParser::RuleExpressionList);
@@ -2396,6 +2605,14 @@ void BSParser::TypeTypeContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitTypeType(this);
 }
 
+
+antlrcpp::Any BSParser::TypeTypeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitTypeType(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::TypeTypeContext* BSParser::typeType() {
   TypeTypeContext *_localctx = _tracker.createInstance<TypeTypeContext>(_ctx, getState());
   enterRule(_localctx, 52, BSParser::RuleTypeType);
@@ -2451,6 +2668,14 @@ void BSParser::UnionTypeContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitUnionType(this);
+}
+
+
+antlrcpp::Any BSParser::UnionTypeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitUnionType(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 BSParser::UnionTypeContext* BSParser::unionType() {
@@ -2516,6 +2741,14 @@ void BSParser::TypesListContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitTypesList(this);
+}
+
+
+antlrcpp::Any BSParser::TypesListContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitTypesList(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 BSParser::TypesListContext* BSParser::typesList() {
@@ -2590,6 +2823,14 @@ void BSParser::ArrayInitializerContext::exitRule(tree::ParseTreeListener *listen
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitArrayInitializer(this);
+}
+
+
+antlrcpp::Any BSParser::ArrayInitializerContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitArrayInitializer(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 BSParser::ArrayInitializerContext* BSParser::arrayInitializer() {
@@ -2673,6 +2914,14 @@ void BSParser::LocalVariableDeclarationContext::exitRule(tree::ParseTreeListener
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitLocalVariableDeclaration(this);
+}
+
+
+antlrcpp::Any BSParser::LocalVariableDeclarationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitLocalVariableDeclaration(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 BSParser::LocalVariableDeclarationContext* BSParser::localVariableDeclaration() {
@@ -2803,6 +3052,14 @@ void BSParser::PrimaryContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitPrimary(this);
 }
 
+
+antlrcpp::Any BSParser::PrimaryContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitPrimary(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::PrimaryContext* BSParser::primary() {
   PrimaryContext *_localctx = _tracker.createInstance<PrimaryContext>(_ctx, getState());
   enterRule(_localctx, 62, BSParser::RulePrimary);
@@ -2895,6 +3152,14 @@ void BSParser::LiteralContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitLiteral(this);
 }
 
+
+antlrcpp::Any BSParser::LiteralContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitLiteral(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::LiteralContext* BSParser::literal() {
   LiteralContext *_localctx = _tracker.createInstance<LiteralContext>(_ctx, getState());
   enterRule(_localctx, 64, BSParser::RuleLiteral);
@@ -2968,6 +3233,14 @@ void BSParser::PrimitiveTypeContext::exitRule(tree::ParseTreeListener *listener)
     parserListener->exitPrimitiveType(this);
 }
 
+
+antlrcpp::Any BSParser::PrimitiveTypeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitPrimitiveType(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::PrimitiveTypeContext* BSParser::primitiveType() {
   PrimitiveTypeContext *_localctx = _tracker.createInstance<PrimitiveTypeContext>(_ctx, getState());
   enterRule(_localctx, 66, BSParser::RulePrimitiveType);
@@ -3037,6 +3310,14 @@ void BSParser::VolumeIdentifierContext::exitRule(tree::ParseTreeListener *listen
     parserListener->exitVolumeIdentifier(this);
 }
 
+
+antlrcpp::Any BSParser::VolumeIdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitVolumeIdentifier(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::VolumeIdentifierContext* BSParser::volumeIdentifier() {
   VolumeIdentifierContext *_localctx = _tracker.createInstance<VolumeIdentifierContext>(_ctx, getState());
   enterRule(_localctx, 68, BSParser::RuleVolumeIdentifier);
@@ -3097,6 +3378,14 @@ void BSParser::TimeIdentifierContext::exitRule(tree::ParseTreeListener *listener
     parserListener->exitTimeIdentifier(this);
 }
 
+
+antlrcpp::Any BSParser::TimeIdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitTimeIdentifier(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 BSParser::TimeIdentifierContext* BSParser::timeIdentifier() {
   TimeIdentifierContext *_localctx = _tracker.createInstance<TimeIdentifierContext>(_ctx, getState());
   enterRule(_localctx, 70, BSParser::RuleTimeIdentifier);
@@ -3144,6 +3433,14 @@ void BSParser::TemperatureIdentifierContext::exitRule(tree::ParseTreeListener *l
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitTemperatureIdentifier(this);
+}
+
+
+antlrcpp::Any BSParser::TemperatureIdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
+    return parserVisitor->visitTemperatureIdentifier(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 BSParser::TemperatureIdentifierContext* BSParser::temperatureIdentifier() {

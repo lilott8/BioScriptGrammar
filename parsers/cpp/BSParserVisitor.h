@@ -1,6 +1,6 @@
 /* parser/listener/visitor header section */
 
-// Generated from /Users/jason/Projects/java/BSPrototype/src/main/resources/BSParser.g4 by ANTLR 4.7
+// Generated from /Users/jason/Projects/java/bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
 
 #pragma once
 
@@ -77,12 +77,6 @@ public:
     virtual antlrcpp::Any visitUnionType(BSParser::UnionTypeContext *context) = 0;
 
     virtual antlrcpp::Any visitTypesList(BSParser::TypesListContext *context) = 0;
-
-    virtual antlrcpp::Any visitVariableDeclaratorId(BSParser::VariableDeclaratorIdContext *context) = 0;
-
-    virtual antlrcpp::Any visitVariableDeclarator(BSParser::VariableDeclaratorContext *context) = 0;
-
-    virtual antlrcpp::Any visitVariableInitializer(BSParser::VariableInitializerContext *context) = 0;
 
     virtual antlrcpp::Any visitArrayInitializer(BSParser::ArrayInitializerContext *context) = 0;
 

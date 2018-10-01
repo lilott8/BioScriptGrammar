@@ -1,6 +1,6 @@
 /* parser/listener/visitor header section */
 
-// Generated from /Users/jason/Projects/java/BSPrototype/src/main/resources/BSParser.g4 by ANTLR 4.7
+// Generated from /Users/jason/Projects/java/bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
 
 #pragma once
 
@@ -129,18 +129,6 @@ public:
   }
 
   virtual antlrcpp::Any visitTypesList(BSParser::TypesListContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
-  virtual antlrcpp::Any visitVariableDeclaratorId(BSParser::VariableDeclaratorIdContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
-  virtual antlrcpp::Any visitVariableDeclarator(BSParser::VariableDeclaratorContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
-  virtual antlrcpp::Any visitVariableInitializer(BSParser::VariableInitializerContext *ctx) override {
     return visitChildren(ctx);
   }
 
