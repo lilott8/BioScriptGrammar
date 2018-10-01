@@ -1,7 +1,7 @@
 # Generated from /java/bioscriptgrammar/grammar/BSLexer.g4 by ANTLR 4.7
 from antlr4 import *
 from io import StringIO
-from typing.io import TextIO
+from typing import TextIO
 import sys
 
 
