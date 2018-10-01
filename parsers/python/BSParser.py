@@ -2,10 +2,10 @@
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
-from typing.io import TextIO
+from typing import TextIO
 import sys
 
-/* parser/listener/visitor header section */
+# parser/listener/visitor header section
 def serializedATN():
     with StringIO() as buf:
         buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3`")
@@ -179,41 +179,41 @@ class BSParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'if'", "'else'", "'repeat'", "'while'", 
-                     "'function'", "'return'", "'manifest'", "'module'", 
-                     "'stationary'", "'functions'", "'instructions'", "'detect'", 
-                     "'mix'", "'split'", "'heat'", "'drain'", "'dispense'", 
-                     "'dispose'", "'at'", "'with'", "'for'", "'into'", "'times'", 
-                     "'on'", "'of'", "'nat'", "'real'", "'mat'", "'bool'", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "'('", "')'", "'{'", "'}'", "'['", "']'", "';'", "','", 
-                     "'.'", "'='", "'>'", "'<'", "'!'", "'~'", "'?'", "':'", 
-                     "'=='", "'<='", "'>='", "'!='", "'&&'", "'||'", "'++'", 
-                     "'--'", "'+'", "'-'", "'*'", "'/'", "'&'", "'|'", "'^'", 
-                     "'%'", "'_'", "'ns'", "'us'", "'ms'", "'cs'", "'ds'", 
-                     "'s'", "'h'", "'d'", "'w'", "'mo'", "'y'", "'nL'", 
-                     "'uL'", "'mL'", "'cL'", "'dL'", "'L'", "'daL'", "'c'", 
+    literalNames = [ "<INVALID>", "'if'", "'else'", "'repeat'", "'while'",
+                     "'function'", "'return'", "'manifest'", "'module'",
+                     "'stationary'", "'functions'", "'instructions'", "'detect'",
+                     "'mix'", "'split'", "'heat'", "'drain'", "'dispense'",
+                     "'dispose'", "'at'", "'with'", "'for'", "'into'", "'times'",
+                     "'on'", "'of'", "'nat'", "'real'", "'mat'", "'bool'",
+                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>",
+                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>",
+                     "'('", "')'", "'{'", "'}'", "'['", "']'", "';'", "','",
+                     "'.'", "'='", "'>'", "'<'", "'!'", "'~'", "'?'", "':'",
+                     "'=='", "'<='", "'>='", "'!='", "'&&'", "'||'", "'++'",
+                     "'--'", "'+'", "'-'", "'*'", "'/'", "'&'", "'|'", "'^'",
+                     "'%'", "'_'", "'ns'", "'us'", "'ms'", "'cs'", "'ds'",
+                     "'s'", "'h'", "'d'", "'w'", "'mo'", "'y'", "'nL'",
+                     "'uL'", "'mL'", "'cL'", "'dL'", "'L'", "'daL'", "'c'",
                      "'f'", "'k'" ]
 
-    symbolicNames = [ "<INVALID>", "IF", "ELSE", "REPEAT", "WHILE", "FUNCTION", 
-                      "RETURN", "MANIFEST", "MODULE", "STATIONARY", "FUNCTIONS", 
-                      "INSTRUCTIONS", "DETECT", "MIX", "SPLIT", "HEAT", 
-                      "DRAIN", "DISPENSE", "DISPOSE", "AT", "WITH", "FOR", 
-                      "INTO", "TIMES", "ON", "OF", "NAT", "REAL", "MAT", 
-                      "BOOL", "IDENTIFIER", "STRING_LITERAL", "BOOL_LITERAL", 
-                      "FLOAT_LITERAL", "INTEGER_LITERAL", "TIME_NUMBER", 
-                      "VOLUME_NUMBER", "TEMP_NUMBER", "LPAREN", "RPAREN", 
-                      "LBRACE", "RBRACE", "LBRACKET", "RBRACKET", "SEMICOLON", 
-                      "COMMA", "DOT", "ASSIGN", "GT", "LT", "BANG", "TILDE", 
-                      "QUESTION", "COLON", "EQUALITY", "LTE", "GTE", "NOTEQUAL", 
-                      "AND", "OR", "INC", "DEC", "ADDITION", "SUBTRACT", 
-                      "MULTIPLY", "DIVIDE", "BITAND", "BITOR", "CARET", 
-                      "MOD", "UNDERSCORE", "NANOSECOND", "MICROSECOND", 
-                      "MILLISECOND", "CENTISECOND", "DECISECOND", "SECOND", 
-                      "HOUR", "DAY", "WEEK", "MONTH", "YEAR", "NANOLITRE", 
-                      "MICROLITRE", "MILLILITRE", "CENTILITRE", "DECILITRE", 
-                      "LITRE", "DECALITRE", "CELSIUS", "FAHRENHEIT", "KELVIN", 
+    symbolicNames = [ "<INVALID>", "IF", "ELSE", "REPEAT", "WHILE", "FUNCTION",
+                      "RETURN", "MANIFEST", "MODULE", "STATIONARY", "FUNCTIONS",
+                      "INSTRUCTIONS", "DETECT", "MIX", "SPLIT", "HEAT",
+                      "DRAIN", "DISPENSE", "DISPOSE", "AT", "WITH", "FOR",
+                      "INTO", "TIMES", "ON", "OF", "NAT", "REAL", "MAT",
+                      "BOOL", "IDENTIFIER", "STRING_LITERAL", "BOOL_LITERAL",
+                      "FLOAT_LITERAL", "INTEGER_LITERAL", "TIME_NUMBER",
+                      "VOLUME_NUMBER", "TEMP_NUMBER", "LPAREN", "RPAREN",
+                      "LBRACE", "RBRACE", "LBRACKET", "RBRACKET", "SEMICOLON",
+                      "COMMA", "DOT", "ASSIGN", "GT", "LT", "BANG", "TILDE",
+                      "QUESTION", "COLON", "EQUALITY", "LTE", "GTE", "NOTEQUAL",
+                      "AND", "OR", "INC", "DEC", "ADDITION", "SUBTRACT",
+                      "MULTIPLY", "DIVIDE", "BITAND", "BITOR", "CARET",
+                      "MOD", "UNDERSCORE", "NANOSECOND", "MICROSECOND",
+                      "MILLISECOND", "CENTISECOND", "DECISECOND", "SECOND",
+                      "HOUR", "DAY", "WEEK", "MONTH", "YEAR", "NANOLITRE",
+                      "MICROLITRE", "MILLILITRE", "CENTILITRE", "DECILITRE",
+                      "LITRE", "DECALITRE", "CELSIUS", "FAHRENHEIT", "KELVIN",
                       "WS", "COMMENT", "LINE_COMMENT" ]
 
     RULE_program = 0
@@ -253,15 +253,15 @@ class BSParser ( Parser ):
     RULE_timeIdentifier = 34
     RULE_temperatureIdentifier = 35
 
-    ruleNames =  [ "program", "moduleDeclaration", "manifestDeclaration", 
-                   "stationaryDeclaration", "functionDeclaration", "formalParameters", 
-                   "formalParameterList", "formalParameter", "functionTyping", 
-                   "returnStatement", "blockStatement", "assignmentOperations", 
-                   "statements", "ifStatement", "whileStatement", "repeat", 
-                   "mix", "detect", "heat", "split", "dispense", "dispose", 
-                   "expression", "parExpression", "methodCall", "expressionList", 
-                   "typeType", "unionType", "typesList", "localVariableDeclaration", 
-                   "primary", "literal", "primitiveType", "volumeIdentifier", 
+    ruleNames =  [ "program", "moduleDeclaration", "manifestDeclaration",
+                   "stationaryDeclaration", "functionDeclaration", "formalParameters",
+                   "formalParameterList", "formalParameter", "functionTyping",
+                   "returnStatement", "blockStatement", "assignmentOperations",
+                   "statements", "ifStatement", "whileStatement", "repeat",
+                   "mix", "detect", "heat", "split", "dispense", "dispose",
+                   "expression", "parExpression", "methodCall", "expressionList",
+                   "typeType", "unionType", "typesList", "localVariableDeclaration",
+                   "primary", "literal", "primitiveType", "volumeIdentifier",
                    "timeIdentifier", "temperatureIdentifier" ]
 
     EOF = Token.EOF
@@ -596,7 +596,7 @@ class BSParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 102 
+            self.state = 102
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
@@ -604,7 +604,7 @@ class BSParser ( Parser ):
                 self.match(BSParser.MANIFEST)
                 self.state = 101
                 self.match(BSParser.IDENTIFIER)
-                self.state = 104 
+                self.state = 104
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not (_la==BSParser.MANIFEST):
@@ -763,13 +763,13 @@ class BSParser ( Parser ):
 
             self.state = 119
             self.match(BSParser.LBRACE)
-            self.state = 121 
+            self.state = 121
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
                 self.state = 120
                 self.statements()
-                self.state = 123 
+                self.state = 123
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BSParser.IF) | (1 << BSParser.REPEAT) | (1 << BSParser.WHILE) | (1 << BSParser.HEAT) | (1 << BSParser.DRAIN) | (1 << BSParser.DISPOSE) | (1 << BSParser.IDENTIFIER) | (1 << BSParser.LBRACKET))) != 0)):
@@ -2242,7 +2242,7 @@ class BSParser ( Parser ):
                         self.match(BSParser.RBRACKET)
                         pass
 
-             
+
                 self.state = 276
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,21,self._ctx)
@@ -3108,35 +3108,35 @@ class BSParser ( Parser ):
     def expression_sempred(self, localctx:ExpressionContext, predIndex:int):
             if predIndex == 0:
                 return self.precpred(self._ctx, 7)
-         
+
 
             if predIndex == 1:
                 return self.precpred(self._ctx, 6)
-         
+
 
             if predIndex == 2:
                 return self.precpred(self._ctx, 5)
-         
+
 
             if predIndex == 3:
                 return self.precpred(self._ctx, 4)
-         
+
 
             if predIndex == 4:
                 return self.precpred(self._ctx, 3)
-         
+
 
             if predIndex == 5:
                 return self.precpred(self._ctx, 2)
-         
+
 
             if predIndex == 6:
                 return self.precpred(self._ctx, 1)
-         
+
 
             if predIndex == 7:
                 return self.precpred(self._ctx, 8)
-         
+
 
 
 
