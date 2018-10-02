@@ -60,7 +60,11 @@ public:
     return visitChildren(ctx);
   }
 
-  virtual antlrcpp::Any visitAssignmentOperations(BSParser::AssignmentOperationsContext *ctx) override {
+  virtual antlrcpp::Any visitMaterialAssignmentOperations(BSParser::MaterialAssignmentOperationsContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitNumericAssignmentOperations(BSParser::NumericAssignmentOperationsContext *ctx) override {
     return visitChildren(ctx);
   }
 
@@ -132,7 +136,11 @@ public:
     return visitChildren(ctx);
   }
 
-  virtual antlrcpp::Any visitLocalVariableDeclaration(BSParser::LocalVariableDeclarationContext *ctx) override {
+  virtual antlrcpp::Any visitNumericDeclaration(BSParser::NumericDeclarationContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitMaterialDeclaration(BSParser::MaterialDeclarationContext *ctx) override {
     return visitChildren(ctx);
   }
 

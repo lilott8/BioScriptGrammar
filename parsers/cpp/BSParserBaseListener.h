@@ -50,8 +50,11 @@ public:
   virtual void enterBlockStatement(BSParser::BlockStatementContext * /*ctx*/) override { }
   virtual void exitBlockStatement(BSParser::BlockStatementContext * /*ctx*/) override { }
 
-  virtual void enterAssignmentOperations(BSParser::AssignmentOperationsContext * /*ctx*/) override { }
-  virtual void exitAssignmentOperations(BSParser::AssignmentOperationsContext * /*ctx*/) override { }
+  virtual void enterMaterialAssignmentOperations(BSParser::MaterialAssignmentOperationsContext * /*ctx*/) override { }
+  virtual void exitMaterialAssignmentOperations(BSParser::MaterialAssignmentOperationsContext * /*ctx*/) override { }
+
+  virtual void enterNumericAssignmentOperations(BSParser::NumericAssignmentOperationsContext * /*ctx*/) override { }
+  virtual void exitNumericAssignmentOperations(BSParser::NumericAssignmentOperationsContext * /*ctx*/) override { }
 
   virtual void enterStatements(BSParser::StatementsContext * /*ctx*/) override { }
   virtual void exitStatements(BSParser::StatementsContext * /*ctx*/) override { }
@@ -104,8 +107,11 @@ public:
   virtual void enterTypesList(BSParser::TypesListContext * /*ctx*/) override { }
   virtual void exitTypesList(BSParser::TypesListContext * /*ctx*/) override { }
 
-  virtual void enterLocalVariableDeclaration(BSParser::LocalVariableDeclarationContext * /*ctx*/) override { }
-  virtual void exitLocalVariableDeclaration(BSParser::LocalVariableDeclarationContext * /*ctx*/) override { }
+  virtual void enterNumericDeclaration(BSParser::NumericDeclarationContext * /*ctx*/) override { }
+  virtual void exitNumericDeclaration(BSParser::NumericDeclarationContext * /*ctx*/) override { }
+
+  virtual void enterMaterialDeclaration(BSParser::MaterialDeclarationContext * /*ctx*/) override { }
+  virtual void exitMaterialDeclaration(BSParser::MaterialDeclarationContext * /*ctx*/) override { }
 
   virtual void enterPrimary(BSParser::PrimaryContext * /*ctx*/) override { }
   virtual void exitPrimary(BSParser::PrimaryContext * /*ctx*/) override { }

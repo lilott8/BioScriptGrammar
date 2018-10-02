@@ -1,10 +1,11 @@
-# Generated from /Users/jason/Projects/java/bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
+# Generated from /bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
 else:
     from BSParser import BSParser
-# parser/listener/visitor header section
+
+# parser/listener/visitor header section */
 
 # This class defines a complete listener for a parse tree produced by BSParser.
 class BSParserListener(ParseTreeListener):
@@ -108,12 +109,21 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by BSParser#assignmentOperations.
-    def enterAssignmentOperations(self, ctx:BSParser.AssignmentOperationsContext):
+    # Enter a parse tree produced by BSParser#materialAssignmentOperations.
+    def enterMaterialAssignmentOperations(self, ctx:BSParser.MaterialAssignmentOperationsContext):
         pass
 
-    # Exit a parse tree produced by BSParser#assignmentOperations.
-    def exitAssignmentOperations(self, ctx:BSParser.AssignmentOperationsContext):
+    # Exit a parse tree produced by BSParser#materialAssignmentOperations.
+    def exitMaterialAssignmentOperations(self, ctx:BSParser.MaterialAssignmentOperationsContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#numericAssignmentOperations.
+    def enterNumericAssignmentOperations(self, ctx:BSParser.NumericAssignmentOperationsContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#numericAssignmentOperations.
+    def exitNumericAssignmentOperations(self, ctx:BSParser.NumericAssignmentOperationsContext):
         pass
 
 
@@ -270,12 +280,21 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by BSParser#localVariableDeclaration.
-    def enterLocalVariableDeclaration(self, ctx:BSParser.LocalVariableDeclarationContext):
+    # Enter a parse tree produced by BSParser#numericDeclaration.
+    def enterNumericDeclaration(self, ctx:BSParser.NumericDeclarationContext):
         pass
 
-    # Exit a parse tree produced by BSParser#localVariableDeclaration.
-    def exitLocalVariableDeclaration(self, ctx:BSParser.LocalVariableDeclarationContext):
+    # Exit a parse tree produced by BSParser#numericDeclaration.
+    def exitNumericDeclaration(self, ctx:BSParser.NumericDeclarationContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#materialDeclaration.
+    def enterMaterialDeclaration(self, ctx:BSParser.MaterialDeclarationContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#materialDeclaration.
+    def exitMaterialDeclaration(self, ctx:BSParser.MaterialDeclarationContext):
         pass
 
 

@@ -48,8 +48,11 @@ public:
   virtual void enterBlockStatement(BSParser::BlockStatementContext *ctx) = 0;
   virtual void exitBlockStatement(BSParser::BlockStatementContext *ctx) = 0;
 
-  virtual void enterAssignmentOperations(BSParser::AssignmentOperationsContext *ctx) = 0;
-  virtual void exitAssignmentOperations(BSParser::AssignmentOperationsContext *ctx) = 0;
+  virtual void enterMaterialAssignmentOperations(BSParser::MaterialAssignmentOperationsContext *ctx) = 0;
+  virtual void exitMaterialAssignmentOperations(BSParser::MaterialAssignmentOperationsContext *ctx) = 0;
+
+  virtual void enterNumericAssignmentOperations(BSParser::NumericAssignmentOperationsContext *ctx) = 0;
+  virtual void exitNumericAssignmentOperations(BSParser::NumericAssignmentOperationsContext *ctx) = 0;
 
   virtual void enterStatements(BSParser::StatementsContext *ctx) = 0;
   virtual void exitStatements(BSParser::StatementsContext *ctx) = 0;
@@ -102,8 +105,11 @@ public:
   virtual void enterTypesList(BSParser::TypesListContext *ctx) = 0;
   virtual void exitTypesList(BSParser::TypesListContext *ctx) = 0;
 
-  virtual void enterLocalVariableDeclaration(BSParser::LocalVariableDeclarationContext *ctx) = 0;
-  virtual void exitLocalVariableDeclaration(BSParser::LocalVariableDeclarationContext *ctx) = 0;
+  virtual void enterNumericDeclaration(BSParser::NumericDeclarationContext *ctx) = 0;
+  virtual void exitNumericDeclaration(BSParser::NumericDeclarationContext *ctx) = 0;
+
+  virtual void enterMaterialDeclaration(BSParser::MaterialDeclarationContext *ctx) = 0;
+  virtual void exitMaterialDeclaration(BSParser::MaterialDeclarationContext *ctx) = 0;
 
   virtual void enterPrimary(BSParser::PrimaryContext *ctx) = 0;
   virtual void exitPrimary(BSParser::PrimaryContext *ctx) = 0;

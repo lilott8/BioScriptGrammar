@@ -99,19 +99,23 @@ blockStatement
     : LBRACE ( statements )* RBRACE
     ;
 
-assignmentOperations
+materialAssignmentOperations
     : mix
-    | detect
     | dispense
     | split
-    | expression
     | methodCall
+    ;
+
+numericAssignmentOperations
+    : expression
+    | detect
     ;
 
 statements
     : ifStatement
     | whileStatement
-    | localVariableDeclaration
+    | materialDeclaration
+    | numericDeclaration
     | repeat
     | heat
     | dispose
@@ -201,10 +205,15 @@ typesList
     : typeType (SEMICOLON typeType)*
     ;
 
-localVariableDeclaration
-    : (unionType)? IDENTIFIER (LBRACKET INTEGER_LITERAL RBRACKET)? ASSIGN assignmentOperations
-    // We can infer the quantity from the split.
-    | (unionType)? IDENTIFIER LBRACKET RBRACKET ASSIGN split
+numericDeclaration
+    : (unionType)? IDENTIFIER ASSIGN numericAssignmentOperations
+    ;
+
+materialDeclaration
+    // We can infer size from split.
+    : (unionType)? IDENTIFIER LBRACKET RBRACKET ASSIGN split
+    // We only want to allow material operations to array stuff.
+    | (unionType)? IDENTIFIER (LBRACKET INTEGER_LITERAL RBRACKET)? ASSIGN materialAssignmentOperations
     ;
 
 primary

@@ -42,7 +42,9 @@ public:
 
     virtual antlrcpp::Any visitBlockStatement(BSParser::BlockStatementContext *context) = 0;
 
-    virtual antlrcpp::Any visitAssignmentOperations(BSParser::AssignmentOperationsContext *context) = 0;
+    virtual antlrcpp::Any visitMaterialAssignmentOperations(BSParser::MaterialAssignmentOperationsContext *context) = 0;
+
+    virtual antlrcpp::Any visitNumericAssignmentOperations(BSParser::NumericAssignmentOperationsContext *context) = 0;
 
     virtual antlrcpp::Any visitStatements(BSParser::StatementsContext *context) = 0;
 
@@ -78,7 +80,9 @@ public:
 
     virtual antlrcpp::Any visitTypesList(BSParser::TypesListContext *context) = 0;
 
-    virtual antlrcpp::Any visitLocalVariableDeclaration(BSParser::LocalVariableDeclarationContext *context) = 0;
+    virtual antlrcpp::Any visitNumericDeclaration(BSParser::NumericDeclarationContext *context) = 0;
+
+    virtual antlrcpp::Any visitMaterialDeclaration(BSParser::MaterialDeclarationContext *context) = 0;
 
     virtual antlrcpp::Any visitPrimary(BSParser::PrimaryContext *context) = 0;
 

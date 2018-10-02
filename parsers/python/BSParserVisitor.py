@@ -1,10 +1,11 @@
-# Generated from /Users/jason/Projects/java/bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
+# Generated from /bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
 else:
     from BSParser import BSParser
-# parser/listener/visitor header section
+
+# parser/listener/visitor header section */
 
 # This class defines a complete generic visitor for a parse tree produced by BSParser.
 
@@ -65,8 +66,13 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by BSParser#assignmentOperations.
-    def visitAssignmentOperations(self, ctx:BSParser.AssignmentOperationsContext):
+    # Visit a parse tree produced by BSParser#materialAssignmentOperations.
+    def visitMaterialAssignmentOperations(self, ctx:BSParser.MaterialAssignmentOperationsContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#numericAssignmentOperations.
+    def visitNumericAssignmentOperations(self, ctx:BSParser.NumericAssignmentOperationsContext):
         return self.visitChildren(ctx)
 
 
@@ -155,8 +161,13 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by BSParser#localVariableDeclaration.
-    def visitLocalVariableDeclaration(self, ctx:BSParser.LocalVariableDeclarationContext):
+    # Visit a parse tree produced by BSParser#numericDeclaration.
+    def visitNumericDeclaration(self, ctx:BSParser.NumericDeclarationContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#materialDeclaration.
+    def visitMaterialDeclaration(self, ctx:BSParser.MaterialDeclarationContext):
         return self.visitChildren(ctx)
 
 
