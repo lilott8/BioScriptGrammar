@@ -90,6 +90,7 @@ functionTyping
 // force the translation into an assignment.
 returnStatement
     : RETURN IDENTIFIER
+    | RETURN methodCall
     ;
 
 /******************************************
