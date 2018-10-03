@@ -110,6 +110,7 @@ materialAssignmentOperations
 numericAssignmentOperations
     : expression
     | detect
+    | methodCall
     ;
 
 statements
