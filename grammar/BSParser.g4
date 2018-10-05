@@ -212,8 +212,9 @@ numericDeclaration
     ;
 
 materialDeclaration
+    : (unionType)? IDENTIFIER (COMMA IDENTIFIER)* ASSIGN split
     // We can infer size from split.
-    : (unionType)? IDENTIFIER LBRACKET RBRACKET ASSIGN split
+    | (unionType)? IDENTIFIER LBRACKET RBRACKET ASSIGN split
     // We only want to allow material operations to array stuff.
     | (unionType)? IDENTIFIER (LBRACKET INTEGER_LITERAL RBRACKET)? ASSIGN materialAssignmentOperations
     ;
