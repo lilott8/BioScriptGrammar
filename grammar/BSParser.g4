@@ -64,7 +64,7 @@ stationaryDeclaration
 ******************************************/
 functionDeclaration
     : FUNCTION IDENTIFIER formalParameters ( functionTyping )? LBRACE
-            ( statements )+
+            ( statements )*
             returnStatement
      RBRACE
     ;
@@ -90,6 +90,7 @@ functionTyping
 // force the translation into an assignment.
 returnStatement
     : RETURN IDENTIFIER
+    | RETURN literal
     | RETURN methodCall
     ;
 

@@ -1,6 +1,6 @@
 /* parser/listener/visitor header section */
 
-// Generated from /Users/jason/Projects/java/bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
+// Generated from /bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
 
 #pragma once
 
@@ -15,36 +15,36 @@
 class  BSParser : public antlr4::Parser {
 public:
   enum {
-    IF = 1, ELSE = 2, REPEAT = 3, WHILE = 4, FUNCTION = 5, RETURN = 6, MANIFEST = 7, 
-    MODULE = 8, STATIONARY = 9, FUNCTIONS = 10, INSTRUCTIONS = 11, DETECT = 12, 
-    MIX = 13, SPLIT = 14, HEAT = 15, DRAIN = 16, DISPENSE = 17, DISPOSE = 18, 
-    AT = 19, WITH = 20, FOR = 21, INTO = 22, TIMES = 23, ON = 24, OF = 25, 
-    NAT = 26, REAL = 27, MAT = 28, BOOL = 29, IDENTIFIER = 30, STRING_LITERAL = 31, 
-    BOOL_LITERAL = 32, FLOAT_LITERAL = 33, INTEGER_LITERAL = 34, TIME_NUMBER = 35, 
-    VOLUME_NUMBER = 36, TEMP_NUMBER = 37, LPAREN = 38, RPAREN = 39, LBRACE = 40, 
-    RBRACE = 41, LBRACKET = 42, RBRACKET = 43, SEMICOLON = 44, COMMA = 45, 
-    DOT = 46, ASSIGN = 47, GT = 48, LT = 49, BANG = 50, TILDE = 51, QUESTION = 52, 
-    COLON = 53, EQUALITY = 54, LTE = 55, GTE = 56, NOTEQUAL = 57, AND = 58, 
-    OR = 59, INC = 60, DEC = 61, ADDITION = 62, SUBTRACT = 63, MULTIPLY = 64, 
-    DIVIDE = 65, BITAND = 66, BITOR = 67, CARET = 68, MOD = 69, UNDERSCORE = 70, 
-    NANOSECOND = 71, MICROSECOND = 72, MILLISECOND = 73, CENTISECOND = 74, 
-    DECISECOND = 75, SECOND = 76, HOUR = 77, DAY = 78, WEEK = 79, MONTH = 80, 
-    YEAR = 81, NANOLITRE = 82, MICROLITRE = 83, MILLILITRE = 84, CENTILITRE = 85, 
-    DECILITRE = 86, LITRE = 87, DECALITRE = 88, CELSIUS = 89, FAHRENHEIT = 90, 
+    IF = 1, ELSE = 2, REPEAT = 3, WHILE = 4, FUNCTION = 5, RETURN = 6, MANIFEST = 7,
+    MODULE = 8, STATIONARY = 9, FUNCTIONS = 10, INSTRUCTIONS = 11, DETECT = 12,
+    MIX = 13, SPLIT = 14, HEAT = 15, DRAIN = 16, DISPENSE = 17, DISPOSE = 18,
+    AT = 19, WITH = 20, FOR = 21, INTO = 22, TIMES = 23, ON = 24, OF = 25,
+    NAT = 26, REAL = 27, MAT = 28, BOOL = 29, IDENTIFIER = 30, STRING_LITERAL = 31,
+    BOOL_LITERAL = 32, FLOAT_LITERAL = 33, INTEGER_LITERAL = 34, TIME_NUMBER = 35,
+    VOLUME_NUMBER = 36, TEMP_NUMBER = 37, LPAREN = 38, RPAREN = 39, LBRACE = 40,
+    RBRACE = 41, LBRACKET = 42, RBRACKET = 43, SEMICOLON = 44, COMMA = 45,
+    DOT = 46, ASSIGN = 47, GT = 48, LT = 49, BANG = 50, TILDE = 51, QUESTION = 52,
+    COLON = 53, EQUALITY = 54, LTE = 55, GTE = 56, NOTEQUAL = 57, AND = 58,
+    OR = 59, INC = 60, DEC = 61, ADDITION = 62, SUBTRACT = 63, MULTIPLY = 64,
+    DIVIDE = 65, BITAND = 66, BITOR = 67, CARET = 68, MOD = 69, UNDERSCORE = 70,
+    NANOSECOND = 71, MICROSECOND = 72, MILLISECOND = 73, CENTISECOND = 74,
+    DECISECOND = 75, SECOND = 76, HOUR = 77, DAY = 78, WEEK = 79, MONTH = 80,
+    YEAR = 81, NANOLITRE = 82, MICROLITRE = 83, MILLILITRE = 84, CENTILITRE = 85,
+    DECILITRE = 86, LITRE = 87, DECALITRE = 88, CELSIUS = 89, FAHRENHEIT = 90,
     KELVIN = 91, WS = 92, COMMENT = 93, LINE_COMMENT = 94
   };
 
   enum {
-    RuleProgram = 0, RuleModuleDeclaration = 1, RuleManifestDeclaration = 2, 
-    RuleStationaryDeclaration = 3, RuleFunctionDeclaration = 4, RuleFormalParameters = 5, 
-    RuleFormalParameterList = 6, RuleFormalParameter = 7, RuleFunctionTyping = 8, 
-    RuleReturnStatement = 9, RuleBlockStatement = 10, RuleMaterialAssignmentOperations = 11, 
-    RuleNumericAssignmentOperations = 12, RuleStatements = 13, RuleIfStatement = 14, 
-    RuleWhileStatement = 15, RuleRepeat = 16, RuleMix = 17, RuleDetect = 18, 
-    RuleHeat = 19, RuleSplit = 20, RuleDispense = 21, RuleDispose = 22, 
-    RuleExpression = 23, RuleParExpression = 24, RuleMethodCall = 25, RuleExpressionList = 26, 
-    RuleTypeType = 27, RuleUnionType = 28, RuleTypesList = 29, RuleNumericDeclaration = 30, 
-    RuleMaterialDeclaration = 31, RulePrimary = 32, RuleLiteral = 33, RulePrimitiveType = 34, 
+    RuleProgram = 0, RuleModuleDeclaration = 1, RuleManifestDeclaration = 2,
+    RuleStationaryDeclaration = 3, RuleFunctionDeclaration = 4, RuleFormalParameters = 5,
+    RuleFormalParameterList = 6, RuleFormalParameter = 7, RuleFunctionTyping = 8,
+    RuleReturnStatement = 9, RuleBlockStatement = 10, RuleMaterialAssignmentOperations = 11,
+    RuleNumericAssignmentOperations = 12, RuleStatements = 13, RuleIfStatement = 14,
+    RuleWhileStatement = 15, RuleRepeat = 16, RuleMix = 17, RuleDetect = 18,
+    RuleHeat = 19, RuleSplit = 20, RuleDispense = 21, RuleDispose = 22,
+    RuleExpression = 23, RuleParExpression = 24, RuleMethodCall = 25, RuleExpressionList = 26,
+    RuleTypeType = 27, RuleUnionType = 28, RuleTypesList = 29, RuleNumericDeclaration = 30,
+    RuleMaterialDeclaration = 31, RulePrimary = 32, RuleLiteral = 33, RulePrimitiveType = 34,
     RuleVolumeIdentifier = 35, RuleTimeIdentifier = 36, RuleTemperatureIdentifier = 37
   };
 
@@ -95,7 +95,7 @@ public:
   class PrimitiveTypeContext;
   class VolumeIdentifierContext;
   class TimeIdentifierContext;
-  class TemperatureIdentifierContext; 
+  class TemperatureIdentifierContext;
 
   class  ProgramContext : public antlr4::ParserRuleContext {
   public:
@@ -118,7 +118,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   ProgramContext* program();
@@ -136,7 +136,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   ModuleDeclarationContext* moduleDeclaration();
@@ -154,7 +154,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   ManifestDeclarationContext* manifestDeclaration();
@@ -172,7 +172,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   StationaryDeclarationContext* stationaryDeclaration();
@@ -195,7 +195,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   FunctionDeclarationContext* functionDeclaration();
@@ -212,7 +212,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   FormalParametersContext* formalParameters();
@@ -230,7 +230,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   FormalParameterListContext* formalParameterList();
@@ -248,7 +248,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   FormalParameterContext* formalParameter();
@@ -264,7 +264,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   FunctionTypingContext* functionTyping();
@@ -275,13 +275,14 @@ public:
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *RETURN();
     antlr4::tree::TerminalNode *IDENTIFIER();
+    LiteralContext *literal();
     MethodCallContext *methodCall();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   ReturnStatementContext* returnStatement();
@@ -299,7 +300,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   BlockStatementContext* blockStatement();
@@ -317,7 +318,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   MaterialAssignmentOperationsContext* materialAssignmentOperations();
@@ -334,7 +335,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   NumericAssignmentOperationsContext* numericAssignmentOperations();
@@ -355,7 +356,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   StatementsContext* statements();
@@ -374,7 +375,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   IfStatementContext* ifStatement();
@@ -391,7 +392,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   WhileStatementContext* whileStatement();
@@ -410,7 +411,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   RepeatContext* repeat();
@@ -430,7 +431,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   MixContext* mix();
@@ -450,7 +451,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   DetectContext* detect();
@@ -470,7 +471,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   HeatContext* heat();
@@ -488,7 +489,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   SplitContext* split();
@@ -504,7 +505,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   DispenseContext* dispense();
@@ -521,7 +522,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   DisposeContext* dispose();
@@ -555,7 +556,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   ExpressionContext* expression();
@@ -572,7 +573,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   ParExpressionContext* parExpression();
@@ -590,7 +591,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   MethodCallContext* methodCall();
@@ -608,7 +609,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   ExpressionListContext* expressionList();
@@ -623,7 +624,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   TypeTypeContext* typeType();
@@ -640,7 +641,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   UnionTypeContext* unionType();
@@ -658,7 +659,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   TypesListContext* typesList();
@@ -676,7 +677,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   NumericDeclarationContext* numericDeclaration();
@@ -701,7 +702,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   MaterialDeclarationContext* materialDeclaration();
@@ -720,7 +721,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   PrimaryContext* primary();
@@ -738,7 +739,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   LiteralContext* literal();
@@ -756,7 +757,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   PrimitiveTypeContext* primitiveType();
@@ -773,7 +774,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   VolumeIdentifierContext* volumeIdentifier();
@@ -788,7 +789,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   TimeIdentifierContext* timeIdentifier();
@@ -803,7 +804,7 @@ public:
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-   
+
   };
 
   TemperatureIdentifierContext* temperatureIdentifier();
