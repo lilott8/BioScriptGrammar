@@ -44,6 +44,8 @@ public:
 
     virtual antlrcpp::Any visitMaterialAssignmentOperations(BSParser::MaterialAssignmentOperationsContext *context) = 0;
 
+    virtual antlrcpp::Any visitMaterialArrayAssignmentOperations(BSParser::MaterialArrayAssignmentOperationsContext *context) = 0;
+
     virtual antlrcpp::Any visitNumericAssignmentOperations(BSParser::NumericAssignmentOperationsContext *context) = 0;
 
     virtual antlrcpp::Any visitStatements(BSParser::StatementsContext *context) = 0;

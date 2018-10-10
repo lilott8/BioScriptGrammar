@@ -53,6 +53,9 @@ public:
   virtual void enterMaterialAssignmentOperations(BSParser::MaterialAssignmentOperationsContext * /*ctx*/) override { }
   virtual void exitMaterialAssignmentOperations(BSParser::MaterialAssignmentOperationsContext * /*ctx*/) override { }
 
+  virtual void enterMaterialArrayAssignmentOperations(BSParser::MaterialArrayAssignmentOperationsContext * /*ctx*/) override { }
+  virtual void exitMaterialArrayAssignmentOperations(BSParser::MaterialArrayAssignmentOperationsContext * /*ctx*/) override { }
+
   virtual void enterNumericAssignmentOperations(BSParser::NumericAssignmentOperationsContext * /*ctx*/) override { }
   virtual void exitNumericAssignmentOperations(BSParser::NumericAssignmentOperationsContext * /*ctx*/) override { }
 

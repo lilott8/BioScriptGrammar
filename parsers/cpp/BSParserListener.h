@@ -51,6 +51,9 @@ public:
   virtual void enterMaterialAssignmentOperations(BSParser::MaterialAssignmentOperationsContext *ctx) = 0;
   virtual void exitMaterialAssignmentOperations(BSParser::MaterialAssignmentOperationsContext *ctx) = 0;
 
+  virtual void enterMaterialArrayAssignmentOperations(BSParser::MaterialArrayAssignmentOperationsContext *ctx) = 0;
+  virtual void exitMaterialArrayAssignmentOperations(BSParser::MaterialArrayAssignmentOperationsContext *ctx) = 0;
+
   virtual void enterNumericAssignmentOperations(BSParser::NumericAssignmentOperationsContext *ctx) = 0;
   virtual void exitNumericAssignmentOperations(BSParser::NumericAssignmentOperationsContext *ctx) = 0;
 

@@ -108,6 +108,12 @@ materialAssignmentOperations
     | methodCall
     ;
 
+materialArrayAssignmentOperations
+    : dispense
+    | split
+    | methodCall
+    ;
+
 numericAssignmentOperations
     : expression
     | detect
@@ -213,11 +219,14 @@ numericDeclaration
     ;
 
 materialDeclaration
+    // Inferred from size of identifiers.
     : (unionType)? IDENTIFIER (COMMA IDENTIFIER)* ASSIGN split
-    // We can infer size from split.
+    // Inferred size from split.
     | (unionType)? IDENTIFIER LBRACKET RBRACKET ASSIGN split
-    // We only want to allow material operations to array stuff.
-    | (unionType)? IDENTIFIER (LBRACKET INTEGER_LITERAL RBRACKET)? ASSIGN materialAssignmentOperations
+    // Defaults to INTEGER_LITERAL.
+    | (unionType)? IDENTIFIER LBRACKET INTEGER_LITERAL RBRACKET ASSIGN materialArrayAssignmentOperations
+    // Defaults to 1.
+    | (unionType)? IDENTIFIER ASSIGN materialAssignmentOperations
     ;
 
 primary

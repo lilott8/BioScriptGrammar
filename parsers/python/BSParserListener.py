@@ -117,6 +117,15 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by BSParser#materialArrayAssignmentOperations.
+    def enterMaterialArrayAssignmentOperations(self, ctx:BSParser.MaterialArrayAssignmentOperationsContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#materialArrayAssignmentOperations.
+    def exitMaterialArrayAssignmentOperations(self, ctx:BSParser.MaterialArrayAssignmentOperationsContext):
+        pass
+
+
     # Enter a parse tree produced by BSParser#numericAssignmentOperations.
     def enterNumericAssignmentOperations(self, ctx:BSParser.NumericAssignmentOperationsContext):
         pass

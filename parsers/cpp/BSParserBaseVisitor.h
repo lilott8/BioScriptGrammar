@@ -64,6 +64,10 @@ public:
     return visitChildren(ctx);
   }
 
+  virtual antlrcpp::Any visitMaterialArrayAssignmentOperations(BSParser::MaterialArrayAssignmentOperationsContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
   virtual antlrcpp::Any visitNumericAssignmentOperations(BSParser::NumericAssignmentOperationsContext *ctx) override {
     return visitChildren(ctx);
   }

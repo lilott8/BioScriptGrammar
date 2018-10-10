@@ -39,13 +39,14 @@ public:
     RuleStationaryDeclaration = 3, RuleFunctionDeclaration = 4, RuleFormalParameters = 5,
     RuleFormalParameterList = 6, RuleFormalParameter = 7, RuleFunctionTyping = 8,
     RuleReturnStatement = 9, RuleBlockStatement = 10, RuleMaterialAssignmentOperations = 11,
-    RuleNumericAssignmentOperations = 12, RuleStatements = 13, RuleIfStatement = 14,
-    RuleWhileStatement = 15, RuleRepeat = 16, RuleMix = 17, RuleDetect = 18,
-    RuleHeat = 19, RuleSplit = 20, RuleDispense = 21, RuleDispose = 22,
-    RuleExpression = 23, RuleParExpression = 24, RuleMethodCall = 25, RuleExpressionList = 26,
-    RuleTypeType = 27, RuleUnionType = 28, RuleTypesList = 29, RuleNumericDeclaration = 30,
-    RuleMaterialDeclaration = 31, RulePrimary = 32, RuleLiteral = 33, RulePrimitiveType = 34,
-    RuleVolumeIdentifier = 35, RuleTimeIdentifier = 36, RuleTemperatureIdentifier = 37
+    RuleMaterialArrayAssignmentOperations = 12, RuleNumericAssignmentOperations = 13,
+    RuleStatements = 14, RuleIfStatement = 15, RuleWhileStatement = 16,
+    RuleRepeat = 17, RuleMix = 18, RuleDetect = 19, RuleHeat = 20, RuleSplit = 21,
+    RuleDispense = 22, RuleDispose = 23, RuleExpression = 24, RuleParExpression = 25,
+    RuleMethodCall = 26, RuleExpressionList = 27, RuleTypeType = 28, RuleUnionType = 29,
+    RuleTypesList = 30, RuleNumericDeclaration = 31, RuleMaterialDeclaration = 32,
+    RulePrimary = 33, RuleLiteral = 34, RulePrimitiveType = 35, RuleVolumeIdentifier = 36,
+    RuleTimeIdentifier = 37, RuleTemperatureIdentifier = 38
   };
 
   BSParser(antlr4::TokenStream *input);
@@ -70,6 +71,7 @@ public:
   class ReturnStatementContext;
   class BlockStatementContext;
   class MaterialAssignmentOperationsContext;
+  class MaterialArrayAssignmentOperationsContext;
   class NumericAssignmentOperationsContext;
   class StatementsContext;
   class IfStatementContext;
@@ -322,6 +324,23 @@ public:
   };
 
   MaterialAssignmentOperationsContext* materialAssignmentOperations();
+
+  class  MaterialArrayAssignmentOperationsContext : public antlr4::ParserRuleContext {
+  public:
+    MaterialArrayAssignmentOperationsContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    DispenseContext *dispense();
+    SplitContext *split();
+    MethodCallContext *methodCall();
+
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+
+  };
+
+  MaterialArrayAssignmentOperationsContext* materialArrayAssignmentOperations();
 
   class  NumericAssignmentOperationsContext : public antlr4::ParserRuleContext {
   public:
@@ -695,8 +714,9 @@ public:
     antlr4::tree::TerminalNode* COMMA(size_t i);
     antlr4::tree::TerminalNode *LBRACKET();
     antlr4::tree::TerminalNode *RBRACKET();
-    MaterialAssignmentOperationsContext *materialAssignmentOperations();
     antlr4::tree::TerminalNode *INTEGER_LITERAL();
+    MaterialArrayAssignmentOperationsContext *materialArrayAssignmentOperations();
+    MaterialAssignmentOperationsContext *materialAssignmentOperations();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;

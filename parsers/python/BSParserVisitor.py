@@ -70,6 +70,11 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by BSParser#materialArrayAssignmentOperations.
+    def visitMaterialArrayAssignmentOperations(self, ctx:BSParser.MaterialArrayAssignmentOperationsContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by BSParser#numericAssignmentOperations.
     def visitNumericAssignmentOperations(self, ctx:BSParser.NumericAssignmentOperationsContext):
         return self.visitChildren(ctx)
