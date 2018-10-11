@@ -713,9 +713,8 @@ public:
     std::vector<antlr4::tree::TerminalNode *> COMMA();
     antlr4::tree::TerminalNode* COMMA(size_t i);
     antlr4::tree::TerminalNode *LBRACKET();
+    antlr4::tree::TerminalNode *INTEGER_LITERAL();
     antlr4::tree::TerminalNode *RBRACKET();
-    std::vector<antlr4::tree::TerminalNode *> INTEGER_LITERAL();
-    antlr4::tree::TerminalNode* INTEGER_LITERAL(size_t i);
     MaterialAssignmentOperationsContext *materialAssignmentOperations();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
