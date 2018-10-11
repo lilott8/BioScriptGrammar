@@ -222,9 +222,7 @@ materialDeclaration
     // Inferred from size of identifiers.
     : (unionType)? IDENTIFIER (COMMA IDENTIFIER)* ASSIGN split
     // Inferred size from split.
-    | (unionType)? IDENTIFIER LBRACKET RBRACKET ASSIGN split
-    // Defaults to INTEGER_LITERAL.
-    | (unionType)? IDENTIFIER LBRACKET INTEGER_LITERAL RBRACKET ASSIGN materialArrayAssignmentOperations
+    | (unionType)? IDENTIFIER LBRACKET (INTEGER_LITERAL)+ RBRACKET ASSIGN split
     // Defaults to 1.
     | (unionType)? IDENTIFIER ASSIGN materialAssignmentOperations
     ;
