@@ -65,18 +65,8 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by BSParser#materialAssignmentOperations.
-    def visitMaterialAssignmentOperations(self, ctx:BSParser.MaterialAssignmentOperationsContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by BSParser#materialArrayAssignmentOperations.
-    def visitMaterialArrayAssignmentOperations(self, ctx:BSParser.MaterialArrayAssignmentOperationsContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by BSParser#numericAssignmentOperations.
-    def visitNumericAssignmentOperations(self, ctx:BSParser.NumericAssignmentOperationsContext):
+    # Visit a parse tree produced by BSParser#variableDeclaration.
+    def visitVariableDeclaration(self, ctx:BSParser.VariableDeclarationContext):
         return self.visitChildren(ctx)
 
 
@@ -165,13 +155,8 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by BSParser#numericDeclaration.
-    def visitNumericDeclaration(self, ctx:BSParser.NumericDeclarationContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by BSParser#materialDeclaration.
-    def visitMaterialDeclaration(self, ctx:BSParser.MaterialDeclarationContext):
+    # Visit a parse tree produced by BSParser#variableDefinition.
+    def visitVariableDefinition(self, ctx:BSParser.VariableDefinitionContext):
         return self.visitChildren(ctx)
 
 

@@ -40,7 +40,7 @@ program
         FUNCTIONS COLON
         (functionDeclaration)*
         INSTRUCTIONS COLON
-        ( statements )*
+        ( statements )+
         EOF
     ;
 
@@ -64,7 +64,7 @@ stationaryDeclaration
 ******************************************/
 functionDeclaration
     : FUNCTION IDENTIFIER formalParameters ( functionTyping )? LBRACE
-            ( statements )*
+            ( statements )+
             returnStatement
      RBRACE
     ;
@@ -101,30 +101,19 @@ blockStatement
     : LBRACE ( statements )* RBRACE
     ;
 
-materialAssignmentOperations
+variableDeclaration
     : mix
     | dispense
     | split
     | methodCall
-    ;
-
-materialArrayAssignmentOperations
-    : dispense
-    | split
-    | methodCall
-    ;
-
-numericAssignmentOperations
-    : expression
     | detect
-    | methodCall
+    | expression
     ;
 
 statements
     : ifStatement
     | whileStatement
-    | materialDeclaration
-    | numericDeclaration
+    | variableDefinition
     | repeat
     | heat
     | dispose
@@ -214,19 +203,8 @@ typesList
     : typeType (SEMICOLON typeType)*
     ;
 
-numericDeclaration
-    : (unionType)? IDENTIFIER ASSIGN numericAssignmentOperations
-    ;
-
-materialDeclaration
-    // Inferred from size of identifiers.
-    : (unionType)? IDENTIFIER (COMMA IDENTIFIER)* ASSIGN split
-    // We can do anything!
-    | (unionType)? IDENTIFIER LBRACKET INTEGER_LITERAL RBRACKET ASSIGN materialAssignmentOperations
-    // Inferred size from split.
-    | (unionType)? IDENTIFIER LBRACKET RBRACKET ASSIGN split
-    // Defaults to 1.
-    | (unionType)? IDENTIFIER ASSIGN materialAssignmentOperations
+variableDefinition
+    : (unionType)? IDENTIFIER (LBRACKET (INTEGER_LITERAL)? RBRACKET)? ASSIGN variableDeclaration
     ;
 
 primary

@@ -108,30 +108,12 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by BSParser#materialAssignmentOperations.
-    def enterMaterialAssignmentOperations(self, ctx:BSParser.MaterialAssignmentOperationsContext):
+    # Enter a parse tree produced by BSParser#variableDeclaration.
+    def enterVariableDeclaration(self, ctx:BSParser.VariableDeclarationContext):
         pass
 
-    # Exit a parse tree produced by BSParser#materialAssignmentOperations.
-    def exitMaterialAssignmentOperations(self, ctx:BSParser.MaterialAssignmentOperationsContext):
-        pass
-
-
-    # Enter a parse tree produced by BSParser#materialArrayAssignmentOperations.
-    def enterMaterialArrayAssignmentOperations(self, ctx:BSParser.MaterialArrayAssignmentOperationsContext):
-        pass
-
-    # Exit a parse tree produced by BSParser#materialArrayAssignmentOperations.
-    def exitMaterialArrayAssignmentOperations(self, ctx:BSParser.MaterialArrayAssignmentOperationsContext):
-        pass
-
-
-    # Enter a parse tree produced by BSParser#numericAssignmentOperations.
-    def enterNumericAssignmentOperations(self, ctx:BSParser.NumericAssignmentOperationsContext):
-        pass
-
-    # Exit a parse tree produced by BSParser#numericAssignmentOperations.
-    def exitNumericAssignmentOperations(self, ctx:BSParser.NumericAssignmentOperationsContext):
+    # Exit a parse tree produced by BSParser#variableDeclaration.
+    def exitVariableDeclaration(self, ctx:BSParser.VariableDeclarationContext):
         pass
 
 
@@ -288,21 +270,12 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by BSParser#numericDeclaration.
-    def enterNumericDeclaration(self, ctx:BSParser.NumericDeclarationContext):
+    # Enter a parse tree produced by BSParser#variableDefinition.
+    def enterVariableDefinition(self, ctx:BSParser.VariableDefinitionContext):
         pass
 
-    # Exit a parse tree produced by BSParser#numericDeclaration.
-    def exitNumericDeclaration(self, ctx:BSParser.NumericDeclarationContext):
-        pass
-
-
-    # Enter a parse tree produced by BSParser#materialDeclaration.
-    def enterMaterialDeclaration(self, ctx:BSParser.MaterialDeclarationContext):
-        pass
-
-    # Exit a parse tree produced by BSParser#materialDeclaration.
-    def exitMaterialDeclaration(self, ctx:BSParser.MaterialDeclarationContext):
+    # Exit a parse tree produced by BSParser#variableDefinition.
+    def exitVariableDefinition(self, ctx:BSParser.VariableDefinitionContext):
         pass
 
 
