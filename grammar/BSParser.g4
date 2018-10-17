@@ -40,7 +40,7 @@ program
         FUNCTIONS COLON
         (functionDeclaration)*
         INSTRUCTIONS COLON
-        ( statements )+
+        ( statements )*
         EOF
     ;
 
@@ -64,7 +64,7 @@ stationaryDeclaration
 ******************************************/
 functionDeclaration
     : FUNCTION IDENTIFIER formalParameters ( functionTyping )? LBRACE
-            ( statements )+
+            ( statements )*
             returnStatement
      RBRACE
     ;
