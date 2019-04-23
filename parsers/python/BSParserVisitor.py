@@ -1,10 +1,10 @@
-# Generated from /bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
+# Generated from /Users/ryanpecor/Documents/BioScriptGrammar/grammar/BSParser.g4 by ANTLR 4.7.2
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
 else:
     from BSParser import BSParser
-# parser/listener/visitor header section */
+# /* parser/listener/visitor header section */
 
 # This class defines a complete generic visitor for a parse tree produced by BSParser.
 
@@ -117,6 +117,11 @@ class BSParserVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by BSParser#dispose.
     def visitDispose(self, ctx:BSParser.DisposeContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#gradient.
+    def visitGradient(self, ctx:BSParser.GradientContext):
         return self.visitChildren(ctx)
 
 
