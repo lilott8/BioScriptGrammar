@@ -25,6 +25,7 @@ HEAT:           'heat';
 DRAIN:          'drain';
 DISPENSE:       'dispense';
 DISPOSE:        'dispose';
+GRADIENT:       'gradient';
 
 // Other Keywords
 AT:             'at';

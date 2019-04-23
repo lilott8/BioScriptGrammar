@@ -1,10 +1,10 @@
-# Generated from /bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
+# Generated from /Users/ryanpecor/Documents/BioScriptGrammar/grammar/BSParser.g4 by ANTLR 4.7.2
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
 else:
     from BSParser import BSParser
-# parser/listener/visitor header section */
+/* parser/listener/visitor header section */
 
 # This class defines a complete listener for a parse tree produced by BSParser.
 class BSParserListener(ParseTreeListener):
@@ -204,6 +204,15 @@ class BSParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by BSParser#dispose.
     def exitDispose(self, ctx:BSParser.DisposeContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#gradient.
+    def enterGradient(self, ctx:BSParser.GradientContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#gradient.
+    def exitGradient(self, ctx:BSParser.GradientContext):
         pass
 
 
