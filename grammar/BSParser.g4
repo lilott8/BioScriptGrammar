@@ -108,6 +108,7 @@ variableDeclaration
     | methodCall
     | detect
     | expression
+    | gradient
     ;
 
 statements
@@ -155,7 +156,9 @@ dispose
     : DRAIN IDENTIFIER
     | DISPOSE IDENTIFIER
     ;
-
+gradient
+    : GRADIENT IDENTIFIER WITH IDENTIFIER FOR FLOAT_LITERAL COMMA FLOAT_LITERAL AT FLOAT_LITERAL
+    ;
 /******************************************
  * Expressions
 ******************************************/
