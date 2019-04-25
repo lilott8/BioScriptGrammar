@@ -156,6 +156,11 @@ dispose
     : DRAIN IDENTIFIER
     | DISPOSE IDENTIFIER
     ;
+
+useby
+    : AT_SYMBOL USEBY timeIdentifier
+    ;
+
 gradient
     : GRADIENT IDENTIFIER WITH IDENTIFIER FOR FLOAT_LITERAL COMMA FLOAT_LITERAL AT FLOAT_LITERAL
     ;
@@ -207,7 +212,8 @@ typesList
     ;
 
 variableDefinition
-    : (unionType)? IDENTIFIER (LBRACKET (INTEGER_LITERAL)? RBRACKET)? ASSIGN variableDeclaration
+    : (useby)?
+      (unionType)? IDENTIFIER (LBRACKET (INTEGER_LITERAL)? RBRACKET)? ASSIGN variableDeclaration
     ;
 
 primary

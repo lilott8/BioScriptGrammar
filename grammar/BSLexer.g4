@@ -25,6 +25,7 @@ HEAT:           'heat';
 DRAIN:          'drain';
 DISPENSE:       'dispense';
 DISPOSE:        'dispose';
+USEBY:          'useby';
 GRADIENT:       'gradient';
 
 // Other Keywords
@@ -65,6 +66,7 @@ RBRACKET:           ']';
 SEMICOLON:          ';';
 COMMA:              ',';
 DOT:                '.';
+AT_SYMBOL:          '@';
 
 // Operators
 ASSIGN:             '=';
