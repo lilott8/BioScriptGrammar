@@ -5,7 +5,7 @@ from io import StringIO
 from typing.io import TextIO
 import sys
 
-/* parser/listener/visitor header section */
+# /* parser/listener/visitor header section */
 
 def serializedATN():
     with StringIO() as buf:
