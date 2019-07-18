@@ -1,15 +1,15 @@
-# Generated from /Users/ryanpecor/Documents/BioScriptGrammar/grammar/BSParser.g4 by ANTLR 4.7.2
+# Generated from /Users/Life/Documents/GitHub/BioScriptGrammar/grammar/BSParser.g4 by ANTLR 4.7.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
 from typing.io import TextIO
 import sys
 
-# /* parser/listener/visitor header section */
+/* parser/listener/visitor header section */
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3a")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3b")
         buf.write("\u0171\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
@@ -199,9 +199,9 @@ class BSParser ( Parser ):
                      "'?'", "':'", "'=='", "'<='", "'>='", "'!='", "'&&'", 
                      "'||'", "'++'", "'--'", "'+'", "'-'", "'*'", "'/'", 
                      "'&'", "'|'", "'^'", "'%'", "'_'", "'ns'", "'us'", 
-                     "'ms'", "'cs'", "'ds'", "'s'", "'h'", "'d'", "'w'", 
-                     "'mo'", "'y'", "'nL'", "'uL'", "'mL'", "'cL'", "'dL'", 
-                     "'L'", "'daL'", "'c'", "'f'", "'k'" ]
+                     "'ms'", "'cs'", "'ds'", "'s'", "'m'", "'h'", "'d'", 
+                     "'w'", "'mo'", "'y'", "'nL'", "'uL'", "'mL'", "'cL'", 
+                     "'dL'", "'L'", "'daL'", "'c'", "'f'", "'k'" ]
 
     symbolicNames = [ "<INVALID>", "IF", "ELSE", "REPEAT", "WHILE", "FUNCTION", 
                       "RETURN", "MANIFEST", "MODULE", "STATIONARY", "FUNCTIONS", 
@@ -218,8 +218,8 @@ class BSParser ( Parser ):
                       "ADDITION", "SUBTRACT", "MULTIPLY", "DIVIDE", "BITAND", 
                       "BITOR", "CARET", "MOD", "UNDERSCORE", "NANOSECOND", 
                       "MICROSECOND", "MILLISECOND", "CENTISECOND", "DECISECOND", 
-                      "SECOND", "HOUR", "DAY", "WEEK", "MONTH", "YEAR", 
-                      "NANOLITRE", "MICROLITRE", "MILLILITRE", "CENTILITRE", 
+                      "SECOND", "MINUTE", "HOUR", "DAY", "WEEK", "MONTH", 
+                      "YEAR", "NANOLITRE", "MICROLITRE", "MILLILITRE", "CENTILITRE", 
                       "DECILITRE", "LITRE", "DECALITRE", "CELSIUS", "FAHRENHEIT", 
                       "KELVIN", "WS", "COMMENT", "LINE_COMMENT" ]
 
@@ -350,24 +350,25 @@ class BSParser ( Parser ):
     CENTISECOND=75
     DECISECOND=76
     SECOND=77
-    HOUR=78
-    DAY=79
-    WEEK=80
-    MONTH=81
-    YEAR=82
-    NANOLITRE=83
-    MICROLITRE=84
-    MILLILITRE=85
-    CENTILITRE=86
-    DECILITRE=87
-    LITRE=88
-    DECALITRE=89
-    CELSIUS=90
-    FAHRENHEIT=91
-    KELVIN=92
-    WS=93
-    COMMENT=94
-    LINE_COMMENT=95
+    MINUTE=78
+    HOUR=79
+    DAY=80
+    WEEK=81
+    MONTH=82
+    YEAR=83
+    NANOLITRE=84
+    MICROLITRE=85
+    MILLILITRE=86
+    CENTILITRE=87
+    DECILITRE=88
+    LITRE=89
+    DECALITRE=90
+    CELSIUS=91
+    FAHRENHEIT=92
+    KELVIN=93
+    WS=94
+    COMMENT=95
+    LINE_COMMENT=96
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)

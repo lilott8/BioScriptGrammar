@@ -25,7 +25,6 @@ HEAT:           'heat';
 DRAIN:          'drain';
 DISPENSE:       'dispense';
 DISPOSE:        'dispose';
-USEBY:          'useby';
 GRADIENT:       'gradient';
 
 // Other Keywords
@@ -66,7 +65,6 @@ RBRACKET:           ']';
 SEMICOLON:          ';';
 COMMA:              ',';
 DOT:                '.';
-AT_SYMBOL:          '@';
 
 // Operators
 ASSIGN:             '=';
@@ -101,6 +99,7 @@ MILLISECOND:        'ms';
 CENTISECOND:        'cs';
 DECISECOND:         'ds';
 SECOND:             's';
+MINUTE:             'm';
 HOUR:               'h';
 DAY:                'd';
 WEEK:               'w';
@@ -125,7 +124,7 @@ COMMENT:            '/*' .*? '*/'    -> channel(HIDDEN);
 LINE_COMMENT:       '//' ~[\r\n]*    -> channel(HIDDEN);
 
 fragment TimeUnits
-    : NANOSECOND | MICROSECOND | MILLISECOND | CENTISECOND | DECISECOND | SECOND | HOUR | DAY | WEEK | MONTH | YEAR
+    : NANOSECOND | MICROSECOND | MILLISECOND | CENTISECOND | DECISECOND | SECOND | MINUTE | HOUR | DAY | WEEK | MONTH | YEAR
     ;
 
 fragment VolumeUnits
