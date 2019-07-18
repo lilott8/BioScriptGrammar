@@ -1,11 +1,10 @@
-# Generated from /Users/Life/Documents/GitHub/BioScriptGrammar/grammar/BSParser.g4 by ANTLR 4.7.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
 from typing.io import TextIO
 import sys
 
-/* parser/listener/visitor header section */
+#/* parser/listener/visitor header section */
 
 def serializedATN():
     with StringIO() as buf:
