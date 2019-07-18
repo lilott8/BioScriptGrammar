@@ -1,4 +1,3 @@
-// Generated from /Users/jason/Projects/cpp/BioScript/grammar/BSLexer.g4 by ANTLR 4.7
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
