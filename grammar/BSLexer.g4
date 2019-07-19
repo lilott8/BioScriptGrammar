@@ -42,6 +42,19 @@ REAL:           'real';
 MAT:            'mat';
 BOOL:           'bool';
 
+
+// Annotations
+VISCOSITY:              'viscosity';
+MASS_DENSITY:           'mass_density';
+RELATIVE_DENSITY:       'relative_density';
+WEIGHT_DENSITY:         'weight_density';
+SPECIFIC_GRAVITY:       'specific_gravity';
+CONCENTRATION:          'concentration';
+SPECIFIC_VOLUME:        'specific_volume';
+COMPRESSIBILITY:        'compressibility';
+CAPILLARITY:            'capillarity';
+ELASTICITY:             'elasticity';
+
 IDENTIFIER:         Letter LetterOrDigit*;
 
 // Literals
