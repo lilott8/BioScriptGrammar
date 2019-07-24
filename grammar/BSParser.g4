@@ -37,8 +37,7 @@ program
     : moduleDeclaration
         stationaryDeclaration
         manifestDeclaration
-        FUNCTIONS COLON
-        (functionDeclaration)*
+        functions?
         INSTRUCTIONS COLON
         ( statements )*
         EOF
@@ -62,6 +61,11 @@ stationaryDeclaration
 /******************************************
  * Function Declaration
 ******************************************/
+functions
+    : (FUNCTIONS COLON
+      (functionDeclaration)*)?
+    ;
+
 functionDeclaration
     : FUNCTION IDENTIFIER formalParameters ( functionTyping )? LBRACE
             ( statements )*
@@ -77,8 +81,13 @@ formalParameterList
     :  formalParameter (COMMA formalParameter)*
     ;
 
+/******************************************
+This has to be an identifier, because it
+doesn't make sense to define: x[3] as a
+parameter to a function.
+******************************************/
 formalParameter
-    : (unionType)? IDENTIFIER (LBRACKET RBRACKET)?
+    : (unionType)? IDENTIFIER
     ;
 
 // TODO: make mat an id and repeatable
@@ -89,8 +98,7 @@ functionTyping
 // This is mandatory so that we can
 // force the translation into an assignment.
 returnStatement
-    : RETURN IDENTIFIER
-    | RETURN literal
+    : RETURN primary
     | RETURN methodCall
     ;
 
@@ -101,16 +109,6 @@ blockStatement
     : LBRACE ( statements )* RBRACE
     ;
 
-variableDeclaration
-    : mix
-    | dispense
-    | split
-    | methodCall
-    | detect
-    | expression
-    | gradient
-    ;
-
 statements
     : ifStatement
     | whileStatement
@@ -118,6 +116,14 @@ statements
     | repeat
     | heat
     | dispose
+    | mix
+    | dispense
+    | split
+    | methodCall
+    | gradient
+    | detect
+    | store
+    | math
     ;
 
 ifStatement
@@ -129,64 +135,75 @@ whileStatement
     ;
 
 repeat
-    : REPEAT (IDENTIFIER | INTEGER_LITERAL) TIMES blockStatement
-    ;
-
-mix
-    : MIX volumeIdentifier WITH volumeIdentifier (FOR timeIdentifier)?
-    ;
-
-detect
-    : DETECT IDENTIFIER ON IDENTIFIER (FOR timeIdentifier)?
+    : REPEAT INTEGER_LITERAL TIMES blockStatement
     ;
 
 heat
-    : HEAT IDENTIFIER AT temperatureIdentifier (FOR timeIdentifier)?
-    ;
-
-split
-    : SPLIT IDENTIFIER INTO INTEGER_LITERAL
-    ;
-
-dispense
-    : DISPENSE IDENTIFIER
+    : HEAT variable AT temperatureIdentifier (FOR timeIdentifier)?
     ;
 
 dispose
-    : DRAIN IDENTIFIER
-    | DISPOSE IDENTIFIER
+    : DRAIN variable
+    | DISPOSE variable
+    ;
+
+mix
+    : variableDefinition MIX variable WITH variable (FOR timeIdentifier)?
+    ;
+
+/********************************************************
+The first one is intentionally an IDENTIFIER.  It has
+to be a module, thus it cannot be indexed as an array.
+********************************************************/
+detect
+    : variableDefinition DETECT IDENTIFIER ON variable (FOR timeIdentifier)?
+    ;
+
+split
+    : variableDefinition SPLIT variable INTO INTEGER_LITERAL
+    ;
+
+/********************************************************
+You can only dispense a global variable.  Thus, it has no
+indexing capabilities.  Hence the identifier.
+********************************************************/
+dispense
+    : variableDefinition DISPENSE IDENTIFIER
     ;
 
 gradient
-    : GRADIENT IDENTIFIER WITH IDENTIFIER FOR FLOAT_LITERAL COMMA FLOAT_LITERAL AT FLOAT_LITERAL
+    : variableDefinition GRADIENT IDENTIFIER WITH IDENTIFIER RANGE FLOAT_LITERAL COMMA FLOAT_LITERAL AT FLOAT_LITERAL
+    ;
+
+store
+    : STORE variable
     ;
 /******************************************
  * Expressions
 ******************************************/
-expression
-    : primary
-    | expression LBRACKET expression RBRACKET
-    | expression bop=(MULTIPLY | DIVIDE |'%') expression
-    | expression bop=(ADDITION | SUBTRACT) expression
-    | expression (LT LT | GT GT GT | GT GT) expression
-    | expression bop=(LTE | GTE | GT | LT) expression
-    | expression bop=(EQUALITY | NOTEQUAL) expression
-    | expression bop=AND expression
-    | expression bop=OR expression
+math
+    : variableDefinition primary bop=(MULTIPLY | DIVIDE | '%') primary
+    | variableDefinition primary bop=(ADDITION | SUBTRACT) primary
+    ;
+
+binops
+    : primary (LT LT | GT GT GT | GT GT) primary
+    | primary bop=(LTE | GTE | GT | LT) primary
+    | primary bop=(EQUALITY | NOTEQUAL) primary
     ;
 
 parExpression
-    : LPAREN expression RPAREN
+    : LPAREN binops((AND | OR) binops)* RPAREN
     ;
 /******************************************
  * Method Call
 ******************************************/
 methodCall
-    : IDENTIFIER LPAREN ( expressionList )? RPAREN
+    : variableDefinition IDENTIFIER LPAREN ( expressionList )? RPAREN
     ;
 
 expressionList
-    : expression (COMMA expression)*
+    : primary (COMMA primary)*
     ;
 
 
@@ -208,13 +225,16 @@ typesList
     ;
 
 variableDefinition
-    : (unionType)? IDENTIFIER (LBRACKET (INTEGER_LITERAL)? RBRACKET)? ASSIGN variableDeclaration
+    : (unionType)? variable ASSIGN
+    ;
+
+variable
+    : IDENTIFIER(LBRACKET INTEGER_LITERAL RBRACKET)?
     ;
 
 primary
-    : LPAREN expression RPAREN
-    | literal
-    | IDENTIFIER
+    : literal
+    | variable
     ;
 
 literal
@@ -230,10 +250,6 @@ primitiveType
  | REAL
  | MAT
  ;
-
-volumeIdentifier
-    : ( VOLUME_NUMBER OF )? IDENTIFIER
-    ;
 
 timeIdentifier
     : TIME_NUMBER
