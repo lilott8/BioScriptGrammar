@@ -1,4 +1,4 @@
-# Generated from bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
+# Generated from /bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .BSParser import BSParser

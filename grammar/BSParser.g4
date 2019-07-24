@@ -62,8 +62,8 @@ stationaryDeclaration
  * Function Declaration
 ******************************************/
 functions
-    : (FUNCTIONS COLON
-      (functionDeclaration)*)?
+    : FUNCTIONS COLON
+      functionDeclaration+
     ;
 
 functionDeclaration
