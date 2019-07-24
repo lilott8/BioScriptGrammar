@@ -1,3 +1,4 @@
+# Generated from bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
@@ -41,6 +42,15 @@ class BSParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by BSParser#stationaryDeclaration.
     def exitStationaryDeclaration(self, ctx:BSParser.StationaryDeclarationContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#functions.
+    def enterFunctions(self, ctx:BSParser.FunctionsContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#functions.
+    def exitFunctions(self, ctx:BSParser.FunctionsContext):
         pass
 
 
@@ -107,15 +117,6 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by BSParser#variableDeclaration.
-    def enterVariableDeclaration(self, ctx:BSParser.VariableDeclarationContext):
-        pass
-
-    # Exit a parse tree produced by BSParser#variableDeclaration.
-    def exitVariableDeclaration(self, ctx:BSParser.VariableDeclarationContext):
-        pass
-
-
     # Enter a parse tree produced by BSParser#statements.
     def enterStatements(self, ctx:BSParser.StatementsContext):
         pass
@@ -152,6 +153,24 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by BSParser#heat.
+    def enterHeat(self, ctx:BSParser.HeatContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#heat.
+    def exitHeat(self, ctx:BSParser.HeatContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#dispose.
+    def enterDispose(self, ctx:BSParser.DisposeContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#dispose.
+    def exitDispose(self, ctx:BSParser.DisposeContext):
+        pass
+
+
     # Enter a parse tree produced by BSParser#mix.
     def enterMix(self, ctx:BSParser.MixContext):
         pass
@@ -167,15 +186,6 @@ class BSParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by BSParser#detect.
     def exitDetect(self, ctx:BSParser.DetectContext):
-        pass
-
-
-    # Enter a parse tree produced by BSParser#heat.
-    def enterHeat(self, ctx:BSParser.HeatContext):
-        pass
-
-    # Exit a parse tree produced by BSParser#heat.
-    def exitHeat(self, ctx:BSParser.HeatContext):
         pass
 
 
@@ -197,15 +207,6 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by BSParser#dispose.
-    def enterDispose(self, ctx:BSParser.DisposeContext):
-        pass
-
-    # Exit a parse tree produced by BSParser#dispose.
-    def exitDispose(self, ctx:BSParser.DisposeContext):
-        pass
-
-
     # Enter a parse tree produced by BSParser#gradient.
     def enterGradient(self, ctx:BSParser.GradientContext):
         pass
@@ -215,12 +216,30 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by BSParser#expression.
-    def enterExpression(self, ctx:BSParser.ExpressionContext):
+    # Enter a parse tree produced by BSParser#store.
+    def enterStore(self, ctx:BSParser.StoreContext):
         pass
 
-    # Exit a parse tree produced by BSParser#expression.
-    def exitExpression(self, ctx:BSParser.ExpressionContext):
+    # Exit a parse tree produced by BSParser#store.
+    def exitStore(self, ctx:BSParser.StoreContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#math.
+    def enterMath(self, ctx:BSParser.MathContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#math.
+    def exitMath(self, ctx:BSParser.MathContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#binops.
+    def enterBinops(self, ctx:BSParser.BinopsContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#binops.
+    def exitBinops(self, ctx:BSParser.BinopsContext):
         pass
 
 
@@ -287,6 +306,15 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by BSParser#variable.
+    def enterVariable(self, ctx:BSParser.VariableContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#variable.
+    def exitVariable(self, ctx:BSParser.VariableContext):
+        pass
+
+
     # Enter a parse tree produced by BSParser#primary.
     def enterPrimary(self, ctx:BSParser.PrimaryContext):
         pass
@@ -311,15 +339,6 @@ class BSParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by BSParser#primitiveType.
     def exitPrimitiveType(self, ctx:BSParser.PrimitiveTypeContext):
-        pass
-
-
-    # Enter a parse tree produced by BSParser#volumeIdentifier.
-    def enterVolumeIdentifier(self, ctx:BSParser.VolumeIdentifierContext):
-        pass
-
-    # Exit a parse tree produced by BSParser#volumeIdentifier.
-    def exitVolumeIdentifier(self, ctx:BSParser.VolumeIdentifierContext):
         pass
 
 

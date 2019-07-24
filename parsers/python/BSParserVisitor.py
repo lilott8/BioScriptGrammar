@@ -1,3 +1,4 @@
+# Generated from bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
@@ -26,6 +27,11 @@ class BSParserVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by BSParser#stationaryDeclaration.
     def visitStationaryDeclaration(self, ctx:BSParser.StationaryDeclarationContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#functions.
+    def visitFunctions(self, ctx:BSParser.FunctionsContext):
         return self.visitChildren(ctx)
 
 
@@ -64,11 +70,6 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by BSParser#variableDeclaration.
-    def visitVariableDeclaration(self, ctx:BSParser.VariableDeclarationContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by BSParser#statements.
     def visitStatements(self, ctx:BSParser.StatementsContext):
         return self.visitChildren(ctx)
@@ -89,6 +90,16 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by BSParser#heat.
+    def visitHeat(self, ctx:BSParser.HeatContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#dispose.
+    def visitDispose(self, ctx:BSParser.DisposeContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by BSParser#mix.
     def visitMix(self, ctx:BSParser.MixContext):
         return self.visitChildren(ctx)
@@ -96,11 +107,6 @@ class BSParserVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by BSParser#detect.
     def visitDetect(self, ctx:BSParser.DetectContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by BSParser#heat.
-    def visitHeat(self, ctx:BSParser.HeatContext):
         return self.visitChildren(ctx)
 
 
@@ -114,18 +120,23 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by BSParser#dispose.
-    def visitDispose(self, ctx:BSParser.DisposeContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by BSParser#gradient.
     def visitGradient(self, ctx:BSParser.GradientContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by BSParser#expression.
-    def visitExpression(self, ctx:BSParser.ExpressionContext):
+    # Visit a parse tree produced by BSParser#store.
+    def visitStore(self, ctx:BSParser.StoreContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#math.
+    def visitMath(self, ctx:BSParser.MathContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#binops.
+    def visitBinops(self, ctx:BSParser.BinopsContext):
         return self.visitChildren(ctx)
 
 
@@ -164,6 +175,11 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by BSParser#variable.
+    def visitVariable(self, ctx:BSParser.VariableContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by BSParser#primary.
     def visitPrimary(self, ctx:BSParser.PrimaryContext):
         return self.visitChildren(ctx)
@@ -176,11 +192,6 @@ class BSParserVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by BSParser#primitiveType.
     def visitPrimitiveType(self, ctx:BSParser.PrimitiveTypeContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by BSParser#volumeIdentifier.
-    def visitVolumeIdentifier(self, ctx:BSParser.VolumeIdentifierContext):
         return self.visitChildren(ctx)
 
 

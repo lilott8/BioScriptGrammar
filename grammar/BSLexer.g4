@@ -13,6 +13,8 @@ RETURN:         'return';
 // Declarations
 MANIFEST:       'manifest';
 MODULE:         'module';
+
+
 STATIONARY:     'stationary';
 FUNCTIONS:      'functions';
 INSTRUCTIONS:   'instructions';
@@ -26,6 +28,8 @@ DRAIN:          'drain';
 DISPENSE:       'dispense';
 DISPOSE:        'dispose';
 GRADIENT:       'gradient';
+STORE:          'store';
+RANGE:          'range';
 
 // Other Keywords
 AT:             'at';
