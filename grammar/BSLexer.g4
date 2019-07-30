@@ -54,6 +54,7 @@ SPECIFIC_VOLUME:        'specific_volume';
 COMPRESSIBILITY:        'compressibility';
 CAPILLARITY:            'capillarity';
 ELASTICITY:             'elasticity';
+USEBY:                  'useby';
 
 IDENTIFIER:         Letter LetterOrDigit*;
 
@@ -104,6 +105,7 @@ BITOR:              '|';
 CARET:              '^';
 MOD:                '%';
 UNDERSCORE:         '_';
+AT_SYMBOL:          '@';
 
 // Time and Volume Units
 NANOSECOND:         'ns';

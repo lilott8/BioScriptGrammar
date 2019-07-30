@@ -118,6 +118,7 @@ statements
     | repeat
     | heat
     | dispose
+    | annotations
     ;
 
 ifStatement
@@ -174,7 +175,7 @@ expression
     | expression bop=AND expression
     | expression bop=OR expression
     ;
-
+// Make Base Level Primitives
  annotations
      : AT_SYMBOL VISCOSITY FLOAT_LITERAL
      | AT_SYMBOL MASS_DENSITY FLOAT_LITERAL
@@ -186,7 +187,7 @@ expression
      | AT_SYMBOL COMPRESSIBILITY FLOAT_LITERAL
      | AT_SYMBOL CAPILLARITY FLOAT_LITERAL
      | AT_SYMBOL ELASTICITY FLOAT_LITERAL
-     | AT_SYMBOL USEBY timeIdentifier
+     | AT_SYMBOL USEBY timeIdentifier;
 
 parExpression
     : LPAREN expression RPAREN
