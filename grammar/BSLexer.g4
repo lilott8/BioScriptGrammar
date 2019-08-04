@@ -43,18 +43,7 @@ MAT:            'mat';
 BOOL:           'bool';
 
 
-// Annotations
-VISCOSITY:              'viscosity';
-MASS_DENSITY:           'mass_density';
-RELATIVE_DENSITY:       'relative_density';
-WEIGHT_DENSITY:         'weight_density';
-SPECIFIC_GRAVITY:       'specific_gravity';
-CONCENTRATION:          'concentration';
-SPECIFIC_VOLUME:        'specific_volume';
-COMPRESSIBILITY:        'compressibility';
-CAPILLARITY:            'capillarity';
-ELASTICITY:             'elasticity';
-USEBY:                  'useby';
+
 
 IDENTIFIER:         Letter LetterOrDigit*;
 
@@ -68,6 +57,17 @@ INTEGER_LITERAL:    Digits ( Digits ) *;
 TIME_NUMBER:        (FLOAT_LITERAL | INTEGER_LITERAL)TimeUnits;
 VOLUME_NUMBER:      (FLOAT_LITERAL | INTEGER_LITERAL)VolumeUnits;
 TEMP_NUMBER:        (FLOAT_LITERAL | INTEGER_LITERAL)TempUnits;
+// Physics
+MASS_NUMBER:               'mass'(FLOAT_LITERAL | INTEGER_LITERAL)TimeUnits;;
+EFFICIENCY_NUMBER:         'efficiency';
+PRESSURE_NUMBER:           'pressure';
+FORCE_NUMBER:              'force';
+SPEED_NUMBER:              'speed';
+FRICTION_NUMBER:           'friction';
+USEBY:                      'useby';
+
+
+
 
 // Separators
 LPAREN:             '(';
