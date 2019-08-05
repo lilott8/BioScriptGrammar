@@ -4,7 +4,7 @@ if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
 else:
     from BSParser import BSParser
-#/* parser/listener/visitor header section */
+# /* parser/listener/visitor header section */
 
 # This class defines a complete generic visitor for a parse tree produced by BSParser.
 
@@ -12,6 +12,11 @@ class BSParserVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by BSParser#program.
     def visitProgram(self, ctx:BSParser.ProgramContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#globalDeclarations.
+    def visitGlobalDeclarations(self, ctx:BSParser.GlobalDeclarationsContext):
         return self.visitChildren(ctx)
 
 
@@ -130,6 +135,11 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by BSParser#numberAssignment.
+    def visitNumberAssignment(self, ctx:BSParser.NumberAssignmentContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by BSParser#math.
     def visitMath(self, ctx:BSParser.MathContext):
         return self.visitChildren(ctx)
@@ -142,6 +152,11 @@ class BSParserVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by BSParser#parExpression.
     def visitParExpression(self, ctx:BSParser.ParExpressionContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#methodInvocation.
+    def visitMethodInvocation(self, ctx:BSParser.MethodInvocationContext):
         return self.visitChildren(ctx)
 
 

@@ -22,6 +22,8 @@ public:
    */
     virtual antlrcpp::Any visitProgram(BSParser::ProgramContext *context) = 0;
 
+    virtual antlrcpp::Any visitGlobalDeclarations(BSParser::GlobalDeclarationsContext *context) = 0;
+
     virtual antlrcpp::Any visitModuleDeclaration(BSParser::ModuleDeclarationContext *context) = 0;
 
     virtual antlrcpp::Any visitManifestDeclaration(BSParser::ManifestDeclarationContext *context) = 0;
@@ -68,11 +70,15 @@ public:
 
     virtual antlrcpp::Any visitStore(BSParser::StoreContext *context) = 0;
 
+    virtual antlrcpp::Any visitNumberAssignment(BSParser::NumberAssignmentContext *context) = 0;
+
     virtual antlrcpp::Any visitMath(BSParser::MathContext *context) = 0;
 
     virtual antlrcpp::Any visitBinops(BSParser::BinopsContext *context) = 0;
 
     virtual antlrcpp::Any visitParExpression(BSParser::ParExpressionContext *context) = 0;
+
+    virtual antlrcpp::Any visitMethodInvocation(BSParser::MethodInvocationContext *context) = 0;
 
     virtual antlrcpp::Any visitMethodCall(BSParser::MethodCallContext *context) = 0;
 

@@ -4,7 +4,7 @@ if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
 else:
     from BSParser import BSParser
-#/* parser/listener/visitor header section */
+# /* parser/listener/visitor header section */
 
 # This class defines a complete listener for a parse tree produced by BSParser.
 class BSParserListener(ParseTreeListener):
@@ -15,6 +15,15 @@ class BSParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by BSParser#program.
     def exitProgram(self, ctx:BSParser.ProgramContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#globalDeclarations.
+    def enterGlobalDeclarations(self, ctx:BSParser.GlobalDeclarationsContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#globalDeclarations.
+    def exitGlobalDeclarations(self, ctx:BSParser.GlobalDeclarationsContext):
         pass
 
 
@@ -225,6 +234,15 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by BSParser#numberAssignment.
+    def enterNumberAssignment(self, ctx:BSParser.NumberAssignmentContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#numberAssignment.
+    def exitNumberAssignment(self, ctx:BSParser.NumberAssignmentContext):
+        pass
+
+
     # Enter a parse tree produced by BSParser#math.
     def enterMath(self, ctx:BSParser.MathContext):
         pass
@@ -249,6 +267,15 @@ class BSParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by BSParser#parExpression.
     def exitParExpression(self, ctx:BSParser.ParExpressionContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#methodInvocation.
+    def enterMethodInvocation(self, ctx:BSParser.MethodInvocationContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#methodInvocation.
+    def exitMethodInvocation(self, ctx:BSParser.MethodInvocationContext):
         pass
 
 

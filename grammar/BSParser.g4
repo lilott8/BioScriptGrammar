@@ -34,28 +34,32 @@ options { tokenVocab=BSLexer; }
 @parser::basevisitordefinitions{}
 
 program
-    : moduleDeclaration
-        stationaryDeclaration
-        manifestDeclaration
-        functions?
-        INSTRUCTIONS COLON
-        ( statements )*
-        EOF
+    : (globalDeclarations )+
+    functions?
+    INSTRUCTIONS COLON
+    ( statements )*
+    EOF
     ;
 
 /******************************************
  * Header declaration information
 ******************************************/
+globalDeclarations
+    : moduleDeclaration
+    | manifestDeclaration
+    | stationaryDeclaration
+    ;
+
 moduleDeclaration
-    : ( MODULE IDENTIFIER )*
+    : MODULE IDENTIFIER
     ;
 
 manifestDeclaration
-    : ( MANIFEST IDENTIFIER )+
+    : MANIFEST IDENTIFIER
     ;
 
 stationaryDeclaration
-    : ( STATIONARY IDENTIFIER )*
+    : STATIONARY IDENTIFIER
     ;
 
 /******************************************
@@ -119,11 +123,12 @@ statements
     | mix
     | dispense
     | split
-    | methodCall
+    | methodInvocation
     | gradient
     | detect
     | store
     | math
+    | numberAssignment
     ;
 
 ifStatement
@@ -172,7 +177,7 @@ dispense
     ;
 
 gradient
-    : variableDefinition GRADIENT IDENTIFIER WITH IDENTIFIER RANGE FLOAT_LITERAL COMMA FLOAT_LITERAL AT FLOAT_LITERAL
+    : variableDefinition GRADIENT variable WITH variable RANGE FLOAT_LITERAL COMMA FLOAT_LITERAL AT FLOAT_LITERAL
     ;
 
 store
@@ -181,6 +186,10 @@ store
 /******************************************
  * Expressions
 ******************************************/
+numberAssignment
+    : variableDefinition literal
+    ;
+
 math
     : variableDefinition primary bop=(MULTIPLY | DIVIDE | '%') primary
     | variableDefinition primary bop=(ADDITION | SUBTRACT) primary
@@ -198,8 +207,12 @@ parExpression
 /******************************************
  * Method Call
 ******************************************/
+methodInvocation
+    : variableDefinition methodCall
+    ;
+
 methodCall
-    : variableDefinition IDENTIFIER LPAREN ( expressionList )? RPAREN
+    : IDENTIFIER LPAREN ( expressionList )? RPAREN
     ;
 
 expressionList

@@ -20,6 +20,10 @@ public:
     return visitChildren(ctx);
   }
 
+  virtual antlrcpp::Any visitGlobalDeclarations(BSParser::GlobalDeclarationsContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
   virtual antlrcpp::Any visitModuleDeclaration(BSParser::ModuleDeclarationContext *ctx) override {
     return visitChildren(ctx);
   }
@@ -112,6 +116,10 @@ public:
     return visitChildren(ctx);
   }
 
+  virtual antlrcpp::Any visitNumberAssignment(BSParser::NumberAssignmentContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
   virtual antlrcpp::Any visitMath(BSParser::MathContext *ctx) override {
     return visitChildren(ctx);
   }
@@ -121,6 +129,10 @@ public:
   }
 
   virtual antlrcpp::Any visitParExpression(BSParser::ParExpressionContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitMethodInvocation(BSParser::MethodInvocationContext *ctx) override {
     return visitChildren(ctx);
   }
 

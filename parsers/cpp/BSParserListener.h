@@ -18,6 +18,9 @@ public:
   virtual void enterProgram(BSParser::ProgramContext *ctx) = 0;
   virtual void exitProgram(BSParser::ProgramContext *ctx) = 0;
 
+  virtual void enterGlobalDeclarations(BSParser::GlobalDeclarationsContext *ctx) = 0;
+  virtual void exitGlobalDeclarations(BSParser::GlobalDeclarationsContext *ctx) = 0;
+
   virtual void enterModuleDeclaration(BSParser::ModuleDeclarationContext *ctx) = 0;
   virtual void exitModuleDeclaration(BSParser::ModuleDeclarationContext *ctx) = 0;
 
@@ -87,6 +90,9 @@ public:
   virtual void enterStore(BSParser::StoreContext *ctx) = 0;
   virtual void exitStore(BSParser::StoreContext *ctx) = 0;
 
+  virtual void enterNumberAssignment(BSParser::NumberAssignmentContext *ctx) = 0;
+  virtual void exitNumberAssignment(BSParser::NumberAssignmentContext *ctx) = 0;
+
   virtual void enterMath(BSParser::MathContext *ctx) = 0;
   virtual void exitMath(BSParser::MathContext *ctx) = 0;
 
@@ -95,6 +101,9 @@ public:
 
   virtual void enterParExpression(BSParser::ParExpressionContext *ctx) = 0;
   virtual void exitParExpression(BSParser::ParExpressionContext *ctx) = 0;
+
+  virtual void enterMethodInvocation(BSParser::MethodInvocationContext *ctx) = 0;
+  virtual void exitMethodInvocation(BSParser::MethodInvocationContext *ctx) = 0;
 
   virtual void enterMethodCall(BSParser::MethodCallContext *ctx) = 0;
   virtual void exitMethodCall(BSParser::MethodCallContext *ctx) = 0;

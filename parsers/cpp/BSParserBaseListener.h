@@ -20,6 +20,9 @@ public:
   virtual void enterProgram(BSParser::ProgramContext * /*ctx*/) override { }
   virtual void exitProgram(BSParser::ProgramContext * /*ctx*/) override { }
 
+  virtual void enterGlobalDeclarations(BSParser::GlobalDeclarationsContext * /*ctx*/) override { }
+  virtual void exitGlobalDeclarations(BSParser::GlobalDeclarationsContext * /*ctx*/) override { }
+
   virtual void enterModuleDeclaration(BSParser::ModuleDeclarationContext * /*ctx*/) override { }
   virtual void exitModuleDeclaration(BSParser::ModuleDeclarationContext * /*ctx*/) override { }
 
@@ -89,6 +92,9 @@ public:
   virtual void enterStore(BSParser::StoreContext * /*ctx*/) override { }
   virtual void exitStore(BSParser::StoreContext * /*ctx*/) override { }
 
+  virtual void enterNumberAssignment(BSParser::NumberAssignmentContext * /*ctx*/) override { }
+  virtual void exitNumberAssignment(BSParser::NumberAssignmentContext * /*ctx*/) override { }
+
   virtual void enterMath(BSParser::MathContext * /*ctx*/) override { }
   virtual void exitMath(BSParser::MathContext * /*ctx*/) override { }
 
@@ -97,6 +103,9 @@ public:
 
   virtual void enterParExpression(BSParser::ParExpressionContext * /*ctx*/) override { }
   virtual void exitParExpression(BSParser::ParExpressionContext * /*ctx*/) override { }
+
+  virtual void enterMethodInvocation(BSParser::MethodInvocationContext * /*ctx*/) override { }
+  virtual void exitMethodInvocation(BSParser::MethodInvocationContext * /*ctx*/) override { }
 
   virtual void enterMethodCall(BSParser::MethodCallContext * /*ctx*/) override { }
   virtual void exitMethodCall(BSParser::MethodCallContext * /*ctx*/) override { }
