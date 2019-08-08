@@ -225,12 +225,12 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by BSParser#annotations.
-    def enterAnnotations(self, ctx:BSParser.AnnotationsContext):
+    # Enter a parse tree produced by BSParser#physic_annotation.
+    def enterPhysic_annotation(self, ctx:BSParser.Physic_annotationContext):
         pass
 
-    # Exit a parse tree produced by BSParser#annotations.
-    def exitAnnotations(self, ctx:BSParser.AnnotationsContext):
+    # Exit a parse tree produced by BSParser#physic_annotation.
+    def exitPhysic_annotation(self, ctx:BSParser.Physic_annotationContext):
         pass
 
 
