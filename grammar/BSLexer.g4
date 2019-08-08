@@ -58,13 +58,16 @@ TIME_NUMBER:        (FLOAT_LITERAL | INTEGER_LITERAL)TimeUnits;
 VOLUME_NUMBER:      (FLOAT_LITERAL | INTEGER_LITERAL)VolumeUnits;
 TEMP_NUMBER:        (FLOAT_LITERAL | INTEGER_LITERAL)TempUnits;
 // Physics
-MASS_NUMBER:               'mass'(FLOAT_LITERAL | INTEGER_LITERAL)TimeUnits;;
+MASS_NUMBER:               'mass';
 EFFICIENCY_NUMBER:         'efficiency';
 PRESSURE_NUMBER:           'pressure';
 FORCE_NUMBER:              'force';
 SPEED_NUMBER:              'speed';
 FRICTION_NUMBER:           'friction';
-USEBY:                      'useby';
+USEBY:                     'useby';
+
+//Physcs 2: Now with more physics:
+
 
 
 
