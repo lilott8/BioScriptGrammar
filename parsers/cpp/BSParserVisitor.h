@@ -1,6 +1,6 @@
 /* parser/listener/visitor header section */
 
-// Generated from /bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
+// Generated from /Users/jason/Projects/java/bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
 
 #pragma once
 
@@ -105,6 +105,6 @@ public:
     virtual antlrcpp::Any visitTemperatureIdentifier(BSParser::TemperatureIdentifierContext *context) = 0;
 
 
-private:
+private:  
 };
 

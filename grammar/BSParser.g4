@@ -173,7 +173,7 @@ You can only dispense a global variable.  Thus, it has no
 indexing capabilities.  Hence the identifier.
 ********************************************************/
 dispense
-    : variableDefinition DISPENSE IDENTIFIER
+    : variableDefinition DISPENSE (INTEGER_LITERAL UNITS OF)? IDENTIFIER
     ;
 
 gradient
@@ -242,7 +242,7 @@ variableDefinition
     ;
 
 variable
-    : IDENTIFIER(LBRACKET INTEGER_LITERAL RBRACKET)?
+    : (INTEGER_LITERAL UNITS OF)? IDENTIFIER(LBRACKET INTEGER_LITERAL RBRACKET)?
     ;
 
 primary
