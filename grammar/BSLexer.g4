@@ -39,6 +39,7 @@ INTO:           'into';
 TIMES:          'times';
 ON:             'on';
 OF:             'of';
+UNITS:           'units';
 
 // Typing
 NAT:            'nat';
