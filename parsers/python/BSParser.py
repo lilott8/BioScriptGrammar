@@ -127,13 +127,13 @@ def serializedATN():
         buf.write("\5H%\2\u0102\u0104\7\23\2\2\u0103\u0105\5V,\2\u0104\u0103")
         buf.write("\3\2\2\2\u0104\u0105\3\2\2\2\u0105\u0106\3\2\2\2\u0106")
         buf.write("\u0107\7$\2\2\u0107/\3\2\2\2\u0108\u0109\5H%\2\u0109\u010a")
-        buf.write("\7\25\2\2\u010a\u010b\7$\2\2\u010b\u010c\7\31\2\2\u010c")
-        buf.write("\u010d\7$\2\2\u010d\u010e\7\27\2\2\u010e\u010f\7(\2\2")
-        buf.write("\u010f\u0110\7\63\2\2\u0110\u0111\7(\2\2\u0111\u0112\7")
-        buf.write("\30\2\2\u0112\u0113\7(\2\2\u0113\61\3\2\2\2\u0114\u0115")
-        buf.write("\7\26\2\2\u0115\u0116\5J&\2\u0116\63\3\2\2\2\u0117\u0118")
-        buf.write("\5H%\2\u0118\u0119\5N(\2\u0119\65\3\2\2\2\u011a\u011b")
-        buf.write("\5H%\2\u011b\u011c\5L\'\2\u011c\u011d\t\2\2\2\u011d\u011e")
+        buf.write("\7\25\2\2\u010a\u010b\5J&\2\u010b\u010c\7\31\2\2\u010c")
+        buf.write("\u010d\5J&\2\u010d\u010e\7\27\2\2\u010e\u010f\7(\2\2\u010f")
+        buf.write("\u0110\7\63\2\2\u0110\u0111\7(\2\2\u0111\u0112\7\30\2")
+        buf.write("\2\u0112\u0113\7(\2\2\u0113\61\3\2\2\2\u0114\u0115\7\26")
+        buf.write("\2\2\u0115\u0116\5J&\2\u0116\63\3\2\2\2\u0117\u0118\5")
+        buf.write("H%\2\u0118\u0119\5N(\2\u0119\65\3\2\2\2\u011a\u011b\5")
+        buf.write("H%\2\u011b\u011c\5L\'\2\u011c\u011d\t\2\2\2\u011d\u011e")
         buf.write("\5L\'\2\u011e\u0125\3\2\2\2\u011f\u0120\5H%\2\u0120\u0121")
         buf.write("\5L\'\2\u0121\u0122\t\3\2\2\u0122\u0123\5L\'\2\u0123\u0125")
         buf.write("\3\2\2\2\u0124\u011a\3\2\2\2\u0124\u011f\3\2\2\2\u0125")
@@ -2146,11 +2146,12 @@ class BSParser ( Parser ):
         def GRADIENT(self):
             return self.getToken(BSParser.GRADIENT, 0)
 
-        def IDENTIFIER(self, i:int=None):
+        def variable(self, i:int=None):
             if i is None:
-                return self.getTokens(BSParser.IDENTIFIER)
+                return self.getTypedRuleContexts(BSParser.VariableContext)
             else:
-                return self.getToken(BSParser.IDENTIFIER, i)
+                return self.getTypedRuleContext(BSParser.VariableContext,i)
+
 
         def WITH(self):
             return self.getToken(BSParser.WITH, 0)
@@ -2201,11 +2202,11 @@ class BSParser ( Parser ):
             self.state = 263
             self.match(BSParser.GRADIENT)
             self.state = 264
-            self.match(BSParser.IDENTIFIER)
+            self.variable()
             self.state = 265
             self.match(BSParser.WITH)
             self.state = 266
-            self.match(BSParser.IDENTIFIER)
+            self.variable()
             self.state = 267
             self.match(BSParser.RANGE)
             self.state = 268
