@@ -36,7 +36,7 @@ public:
   };
 
   enum {
-    RuleProgmaram = 0, RuleGlobalDeclarations = 1, RuleModuleDeclaration = 2,
+    RuleProgram = 0, RuleGlobalDeclarations = 1, RuleModuleDeclaration = 2,
     RuleManifestDeclaration = 3, RuleStationaryDeclaration = 4, RuleFunctions = 5,
     RuleFunctionDeclaration = 6, RuleFormalParameters = 7, RuleFormalParameterList = 8,
     RuleFormalParameter = 9, RuleFunctionTyping = 10, RuleReturnStatement = 11,
@@ -61,7 +61,7 @@ public:
   virtual antlr4::dfa::Vocabulary& getVocabulary() const override;
 
 
-  class ProgmaramContext;
+  class ProgramContext;
   class GlobalDeclarationsContext;
   class ModuleDeclarationContext;
   class ManifestDeclarationContext;
@@ -105,9 +105,9 @@ public:
   class TemperatureIdentifierContext;
   class UnitTrackerContext;
 
-  class  ProgmaramContext : public antlr4::ParserRuleContext {
+  class  ProgramContext : public antlr4::ParserRuleContext {
   public:
-    ProgmaramContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    ProgramContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *INSTRUCTIONS();
     antlr4::tree::TerminalNode *COLON();
@@ -125,7 +125,7 @@ public:
 
   };
 
-  ProgmaramContext* progmaram();
+  ProgramContext* program();
 
   class  GlobalDeclarationsContext : public antlr4::ParserRuleContext {
   public:

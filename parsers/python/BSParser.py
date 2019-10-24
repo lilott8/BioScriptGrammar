@@ -228,7 +228,7 @@ class BSParser ( Parser ):
                       "CENTILITRE", "DECILITRE", "LITRE", "DECALITRE", "CELSIUS",
                       "FAHRENHEIT", "KELVIN", "WS", "COMMENT", "LINE_COMMENT" ]
 
-    RULE_progmaram = 0
+    RULE_program = 0
     RULE_globalDeclarations = 1
     RULE_moduleDeclaration = 2
     RULE_manifestDeclaration = 3
@@ -272,7 +272,7 @@ class BSParser ( Parser ):
     RULE_temperatureIdentifier = 41
     RULE_unitTracker = 42
 
-    ruleNames =  [ "progmaram", "globalDeclarations", "moduleDeclaration",
+    ruleNames =  [ "program", "globalDeclarations", "moduleDeclaration",
                    "manifestDeclaration", "stationaryDeclaration", "functions",
                    "functionDeclaration", "formalParameters", "formalParameterList",
                    "formalParameter", "functionTyping", "returnStatement",
@@ -394,7 +394,7 @@ class BSParser ( Parser ):
 
 
 
-    class ProgmaramContext(ParserRuleContext):
+    class ProgramContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -428,29 +428,29 @@ class BSParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return BSParser.RULE_progmaram
+            return BSParser.RULE_program
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterProgmaram" ):
-                listener.enterProgmaram(self)
+            if hasattr( listener, "enterProgram" ):
+                listener.enterProgram(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitProgmaram" ):
-                listener.exitProgmaram(self)
+            if hasattr( listener, "exitProgram" ):
+                listener.exitProgram(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProgmaram" ):
-                return visitor.visitProgmaram(self)
+            if hasattr( visitor, "visitProgram" ):
+                return visitor.visitProgram(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def progmaram(self):
+    def program(self):
 
-        localctx = BSParser.ProgmaramContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 0, self.RULE_progmaram)
+        localctx = BSParser.ProgramContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 0, self.RULE_program)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)

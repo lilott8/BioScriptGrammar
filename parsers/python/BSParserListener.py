@@ -9,12 +9,12 @@ else:
 # This class defines a complete listener for a parse tree produced by BSParser.
 class BSParserListener(ParseTreeListener):
 
-    # Enter a parse tree produced by BSParser#progmaram.
-    def enterProgmaram(self, ctx:BSParser.ProgmaramContext):
+    # Enter a parse tree produced by BSParser#program.
+    def enterProgram(self, ctx:BSParser.ProgramContext):
         pass
 
-    # Exit a parse tree produced by BSParser#progmaram.
-    def exitProgmaram(self, ctx:BSParser.ProgmaramContext):
+    # Exit a parse tree produced by BSParser#program.
+    def exitProgram(self, ctx:BSParser.ProgramContext):
         pass
 
 

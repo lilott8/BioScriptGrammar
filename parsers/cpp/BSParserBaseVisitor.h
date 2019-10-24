@@ -16,7 +16,7 @@
 class  BSParserBaseVisitor : public BSParserVisitor {
 public:
 
-  virtual antlrcpp::Any visitProgmaram(BSParser::ProgmaramContext *ctx) override {
+  virtual antlrcpp::Any visitProgram(BSParser::ProgramContext *ctx) override {
     return visitChildren(ctx);
   }
 

@@ -15,8 +15,8 @@
 class  BSParserListener : public antlr4::tree::ParseTreeListener {
 public:
 
-  virtual void enterProgmaram(BSParser::ProgmaramContext *ctx) = 0;
-  virtual void exitProgmaram(BSParser::ProgmaramContext *ctx) = 0;
+  virtual void enterProgram(BSParser::ProgramContext *ctx) = 0;
+  virtual void exitProgram(BSParser::ProgramContext *ctx) = 0;
 
   virtual void enterGlobalDeclarations(BSParser::GlobalDeclarationsContext *ctx) = 0;
   virtual void exitGlobalDeclarations(BSParser::GlobalDeclarationsContext *ctx) = 0;

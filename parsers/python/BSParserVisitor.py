@@ -10,8 +10,8 @@ else:
 
 class BSParserVisitor(ParseTreeVisitor):
 
-    # Visit a parse tree produced by BSParser#progmaram.
-    def visitProgmaram(self, ctx:BSParser.ProgmaramContext):
+    # Visit a parse tree produced by BSParser#program.
+    def visitProgram(self, ctx:BSParser.ProgramContext):
         return self.visitChildren(ctx)
 
 

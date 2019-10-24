@@ -35,72 +35,72 @@ dfa::Vocabulary& BSParser::getVocabulary() const {
 
 /* parser definitions section */
 
-//----------------- ProgmaramContext ------------------------------------------------------------------
+//----------------- ProgramContext ------------------------------------------------------------------
 
-BSParser::ProgmaramContext::ProgmaramContext(ParserRuleContext *parent, size_t invokingState)
+BSParser::ProgramContext::ProgramContext(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
 }
 
-tree::TerminalNode* BSParser::ProgmaramContext::INSTRUCTIONS() {
+tree::TerminalNode* BSParser::ProgramContext::INSTRUCTIONS() {
   return getToken(BSParser::INSTRUCTIONS, 0);
 }
 
-tree::TerminalNode* BSParser::ProgmaramContext::COLON() {
+tree::TerminalNode* BSParser::ProgramContext::COLON() {
   return getToken(BSParser::COLON, 0);
 }
 
-tree::TerminalNode* BSParser::ProgmaramContext::EOF() {
+tree::TerminalNode* BSParser::ProgramContext::EOF() {
   return getToken(BSParser::EOF, 0);
 }
 
-std::vector<BSParser::GlobalDeclarationsContext *> BSParser::ProgmaramContext::globalDeclarations() {
+std::vector<BSParser::GlobalDeclarationsContext *> BSParser::ProgramContext::globalDeclarations() {
   return getRuleContexts<BSParser::GlobalDeclarationsContext>();
 }
 
-BSParser::GlobalDeclarationsContext* BSParser::ProgmaramContext::globalDeclarations(size_t i) {
+BSParser::GlobalDeclarationsContext* BSParser::ProgramContext::globalDeclarations(size_t i) {
   return getRuleContext<BSParser::GlobalDeclarationsContext>(i);
 }
 
-BSParser::FunctionsContext* BSParser::ProgmaramContext::functions() {
+BSParser::FunctionsContext* BSParser::ProgramContext::functions() {
   return getRuleContext<BSParser::FunctionsContext>(0);
 }
 
-std::vector<BSParser::StatementsContext *> BSParser::ProgmaramContext::statements() {
+std::vector<BSParser::StatementsContext *> BSParser::ProgramContext::statements() {
   return getRuleContexts<BSParser::StatementsContext>();
 }
 
-BSParser::StatementsContext* BSParser::ProgmaramContext::statements(size_t i) {
+BSParser::StatementsContext* BSParser::ProgramContext::statements(size_t i) {
   return getRuleContext<BSParser::StatementsContext>(i);
 }
 
 
-size_t BSParser::ProgmaramContext::getRuleIndex() const {
-  return BSParser::RuleProgmaram;
+size_t BSParser::ProgramContext::getRuleIndex() const {
+  return BSParser::RuleProgram;
 }
 
-void BSParser::ProgmaramContext::enterRule(tree::ParseTreeListener *listener) {
+void BSParser::ProgramContext::enterRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
-    parserListener->enterProgmaram(this);
+    parserListener->enterProgram(this);
 }
 
-void BSParser::ProgmaramContext::exitRule(tree::ParseTreeListener *listener) {
+void BSParser::ProgramContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<BSParserListener *>(listener);
   if (parserListener != nullptr)
-    parserListener->exitProgmaram(this);
+    parserListener->exitProgram(this);
 }
 
 
-antlrcpp::Any BSParser::ProgmaramContext::accept(tree::ParseTreeVisitor *visitor) {
+antlrcpp::Any BSParser::ProgramContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<BSParserVisitor*>(visitor))
-    return parserVisitor->visitProgmaram(this);
+    return parserVisitor->visitProgram(this);
   else
     return visitor->visitChildren(this);
 }
 
-BSParser::ProgmaramContext* BSParser::progmaram() {
-  ProgmaramContext *_localctx = _tracker.createInstance<ProgmaramContext>(_ctx, getState());
-  enterRule(_localctx, 0, BSParser::RuleProgmaram);
+BSParser::ProgramContext* BSParser::program() {
+  ProgramContext *_localctx = _tracker.createInstance<ProgramContext>(_ctx, getState());
+  enterRule(_localctx, 0, BSParser::RuleProgram);
   size_t _la = 0;
 
   auto onExit = finally([=] {
@@ -3833,7 +3833,7 @@ atn::ATN BSParser::_atn;
 std::vector<uint16_t> BSParser::_serializedATN;
 
 std::vector<std::string> BSParser::_ruleNames = {
-  "progmaram", "globalDeclarations", "moduleDeclaration", "manifestDeclaration",
+  "program", "globalDeclarations", "moduleDeclaration", "manifestDeclaration",
   "stationaryDeclaration", "functions", "functionDeclaration", "formalParameters",
   "formalParameterList", "formalParameter", "functionTyping", "returnStatement",
   "blockStatement", "statements", "ifStatement", "whileStatement", "repeat",

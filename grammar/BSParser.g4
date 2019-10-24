@@ -33,7 +33,7 @@ options { tokenVocab=BSLexer; }
 @parser::basevisitormembers{}
 @parser::basevisitordefinitions{}
 
-progmaram
+program
     : (globalDeclarations )+
     functions?
     INSTRUCTIONS COLON
