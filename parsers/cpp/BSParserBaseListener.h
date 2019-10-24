@@ -1,6 +1,6 @@
 /* parser/listener/visitor header section */
 
-// Generated from /Users/jason/Projects/java/bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
+// Generated from /bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
 
 #pragma once
 
@@ -149,6 +149,6 @@ public:
   virtual void visitTerminal(antlr4::tree::TerminalNode * /*node*/) override { }
   virtual void visitErrorNode(antlr4::tree::ErrorNode * /*node*/) override { }
 
-private:  
+private:
 };
 
