@@ -20,7 +20,7 @@ public:
   /**
    * Visit parse trees produced by BSParser.
    */
-    virtual antlrcpp::Any visitProgram(BSParser::ProgramContext *context) = 0;
+    virtual antlrcpp::Any visitProgmaram(BSParser::ProgmaramContext *context) = 0;
 
     virtual antlrcpp::Any visitGlobalDeclarations(BSParser::GlobalDeclarationsContext *context) = 0;
 
@@ -103,6 +103,8 @@ public:
     virtual antlrcpp::Any visitTimeIdentifier(BSParser::TimeIdentifierContext *context) = 0;
 
     virtual antlrcpp::Any visitTemperatureIdentifier(BSParser::TemperatureIdentifierContext *context) = 0;
+
+    virtual antlrcpp::Any visitUnitTracker(BSParser::UnitTrackerContext *context) = 0;
 
 
 private:

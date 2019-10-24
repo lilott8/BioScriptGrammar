@@ -36,7 +36,7 @@ public:
   };
 
   enum {
-    RuleProgram = 0, RuleGlobalDeclarations = 1, RuleModuleDeclaration = 2,
+    RuleProgmaram = 0, RuleGlobalDeclarations = 1, RuleModuleDeclaration = 2,
     RuleManifestDeclaration = 3, RuleStationaryDeclaration = 4, RuleFunctions = 5,
     RuleFunctionDeclaration = 6, RuleFormalParameters = 7, RuleFormalParameterList = 8,
     RuleFormalParameter = 9, RuleFunctionTyping = 10, RuleReturnStatement = 11,
@@ -47,7 +47,8 @@ public:
     RuleParExpression = 28, RuleMethodInvocation = 29, RuleMethodCall = 30,
     RuleExpressionList = 31, RuleTypeType = 32, RuleUnionType = 33, RuleTypesList = 34,
     RuleVariableDefinition = 35, RuleVariable = 36, RulePrimary = 37, RuleLiteral = 38,
-    RulePrimitiveType = 39, RuleTimeIdentifier = 40, RuleTemperatureIdentifier = 41
+    RulePrimitiveType = 39, RuleTimeIdentifier = 40, RuleTemperatureIdentifier = 41,
+    RuleUnitTracker = 42
   };
 
   BSParser(antlr4::TokenStream *input);
@@ -60,7 +61,7 @@ public:
   virtual antlr4::dfa::Vocabulary& getVocabulary() const override;
 
 
-  class ProgramContext;
+  class ProgmaramContext;
   class GlobalDeclarationsContext;
   class ModuleDeclarationContext;
   class ManifestDeclarationContext;
@@ -102,10 +103,11 @@ public:
   class PrimitiveTypeContext;
   class TimeIdentifierContext;
   class TemperatureIdentifierContext;
+  class UnitTrackerContext;
 
-  class  ProgramContext : public antlr4::ParserRuleContext {
+  class  ProgmaramContext : public antlr4::ParserRuleContext {
   public:
-    ProgramContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    ProgmaramContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *INSTRUCTIONS();
     antlr4::tree::TerminalNode *COLON();
@@ -123,7 +125,7 @@ public:
 
   };
 
-  ProgramContext* program();
+  ProgmaramContext* progmaram();
 
   class  GlobalDeclarationsContext : public antlr4::ParserRuleContext {
   public:
@@ -462,6 +464,8 @@ public:
     std::vector<VariableContext *> variable();
     VariableContext* variable(size_t i);
     antlr4::tree::TerminalNode *WITH();
+    std::vector<UnitTrackerContext *> unitTracker();
+    UnitTrackerContext* unitTracker(size_t i);
     antlr4::tree::TerminalNode *FOR();
     TimeIdentifierContext *timeIdentifier();
 
@@ -521,9 +525,7 @@ public:
     VariableDefinitionContext *variableDefinition();
     antlr4::tree::TerminalNode *DISPENSE();
     antlr4::tree::TerminalNode *IDENTIFIER();
-    antlr4::tree::TerminalNode *INTEGER_LITERAL();
-    antlr4::tree::TerminalNode *UNITS();
-    antlr4::tree::TerminalNode *OF();
+    UnitTrackerContext *unitTracker();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -783,11 +785,8 @@ public:
     VariableContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *IDENTIFIER();
-    std::vector<antlr4::tree::TerminalNode *> INTEGER_LITERAL();
-    antlr4::tree::TerminalNode* INTEGER_LITERAL(size_t i);
-    antlr4::tree::TerminalNode *UNITS();
-    antlr4::tree::TerminalNode *OF();
     antlr4::tree::TerminalNode *LBRACKET();
+    antlr4::tree::TerminalNode *INTEGER_LITERAL();
     antlr4::tree::TerminalNode *RBRACKET();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -880,6 +879,23 @@ public:
   };
 
   TemperatureIdentifierContext* temperatureIdentifier();
+
+  class  UnitTrackerContext : public antlr4::ParserRuleContext {
+  public:
+    UnitTrackerContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    antlr4::tree::TerminalNode *INTEGER_LITERAL();
+    antlr4::tree::TerminalNode *UNITS();
+    antlr4::tree::TerminalNode *OF();
+
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+
+  };
+
+  UnitTrackerContext* unitTracker();
 
 
 private:

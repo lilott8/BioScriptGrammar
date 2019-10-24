@@ -15,8 +15,8 @@
 class  BSParserListener : public antlr4::tree::ParseTreeListener {
 public:
 
-  virtual void enterProgram(BSParser::ProgramContext *ctx) = 0;
-  virtual void exitProgram(BSParser::ProgramContext *ctx) = 0;
+  virtual void enterProgmaram(BSParser::ProgmaramContext *ctx) = 0;
+  virtual void exitProgmaram(BSParser::ProgmaramContext *ctx) = 0;
 
   virtual void enterGlobalDeclarations(BSParser::GlobalDeclarationsContext *ctx) = 0;
   virtual void exitGlobalDeclarations(BSParser::GlobalDeclarationsContext *ctx) = 0;
@@ -140,6 +140,9 @@ public:
 
   virtual void enterTemperatureIdentifier(BSParser::TemperatureIdentifierContext *ctx) = 0;
   virtual void exitTemperatureIdentifier(BSParser::TemperatureIdentifierContext *ctx) = 0;
+
+  virtual void enterUnitTracker(BSParser::UnitTrackerContext *ctx) = 0;
+  virtual void exitUnitTracker(BSParser::UnitTrackerContext *ctx) = 0;
 
 
 private:

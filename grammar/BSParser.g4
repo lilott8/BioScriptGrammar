@@ -33,7 +33,7 @@ options { tokenVocab=BSLexer; }
 @parser::basevisitormembers{}
 @parser::basevisitordefinitions{}
 
-program
+progmaram
     : (globalDeclarations )+
     functions?
     INSTRUCTIONS COLON
@@ -153,7 +153,7 @@ dispose
     ;
 
 mix
-    : variableDefinition MIX variable WITH variable (FOR timeIdentifier)?
+    : variableDefinition MIX (unitTracker)? variable WITH (unitTracker)? variable (FOR timeIdentifier)?
     ;
 
 /********************************************************
@@ -173,7 +173,7 @@ You can only dispense a global variable.  Thus, it has no
 indexing capabilities.  Hence the identifier.
 ********************************************************/
 dispense
-    : variableDefinition DISPENSE (INTEGER_LITERAL UNITS OF)? IDENTIFIER
+    : variableDefinition DISPENSE (unitTracker)? IDENTIFIER
     ;
 
 gradient
@@ -242,7 +242,7 @@ variableDefinition
     ;
 
 variable
-    : (INTEGER_LITERAL UNITS OF)? IDENTIFIER(LBRACKET INTEGER_LITERAL RBRACKET)?
+    : IDENTIFIER(LBRACKET INTEGER_LITERAL RBRACKET)?
     ;
 
 primary
@@ -270,4 +270,8 @@ timeIdentifier
 
 temperatureIdentifier
     : TEMP_NUMBER
+    ;
+
+unitTracker
+    :   INTEGER_LITERAL UNITS OF
     ;

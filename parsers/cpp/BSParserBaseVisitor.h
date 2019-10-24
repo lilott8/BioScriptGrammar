@@ -16,7 +16,7 @@
 class  BSParserBaseVisitor : public BSParserVisitor {
 public:
 
-  virtual antlrcpp::Any visitProgram(BSParser::ProgramContext *ctx) override {
+  virtual antlrcpp::Any visitProgmaram(BSParser::ProgmaramContext *ctx) override {
     return visitChildren(ctx);
   }
 
@@ -181,6 +181,10 @@ public:
   }
 
   virtual antlrcpp::Any visitTemperatureIdentifier(BSParser::TemperatureIdentifierContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitUnitTracker(BSParser::UnitTrackerContext *ctx) override {
     return visitChildren(ctx);
   }
 

@@ -17,8 +17,8 @@
 class  BSParserBaseListener : public BSParserListener {
 public:
 
-  virtual void enterProgram(BSParser::ProgramContext * /*ctx*/) override { }
-  virtual void exitProgram(BSParser::ProgramContext * /*ctx*/) override { }
+  virtual void enterProgmaram(BSParser::ProgmaramContext * /*ctx*/) override { }
+  virtual void exitProgmaram(BSParser::ProgmaramContext * /*ctx*/) override { }
 
   virtual void enterGlobalDeclarations(BSParser::GlobalDeclarationsContext * /*ctx*/) override { }
   virtual void exitGlobalDeclarations(BSParser::GlobalDeclarationsContext * /*ctx*/) override { }
@@ -142,6 +142,9 @@ public:
 
   virtual void enterTemperatureIdentifier(BSParser::TemperatureIdentifierContext * /*ctx*/) override { }
   virtual void exitTemperatureIdentifier(BSParser::TemperatureIdentifierContext * /*ctx*/) override { }
+
+  virtual void enterUnitTracker(BSParser::UnitTrackerContext * /*ctx*/) override { }
+  virtual void exitUnitTracker(BSParser::UnitTrackerContext * /*ctx*/) override { }
 
 
   virtual void enterEveryRule(antlr4::ParserRuleContext * /*ctx*/) override { }
