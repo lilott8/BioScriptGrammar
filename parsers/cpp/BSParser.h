@@ -546,8 +546,8 @@ public:
     VariableContext* variable(size_t i);
     antlr4::tree::TerminalNode *WITH();
     antlr4::tree::TerminalNode *RANGE();
-    std::vector<antlr4::tree::TerminalNode *> INTEGER_LITERAL();
-    antlr4::tree::TerminalNode* INTEGER_LITERAL(size_t i);
+    std::vector<antlr4::tree::TerminalNode *> FLOAT_LITERAL();
+    antlr4::tree::TerminalNode* FLOAT_LITERAL(size_t i);
     antlr4::tree::TerminalNode *COMMA();
     antlr4::tree::TerminalNode *AT();
 

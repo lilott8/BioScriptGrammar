@@ -177,7 +177,7 @@ dispense
     ;
 
 gradient
-    : variableDefinition GRADIENT variable WITH variable RANGE INTEGER_LITERAL COMMA INTEGER_LITERAL AT INTEGER_LITERAL
+    : variableDefinition GRADIENT variable WITH variable RANGE FLOAT_LITERAL COMMA FLOAT_LITERAL AT FLOAT_LITERAL
     ;
 
 store

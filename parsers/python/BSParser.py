@@ -128,12 +128,12 @@ def serializedATN():
         buf.write("\3\2\2\2\u0104\u0105\3\2\2\2\u0105\u0106\3\2\2\2\u0106")
         buf.write("\u0107\7$\2\2\u0107/\3\2\2\2\u0108\u0109\5H%\2\u0109\u010a")
         buf.write("\7\25\2\2\u010a\u010b\5J&\2\u010b\u010c\7\31\2\2\u010c")
-        buf.write("\u010d\5J&\2\u010d\u010e\7\27\2\2\u010e\u010f\7(\2\2\u010f")
-        buf.write("\u0110\7\63\2\2\u0110\u0111\7(\2\2\u0111\u0112\7\30\2")
-        buf.write("\2\u0112\u0113\7(\2\2\u0113\61\3\2\2\2\u0114\u0115\7\26")
-        buf.write("\2\2\u0115\u0116\5J&\2\u0116\63\3\2\2\2\u0117\u0118\5")
-        buf.write("H%\2\u0118\u0119\5N(\2\u0119\65\3\2\2\2\u011a\u011b\5")
-        buf.write("H%\2\u011b\u011c\5L\'\2\u011c\u011d\t\2\2\2\u011d\u011e")
+        buf.write("\u010d\5J&\2\u010d\u010e\7\27\2\2\u010e\u010f\7\'\2\2")
+        buf.write("\u010f\u0110\7\63\2\2\u0110\u0111\7\'\2\2\u0111\u0112")
+        buf.write("\7\30\2\2\u0112\u0113\7\'\2\2\u0113\61\3\2\2\2\u0114\u0115")
+        buf.write("\7\26\2\2\u0115\u0116\5J&\2\u0116\63\3\2\2\2\u0117\u0118")
+        buf.write("\5H%\2\u0118\u0119\5N(\2\u0119\65\3\2\2\2\u011a\u011b")
+        buf.write("\5H%\2\u011b\u011c\5L\'\2\u011c\u011d\t\2\2\2\u011d\u011e")
         buf.write("\5L\'\2\u011e\u0125\3\2\2\2\u011f\u0120\5H%\2\u0120\u0121")
         buf.write("\5L\'\2\u0121\u0122\t\3\2\2\u0122\u0123\5L\'\2\u0123\u0125")
         buf.write("\3\2\2\2\u0124\u011a\3\2\2\2\u0124\u011f\3\2\2\2\u0125")
@@ -2159,11 +2159,11 @@ class BSParser ( Parser ):
         def RANGE(self):
             return self.getToken(BSParser.RANGE, 0)
 
-        def INTEGER_LITERAL(self, i:int=None):
+        def FLOAT_LITERAL(self, i:int=None):
             if i is None:
-                return self.getTokens(BSParser.INTEGER_LITERAL)
+                return self.getTokens(BSParser.FLOAT_LITERAL)
             else:
-                return self.getToken(BSParser.INTEGER_LITERAL, i)
+                return self.getToken(BSParser.FLOAT_LITERAL, i)
 
         def COMMA(self):
             return self.getToken(BSParser.COMMA, 0)
@@ -2210,15 +2210,15 @@ class BSParser ( Parser ):
             self.state = 267
             self.match(BSParser.RANGE)
             self.state = 268
-            self.match(BSParser.INTEGER_LITERAL)
+            self.match(BSParser.FLOAT_LITERAL)
             self.state = 269
             self.match(BSParser.COMMA)
             self.state = 270
-            self.match(BSParser.INTEGER_LITERAL)
+            self.match(BSParser.FLOAT_LITERAL)
             self.state = 271
             self.match(BSParser.AT)
             self.state = 272
-            self.match(BSParser.INTEGER_LITERAL)
+            self.match(BSParser.FLOAT_LITERAL)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
