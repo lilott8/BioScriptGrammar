@@ -32,7 +32,34 @@ public:
     DECISECOND = 79, SECOND = 80, MINUTE = 81, HOUR = 82, DAY = 83, WEEK = 84,
     MONTH = 85, YEAR = 86, NANOLITRE = 87, MICROLITRE = 88, MILLILITRE = 89,
     CENTILITRE = 90, DECILITRE = 91, LITRE = 92, DECALITRE = 93, CELSIUS = 94,
-    FAHRENHEIT = 95, KELVIN = 96, WS = 97, COMMENT = 98, LINE_COMMENT = 99
+    FAHRENHEIT = 95, KELVIN = 96, ACIDS_STRONG_NON_OXIDIZING = 97, ACIDS_STRONG_OXIDIZING = 98,
+    ACIDS_CARBOXYLIC = 99, ALCOHOLS_AND_POLYOLS = 100, ALDEHYDES = 101,
+    AMIDES_AND_IMIDES = 102, AMINES_PHOSPHINES_AND_PYRIDINES = 103, AZO_DIAZO_AZIDO_HYDRAZINE_AND_AZIDE_COMPOUNDS = 104,
+    CARBAMATES = 105, BASES_STRONG = 106, CYANIDES_INORGANIC = 107, THIOCARBAMATE_ESTERS_AND_SALTS_DITHIOCARBAMATE_ESTERS_AND_SALTS = 108,
+    ESTERS_SULFATE_ESTERS_PHOSPHATE_ESTERS_THIOPHOSPHATE_ESTERS_AND_BORATE_ESTERS = 109,
+    ETHERS = 110, FLUORIDES_INORGANIC = 111, HYDROCARBONS_AROMATIC = 112,
+    HALOGENATED_ORGANIC_COMPOUNDS = 113, ISOCYANATES_AND_ISOTHIOCYANATES = 114,
+    KETONES = 115, SULFIDES_ORGANIC = 116, METALS_ALKALI_VERY_ACTIVE = 117,
+    METALS_ELEMENTAL_AND_POWDER_ACTIVE = 118, METALS_LESS_REACTIVE = 119,
+    METALS_AND_METAL_COMPOUNDS_TOXIC = 120, DIAZONIUM_SALTS = 121, NITRILES = 122,
+    NITRO_NITROSO_NITRATE_AND_NITRITE_COMPOUNDS_ORGANIC = 123, HYDROCARBONS_ALIPHATIC_UNSATURATED = 124,
+    HYDROCARBONS_ALIPHATIC_SATURATED = 125, PEROXIDES_ORGANIC = 126, PHENOLS_AND_CRESOLS = 127,
+    SULFONATES_PHOSPHONATES_AND_THIOPHOSPHONATES_ORGANIC = 128, SULFIDES_INORGANIC = 129,
+    EPOXIDES = 130, METAL_HYDRIDES_METAL_ALKYLS_METAL_ARYLS_AND_SILANES = 131,
+    ANHYDRIDES = 132, SALTS_ACIDIC = 133, SALTS_BASIC = 134, ACYL_HALIDES_SULFONYL_HALIDES_AND_CHLOROFORMATES = 135,
+    ORGANOMETALLICS = 136, OXIDIZING_AGENTS_STRONG = 137, REDUCING_AGENTS_STRONG = 138,
+    NON_REDOX_ACTIVE_INORGANIC_COMPOUNDS = 139, FLUORINATED_ORGANIC_COMPOUNDS = 140,
+    FLUORIDE_SALTS_SOLUBLE = 141, OXIDIZING_AGENTS_WEAK = 142, REDUCING_AGENTS_WEAK = 143,
+    NITRIDES_PHOSPHIDES_CARBIDES_AND_SILICIDES = 144, CHLOROSILANES = 145,
+    SILOXANES = 146, HALOGENATING_AGENTS = 147, ACIDS_WEAK = 148, BASES_WEAK = 149,
+    CARBONATE_SALTS = 150, ALKYNES_WITH_ACETYLENIC_HYDROGEN = 151, ALKYNES_WITH_NO_ACETYLENIC_HYDROGEN = 152,
+    CONJUGATED_DIENES = 153, ARYL_HALIDES = 154, AMINES_AROMATIC = 155,
+    NITRATE_AND_NITRITE_COMPOUNDS_INORGANIC = 156, ACETALS_KETALS_HEMIACETALS_AND_HEMIKETALS = 157,
+    ACRYLATES_AND_ACRYLIC_ACIDS = 158, PHENOLIC_SALTS = 159, QUATERNARY_AMMONIUM_AND_PHOSPHONIUM_SALTS = 160,
+    SULFITE_AND_THIOSULFATE_SALTS = 161, OXIMES = 162, POLYMERIZABLE_COMPOUNDS = 163,
+    NOT_CHEMICALLY_REACTIVE = 164, INSUFFICIENT_INFORMATION_FOR_CLASSIFICATION = 165,
+    WATER_AND_AQUEOUS_SOLUTIONS = 166, NULL = 167, UNKNOWN = 168, WS = 169,
+    COMMENT = 170, LINE_COMMENT = 171
   };
 
   enum {
@@ -47,8 +74,8 @@ public:
     RuleParExpression = 28, RuleMethodInvocation = 29, RuleMethodCall = 30,
     RuleExpressionList = 31, RuleTypeType = 32, RuleUnionType = 33, RuleTypesList = 34,
     RuleVariableDefinition = 35, RuleVariable = 36, RulePrimary = 37, RuleLiteral = 38,
-    RulePrimitiveType = 39, RuleTimeIdentifier = 40, RuleTemperatureIdentifier = 41,
-    RuleUnitTracker = 42
+    RulePrimitiveType = 39, RuleChemicalType = 40, RuleTimeIdentifier = 41,
+    RuleTemperatureIdentifier = 42, RuleUnitTracker = 43
   };
 
   BSParser(antlr4::TokenStream *input);
@@ -101,6 +128,7 @@ public:
   class PrimaryContext;
   class LiteralContext;
   class PrimitiveTypeContext;
+  class ChemicalTypeContext;
   class TimeIdentifierContext;
   class TemperatureIdentifierContext;
   class UnitTrackerContext;
@@ -166,6 +194,7 @@ public:
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *MANIFEST();
     antlr4::tree::TerminalNode *IDENTIFIER();
+    UnionTypeContext *unionType();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -182,6 +211,7 @@ public:
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *STATIONARY();
     antlr4::tree::TerminalNode *IDENTIFIER();
+    UnionTypeContext *unionType();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -718,6 +748,7 @@ public:
     TypeTypeContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     PrimitiveTypeContext *primitiveType();
+    ChemicalTypeContext *chemicalType();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -849,6 +880,93 @@ public:
   };
 
   PrimitiveTypeContext* primitiveType();
+
+  class  ChemicalTypeContext : public antlr4::ParserRuleContext {
+  public:
+    ChemicalTypeContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    antlr4::tree::TerminalNode *INTEGER_LITERAL();
+    antlr4::tree::TerminalNode *ACIDS_STRONG_NON_OXIDIZING();
+    antlr4::tree::TerminalNode *ACIDS_STRONG_OXIDIZING();
+    antlr4::tree::TerminalNode *ACIDS_CARBOXYLIC();
+    antlr4::tree::TerminalNode *ALCOHOLS_AND_POLYOLS();
+    antlr4::tree::TerminalNode *ALDEHYDES();
+    antlr4::tree::TerminalNode *AMIDES_AND_IMIDES();
+    antlr4::tree::TerminalNode *AMINES_PHOSPHINES_AND_PYRIDINES();
+    antlr4::tree::TerminalNode *AZO_DIAZO_AZIDO_HYDRAZINE_AND_AZIDE_COMPOUNDS();
+    antlr4::tree::TerminalNode *CARBAMATES();
+    antlr4::tree::TerminalNode *BASES_STRONG();
+    antlr4::tree::TerminalNode *CYANIDES_INORGANIC();
+    antlr4::tree::TerminalNode *THIOCARBAMATE_ESTERS_AND_SALTS_DITHIOCARBAMATE_ESTERS_AND_SALTS();
+    antlr4::tree::TerminalNode *ESTERS_SULFATE_ESTERS_PHOSPHATE_ESTERS_THIOPHOSPHATE_ESTERS_AND_BORATE_ESTERS();
+    antlr4::tree::TerminalNode *ETHERS();
+    antlr4::tree::TerminalNode *FLUORIDES_INORGANIC();
+    antlr4::tree::TerminalNode *HYDROCARBONS_AROMATIC();
+    antlr4::tree::TerminalNode *HALOGENATED_ORGANIC_COMPOUNDS();
+    antlr4::tree::TerminalNode *ISOCYANATES_AND_ISOTHIOCYANATES();
+    antlr4::tree::TerminalNode *KETONES();
+    antlr4::tree::TerminalNode *SULFIDES_ORGANIC();
+    antlr4::tree::TerminalNode *METALS_ALKALI_VERY_ACTIVE();
+    antlr4::tree::TerminalNode *METALS_ELEMENTAL_AND_POWDER_ACTIVE();
+    antlr4::tree::TerminalNode *METALS_LESS_REACTIVE();
+    antlr4::tree::TerminalNode *METALS_AND_METAL_COMPOUNDS_TOXIC();
+    antlr4::tree::TerminalNode *DIAZONIUM_SALTS();
+    antlr4::tree::TerminalNode *NITRILES();
+    antlr4::tree::TerminalNode *NITRO_NITROSO_NITRATE_AND_NITRITE_COMPOUNDS_ORGANIC();
+    antlr4::tree::TerminalNode *HYDROCARBONS_ALIPHATIC_UNSATURATED();
+    antlr4::tree::TerminalNode *HYDROCARBONS_ALIPHATIC_SATURATED();
+    antlr4::tree::TerminalNode *PEROXIDES_ORGANIC();
+    antlr4::tree::TerminalNode *PHENOLS_AND_CRESOLS();
+    antlr4::tree::TerminalNode *SULFONATES_PHOSPHONATES_AND_THIOPHOSPHONATES_ORGANIC();
+    antlr4::tree::TerminalNode *SULFIDES_INORGANIC();
+    antlr4::tree::TerminalNode *EPOXIDES();
+    antlr4::tree::TerminalNode *METAL_HYDRIDES_METAL_ALKYLS_METAL_ARYLS_AND_SILANES();
+    antlr4::tree::TerminalNode *ANHYDRIDES();
+    antlr4::tree::TerminalNode *SALTS_ACIDIC();
+    antlr4::tree::TerminalNode *SALTS_BASIC();
+    antlr4::tree::TerminalNode *ACYL_HALIDES_SULFONYL_HALIDES_AND_CHLOROFORMATES();
+    antlr4::tree::TerminalNode *ORGANOMETALLICS();
+    antlr4::tree::TerminalNode *OXIDIZING_AGENTS_STRONG();
+    antlr4::tree::TerminalNode *REDUCING_AGENTS_STRONG();
+    antlr4::tree::TerminalNode *NON_REDOX_ACTIVE_INORGANIC_COMPOUNDS();
+    antlr4::tree::TerminalNode *FLUORINATED_ORGANIC_COMPOUNDS();
+    antlr4::tree::TerminalNode *FLUORIDE_SALTS_SOLUBLE();
+    antlr4::tree::TerminalNode *OXIDIZING_AGENTS_WEAK();
+    antlr4::tree::TerminalNode *REDUCING_AGENTS_WEAK();
+    antlr4::tree::TerminalNode *NITRIDES_PHOSPHIDES_CARBIDES_AND_SILICIDES();
+    antlr4::tree::TerminalNode *CHLOROSILANES();
+    antlr4::tree::TerminalNode *SILOXANES();
+    antlr4::tree::TerminalNode *HALOGENATING_AGENTS();
+    antlr4::tree::TerminalNode *ACIDS_WEAK();
+    antlr4::tree::TerminalNode *BASES_WEAK();
+    antlr4::tree::TerminalNode *CARBONATE_SALTS();
+    antlr4::tree::TerminalNode *ALKYNES_WITH_ACETYLENIC_HYDROGEN();
+    antlr4::tree::TerminalNode *ALKYNES_WITH_NO_ACETYLENIC_HYDROGEN();
+    antlr4::tree::TerminalNode *CONJUGATED_DIENES();
+    antlr4::tree::TerminalNode *ARYL_HALIDES();
+    antlr4::tree::TerminalNode *AMINES_AROMATIC();
+    antlr4::tree::TerminalNode *NITRATE_AND_NITRITE_COMPOUNDS_INORGANIC();
+    antlr4::tree::TerminalNode *ACETALS_KETALS_HEMIACETALS_AND_HEMIKETALS();
+    antlr4::tree::TerminalNode *ACRYLATES_AND_ACRYLIC_ACIDS();
+    antlr4::tree::TerminalNode *PHENOLIC_SALTS();
+    antlr4::tree::TerminalNode *QUATERNARY_AMMONIUM_AND_PHOSPHONIUM_SALTS();
+    antlr4::tree::TerminalNode *SULFITE_AND_THIOSULFATE_SALTS();
+    antlr4::tree::TerminalNode *OXIMES();
+    antlr4::tree::TerminalNode *POLYMERIZABLE_COMPOUNDS();
+    antlr4::tree::TerminalNode *NOT_CHEMICALLY_REACTIVE();
+    antlr4::tree::TerminalNode *INSUFFICIENT_INFORMATION_FOR_CLASSIFICATION();
+    antlr4::tree::TerminalNode *WATER_AND_AQUEOUS_SOLUTIONS();
+    antlr4::tree::TerminalNode *NULL();
+    antlr4::tree::TerminalNode *UNKNOWN();
+
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+
+  };
+
+  ChemicalTypeContext* chemicalType();
 
   class  TimeIdentifierContext : public antlr4::ParserRuleContext {
   public:

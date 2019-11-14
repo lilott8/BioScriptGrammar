@@ -135,6 +135,9 @@ public:
   virtual void enterPrimitiveType(BSParser::PrimitiveTypeContext *ctx) = 0;
   virtual void exitPrimitiveType(BSParser::PrimitiveTypeContext *ctx) = 0;
 
+  virtual void enterChemicalType(BSParser::ChemicalTypeContext *ctx) = 0;
+  virtual void exitChemicalType(BSParser::ChemicalTypeContext *ctx) = 0;
+
   virtual void enterTimeIdentifier(BSParser::TimeIdentifierContext *ctx) = 0;
   virtual void exitTimeIdentifier(BSParser::TimeIdentifierContext *ctx) = 0;
 

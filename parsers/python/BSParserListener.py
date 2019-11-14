@@ -369,6 +369,15 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by BSParser#chemicalType.
+    def enterChemicalType(self, ctx:BSParser.ChemicalTypeContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#chemicalType.
+    def exitChemicalType(self, ctx:BSParser.ChemicalTypeContext):
+        pass
+
+
     # Enter a parse tree produced by BSParser#timeIdentifier.
     def enterTimeIdentifier(self, ctx:BSParser.TimeIdentifierContext):
         pass

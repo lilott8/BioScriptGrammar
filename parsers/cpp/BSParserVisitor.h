@@ -100,6 +100,8 @@ public:
 
     virtual antlrcpp::Any visitPrimitiveType(BSParser::PrimitiveTypeContext *context) = 0;
 
+    virtual antlrcpp::Any visitChemicalType(BSParser::ChemicalTypeContext *context) = 0;
+
     virtual antlrcpp::Any visitTimeIdentifier(BSParser::TimeIdentifierContext *context) = 0;
 
     virtual antlrcpp::Any visitTemperatureIdentifier(BSParser::TemperatureIdentifierContext *context) = 0;

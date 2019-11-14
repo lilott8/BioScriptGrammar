@@ -176,6 +176,10 @@ public:
     return visitChildren(ctx);
   }
 
+  virtual antlrcpp::Any visitChemicalType(BSParser::ChemicalTypeContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
   virtual antlrcpp::Any visitTimeIdentifier(BSParser::TimeIdentifierContext *ctx) override {
     return visitChildren(ctx);
   }

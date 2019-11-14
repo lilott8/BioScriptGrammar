@@ -137,6 +137,9 @@ public:
   virtual void enterPrimitiveType(BSParser::PrimitiveTypeContext * /*ctx*/) override { }
   virtual void exitPrimitiveType(BSParser::PrimitiveTypeContext * /*ctx*/) override { }
 
+  virtual void enterChemicalType(BSParser::ChemicalTypeContext * /*ctx*/) override { }
+  virtual void exitChemicalType(BSParser::ChemicalTypeContext * /*ctx*/) override { }
+
   virtual void enterTimeIdentifier(BSParser::TimeIdentifierContext * /*ctx*/) override { }
   virtual void exitTimeIdentifier(BSParser::TimeIdentifierContext * /*ctx*/) override { }
 

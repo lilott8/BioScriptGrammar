@@ -210,6 +210,11 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by BSParser#chemicalType.
+    def visitChemicalType(self, ctx:BSParser.ChemicalTypeContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by BSParser#timeIdentifier.
     def visitTimeIdentifier(self, ctx:BSParser.TimeIdentifierContext):
         return self.visitChildren(ctx)
