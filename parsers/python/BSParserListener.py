@@ -189,6 +189,15 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by BSParser#usein.
+    def enterUsein(self, ctx:BSParser.UseinContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#usein.
+    def exitUsein(self, ctx:BSParser.UseinContext):
+        pass
+
+
     # Enter a parse tree produced by BSParser#detect.
     def enterDetect(self, ctx:BSParser.DetectContext):
         pass
@@ -405,3 +414,5 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
+
+del BSParser

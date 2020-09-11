@@ -110,6 +110,11 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by BSParser#usein.
+    def visitUsein(self, ctx:BSParser.UseinContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by BSParser#detect.
     def visitDetect(self, ctx:BSParser.DetectContext):
         return self.visitChildren(ctx)

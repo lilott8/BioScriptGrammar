@@ -144,7 +144,7 @@ repeat
     ;
 
 heat
-    : HEAT variable AT temperatureIdentifier (FOR timeIdentifier)?
+    : (usein)? HEAT variable AT temperatureIdentifier (FOR timeIdentifier)?
     ;
 
 dispose
@@ -153,7 +153,11 @@ dispose
     ;
 
 mix
-    : variableDefinition MIX (unitTracker)? variable WITH (unitTracker)? variable (FOR timeIdentifier)?
+    : (usein)? variableDefinition MIX (unitTracker)? variable WITH (unitTracker)? variable (FOR timeIdentifier)?
+    ;
+
+usein
+    : ATSIGN USEIN timeIdentifier
     ;
 
 /********************************************************
