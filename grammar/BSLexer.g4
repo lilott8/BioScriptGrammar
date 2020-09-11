@@ -13,8 +13,6 @@ RETURN:         'return';
 // Declarations
 MANIFEST:       'manifest';
 MODULE:         'module';
-
-
 STATIONARY:     'stationary';
 FUNCTIONS:      'functions';
 INSTRUCTIONS:   'instructions';
@@ -39,7 +37,8 @@ INTO:           'into';
 TIMES:          'times';
 ON:             'on';
 OF:             'of';
-UNITS:           'units';
+UNITS:          'units';
+USEIN:          'usein';
 
 // Typing
 NAT:            'nat';
@@ -96,6 +95,7 @@ BITOR:              '|';
 CARET:              '^';
 MOD:                '%';
 UNDERSCORE:         '_';
+ATSIGN:             '@';
 
 // Time and Volume Units
 NANOSECOND:         'ns';
