@@ -1,4 +1,4 @@
-# Generated from /bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
+# Generated from /Users/labtop/PyCharm/BioScript/grammar/grammar/BSParser.g4 by ANTLR 4.8
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
@@ -195,6 +195,15 @@ class BSParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by BSParser#usein.
     def exitUsein(self, ctx:BSParser.UseinContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#useinType.
+    def enterUseinType(self, ctx:BSParser.UseinTypeContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#useinType.
+    def exitUseinType(self, ctx:BSParser.UseinTypeContext):
         pass
 
 

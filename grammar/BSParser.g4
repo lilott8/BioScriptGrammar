@@ -157,7 +157,11 @@ mix
     ;
 
 usein
-    : ATSIGN USEIN timeIdentifier
+    : ATSIGN USEIN(useinType)? timeIdentifier
+    ;
+
+useinType
+    : LPAREN (SLE | SEQ | SGE | FLE | FEQ | FGE) RPAREN
     ;
 
 /********************************************************
