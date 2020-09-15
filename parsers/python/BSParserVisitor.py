@@ -1,4 +1,4 @@
-# Generated from /bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
+# Generated from /Users/labtop/PyCharm/BioScript/grammar/grammar/BSParser.g4 by ANTLR 4.8
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
@@ -112,6 +112,11 @@ class BSParserVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by BSParser#usein.
     def visitUsein(self, ctx:BSParser.UseinContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#useinType.
+    def visitUseinType(self, ctx:BSParser.UseinTypeContext):
         return self.visitChildren(ctx)
 
 

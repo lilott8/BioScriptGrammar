@@ -39,6 +39,12 @@ ON:             'on';
 OF:             'of';
 UNITS:          'units';
 USEIN:          'usein';
+SLE:            'start <=';
+SEQ:            'start';
+SGE:            'start >=';
+FLE:            'finish <=';
+FEQ:            'finish';
+FGE:            'finish >=';
 
 // Typing
 NAT:            'nat';
