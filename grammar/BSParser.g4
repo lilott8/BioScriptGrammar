@@ -144,7 +144,7 @@ repeat
     ;
 
 heat
-    : (usein)? HEAT variable AT temperatureIdentifier (ON variable)? (FOR timeIdentifier)?
+    : (usein)? HEAT variable AT temperatureIdentifier onStationary? (FOR timeIdentifier)?
     ;
 
 dispose
@@ -153,7 +153,7 @@ dispose
     ;
 
 mix
-    : (usein)? variableDefinition MIX (unitTracker)? variable (WITH (unitTracker)? variable (ON variable)? | ON variable) (FOR timeIdentifier)?
+    : (usein)? variableDefinition MIX (unitTracker)? variable (WITH (unitTracker)? variable onStationary? | onStationary) (FOR timeIdentifier)?
     ;
 
 usein
@@ -162,6 +162,10 @@ usein
 
 useinType
     : LPAREN (SLE | SEQ | SGE | FLE | FEQ | FGE) RPAREN
+    ;
+
+onStationary
+    : ON variable
     ;
 
 /********************************************************

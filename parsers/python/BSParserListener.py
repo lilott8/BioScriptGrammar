@@ -207,6 +207,15 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by BSParser#onStationary.
+    def enterOnStationary(self, ctx:BSParser.OnStationaryContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#onStationary.
+    def exitOnStationary(self, ctx:BSParser.OnStationaryContext):
+        pass
+
+
     # Enter a parse tree produced by BSParser#detect.
     def enterDetect(self, ctx:BSParser.DetectContext):
         pass
