@@ -20,6 +20,7 @@ INSTRUCTIONS:   'instructions';
 // Operations
 DETECT:         'detect';
 MIX:            'mix';
+SEND:           'send';
 SPLIT:          'split';
 HEAT:           'heat';
 DRAIN:          'drain';
@@ -36,6 +37,7 @@ FOR:            'for';
 INTO:           'into';
 TIMES:          'times';
 ON:             'on';
+TO:             'to';
 OF:             'of';
 UNITS:          'units';
 USEIN:          'usein';
