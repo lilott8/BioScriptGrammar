@@ -16,6 +16,7 @@ MODULE:         'module';
 STATIONARY:     'stationary';
 FUNCTIONS:      'functions';
 INSTRUCTIONS:   'instructions';
+IMPORT:         'import';
 
 // Operations
 DETECT:         'detect';

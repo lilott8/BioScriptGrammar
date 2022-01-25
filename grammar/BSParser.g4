@@ -75,6 +75,7 @@ functionDeclaration
             ( statements )*
             returnStatement
      RBRACE
+     | IMPORT IDENTIFIER
     ;
 
 formalParameters
