@@ -48,6 +48,7 @@ globalDeclarations
     : moduleDeclaration
     | manifestDeclaration
     | stationaryDeclaration
+    | importStatement
     ;
 
 moduleDeclaration
@@ -62,6 +63,23 @@ stationaryDeclaration
     : (unionType)? STATIONARY IDENTIFIER
     ;
 
+importStatement
+    : importLibrary
+    | importFuncFromLibrary
+    ;
+
+importLibrary
+    : IMPORT IDENTIFIER
+    ;
+
+importFuncFromLibrary
+    : IMPORT IDENTIFIER (COMMA IDENTIFIER)* fromLibrary
+    ;
+
+fromLibrary
+    : FROM IDENTIFIER
+    ;
+
 /******************************************
  * Function Declaration
 ******************************************/
@@ -73,9 +91,8 @@ functions
 functionDeclaration
     : FUNCTION IDENTIFIER formalParameters ( functionTyping )? LBRACE
             ( statements )*
-            returnStatement
+            returnStatement?
      RBRACE
-     | IMPORT IDENTIFIER
     ;
 
 formalParameters
@@ -117,7 +134,9 @@ blockStatement
 statements
     : ifStatement
     | whileStatement
+    | forInStatement
     | variableDefinition
+    | listDefinition
     | repeat
     | heat
     | dispose
@@ -141,11 +160,15 @@ whileStatement
     ;
 
 repeat
-    : REPEAT INTEGER_LITERAL TIMES blockStatement
+    : REPEAT (INTEGER_LITERAL | variable) TIMES blockStatement
     ;
 
 heat
     : (usein)? HEAT variable AT temperatureIdentifier (FOR timeIdentifier)?
+    ;
+
+forInStatement
+    : FOR primary (COMMA primary)* IN primary (COMMA primary)* blockStatement
     ;
 
 dispose
@@ -222,7 +245,8 @@ methodCall
     ;
 
 expressionList
-    : primary (COMMA primary)*
+    : primary (COMMA (primary | methodCall))*
+    | methodCall
     ;
 
 
@@ -248,13 +272,27 @@ variableDefinition
     : (unionType)? variable ASSIGN
     ;
 
+listDefinition
+    : variableDefinition LBRACKET primary (COMMA primary)* RBRACKET
+    ;
+
 variable
     : IDENTIFIER(LBRACKET INTEGER_LITERAL RBRACKET)?
+    ;
+
+numericAlias
+    : IDENTIFIER
+    ;
+
+list
+    : LBRACKET primary (COMMA primary)* RBRACKET
     ;
 
 primary
     : literal
     | variable
+    | list
+    | numericAlias
     ;
 
 literal
@@ -349,10 +387,12 @@ chemicalType
 
 timeIdentifier
     : TIME_NUMBER
+    | numericAlias (SECOND | MINUTE | HOUR | DAY)
     ;
 
 temperatureIdentifier
     : TEMP_NUMBER
+    | numericAlias (CELSIUS | FAHRENHEIT | KELVIN)
     ;
 
 unitTracker

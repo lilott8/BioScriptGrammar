@@ -1,10 +1,10 @@
-# Generated from /bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
+# Generated from /Users/life/PycharmProjects/BioScript/grammar/grammar/BSParser.g4 by ANTLR 4.10.1
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
 else:
     from BSParser import BSParser
-# /* parser/listener/visitor header section */
+# parser/listener/visitor header section */
 
 # This class defines a complete listener for a parse tree produced by BSParser.
 class BSParserListener(ParseTreeListener):
@@ -51,6 +51,42 @@ class BSParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by BSParser#stationaryDeclaration.
     def exitStationaryDeclaration(self, ctx:BSParser.StationaryDeclarationContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#importStatement.
+    def enterImportStatement(self, ctx:BSParser.ImportStatementContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#importStatement.
+    def exitImportStatement(self, ctx:BSParser.ImportStatementContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#importLibrary.
+    def enterImportLibrary(self, ctx:BSParser.ImportLibraryContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#importLibrary.
+    def exitImportLibrary(self, ctx:BSParser.ImportLibraryContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#importFuncFromLibrary.
+    def enterImportFuncFromLibrary(self, ctx:BSParser.ImportFuncFromLibraryContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#importFuncFromLibrary.
+    def exitImportFuncFromLibrary(self, ctx:BSParser.ImportFuncFromLibraryContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#fromLibrary.
+    def enterFromLibrary(self, ctx:BSParser.FromLibraryContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#fromLibrary.
+    def exitFromLibrary(self, ctx:BSParser.FromLibraryContext):
         pass
 
 
@@ -141,6 +177,15 @@ class BSParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by BSParser#ifStatement.
     def exitIfStatement(self, ctx:BSParser.IfStatementContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#forInStatement.
+    def enterForInStatement(self, ctx:BSParser.ForInStatementContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#forInStatement.
+    def exitForInStatement(self, ctx:BSParser.ForInStatementContext):
         pass
 
 
@@ -342,12 +387,39 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by BSParser#listDefinition.
+    def enterListDefinition(self, ctx:BSParser.ListDefinitionContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#listDefinition.
+    def exitListDefinition(self, ctx:BSParser.ListDefinitionContext):
+        pass
+
+
     # Enter a parse tree produced by BSParser#variable.
     def enterVariable(self, ctx:BSParser.VariableContext):
         pass
 
     # Exit a parse tree produced by BSParser#variable.
     def exitVariable(self, ctx:BSParser.VariableContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#numericAlias.
+    def enterNumericAlias(self, ctx:BSParser.NumericAliasContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#numericAlias.
+    def exitNumericAlias(self, ctx:BSParser.NumericAliasContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#list.
+    def enterList(self, ctx:BSParser.ListContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#list.
+    def exitList(self, ctx:BSParser.ListContext):
         pass
 
 

@@ -17,6 +17,7 @@ STATIONARY:     'stationary';
 FUNCTIONS:      'functions';
 INSTRUCTIONS:   'instructions';
 IMPORT:         'import';
+FROM:           'from';
 
 // Operations
 DETECT:         'detect';
@@ -38,6 +39,7 @@ INTO:           'into';
 TIMES:          'times';
 ON:             'on';
 OF:             'of';
+IN:             'in';
 UNITS:          'units';
 USEIN:          'usein';
 
@@ -47,7 +49,6 @@ REAL:           'real';
 MAT:            'mat';
 BOOL:           'bool';
 
-IDENTIFIER:         Letter LetterOrDigit*;
 
 // Literals
 STRING_LITERAL:     '"' (~["\\\r\n] | EscapeSequence)* '"';
@@ -56,9 +57,9 @@ BOOL_LITERAL:       'true'
             ;
 FLOAT_LITERAL:      (Digits '.' Digits? | '.' Digits);
 INTEGER_LITERAL:    Digits ( Digits ) *;
-TIME_NUMBER:        (FLOAT_LITERAL | INTEGER_LITERAL)TimeUnits;
-VOLUME_NUMBER:      (FLOAT_LITERAL | INTEGER_LITERAL)VolumeUnits;
-TEMP_NUMBER:        (FLOAT_LITERAL | INTEGER_LITERAL)TempUnits;
+TIME_NUMBER:        (FLOAT_LITERAL | INTEGER_LITERAL)(SPACES)?TimeUnits;
+VOLUME_NUMBER:      (FLOAT_LITERAL | INTEGER_LITERAL)(SPACES)?VolumeUnits;
+TEMP_NUMBER:        (FLOAT_LITERAL | INTEGER_LITERAL)(SPACES)?TempUnits;
 
 // Separators
 LPAREN:             '(';
@@ -121,6 +122,8 @@ DECALITRE:          'daL';
 CELSIUS:            'c';
 FAHRENHEIT:         'f';
 KELVIN:             'k';
+
+IDENTIFIER:         Letter LetterOrDigit*;
 
 ACIDS_STRONG_NON_OXIDIZING: '1';
 ACIDS_STRONG_OXIDIZING: '2';

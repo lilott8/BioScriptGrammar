@@ -1,10 +1,10 @@
-# Generated from /bioscriptgrammar/grammar/BSParser.g4 by ANTLR 4.7
+# Generated from /Users/life/PycharmProjects/BioScript/grammar/grammar/BSParser.g4 by ANTLR 4.10.1
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .BSParser import BSParser
 else:
     from BSParser import BSParser
-# /* parser/listener/visitor header section */
+# parser/listener/visitor header section */
 
 # This class defines a complete generic visitor for a parse tree produced by BSParser.
 
@@ -32,6 +32,26 @@ class BSParserVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by BSParser#stationaryDeclaration.
     def visitStationaryDeclaration(self, ctx:BSParser.StationaryDeclarationContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#importStatement.
+    def visitImportStatement(self, ctx:BSParser.ImportStatementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#importLibrary.
+    def visitImportLibrary(self, ctx:BSParser.ImportLibraryContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#importFuncFromLibrary.
+    def visitImportFuncFromLibrary(self, ctx:BSParser.ImportFuncFromLibraryContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#fromLibrary.
+    def visitFromLibrary(self, ctx:BSParser.FromLibraryContext):
         return self.visitChildren(ctx)
 
 
@@ -82,6 +102,11 @@ class BSParserVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by BSParser#ifStatement.
     def visitIfStatement(self, ctx:BSParser.IfStatementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#forInStatement.
+    def visitForInStatement(self, ctx:BSParser.ForInStatementContext):
         return self.visitChildren(ctx)
 
 
@@ -195,8 +220,23 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by BSParser#listDefinition.
+    def visitListDefinition(self, ctx:BSParser.ListDefinitionContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by BSParser#variable.
     def visitVariable(self, ctx:BSParser.VariableContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#numericAlias.
+    def visitNumericAlias(self, ctx:BSParser.NumericAliasContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#list.
+    def visitList(self, ctx:BSParser.ListContext):
         return self.visitChildren(ctx)
 
 
