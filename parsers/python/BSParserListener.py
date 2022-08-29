@@ -180,15 +180,6 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by BSParser#forInStatement.
-    def enterForInStatement(self, ctx:BSParser.ForInStatementContext):
-        pass
-
-    # Exit a parse tree produced by BSParser#forInStatement.
-    def exitForInStatement(self, ctx:BSParser.ForInStatementContext):
-        pass
-
-
     # Enter a parse tree produced by BSParser#whileStatement.
     def enterWhileStatement(self, ctx:BSParser.WhileStatementContext):
         pass
@@ -216,6 +207,15 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by BSParser#forInStatement.
+    def enterForInStatement(self, ctx:BSParser.ForInStatementContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#forInStatement.
+    def exitForInStatement(self, ctx:BSParser.ForInStatementContext):
+        pass
+
+
     # Enter a parse tree produced by BSParser#dispose.
     def enterDispose(self, ctx:BSParser.DisposeContext):
         pass
@@ -240,6 +240,69 @@ class BSParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by BSParser#usein.
     def exitUsein(self, ctx:BSParser.UseinContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#useinType.
+    def enterUseinType(self, ctx:BSParser.UseinTypeContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#useinType.
+    def exitUseinType(self, ctx:BSParser.UseinTypeContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#sle.
+    def enterSle(self, ctx:BSParser.SleContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#sle.
+    def exitSle(self, ctx:BSParser.SleContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#seq.
+    def enterSeq(self, ctx:BSParser.SeqContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#seq.
+    def exitSeq(self, ctx:BSParser.SeqContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#sge.
+    def enterSge(self, ctx:BSParser.SgeContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#sge.
+    def exitSge(self, ctx:BSParser.SgeContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#fle.
+    def enterFle(self, ctx:BSParser.FleContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#fle.
+    def exitFle(self, ctx:BSParser.FleContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#feq.
+    def enterFeq(self, ctx:BSParser.FeqContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#feq.
+    def exitFeq(self, ctx:BSParser.FeqContext):
+        pass
+
+
+    # Enter a parse tree produced by BSParser#fge.
+    def enterFge(self, ctx:BSParser.FgeContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#fge.
+    def exitFge(self, ctx:BSParser.FgeContext):
         pass
 
 

@@ -105,11 +105,6 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by BSParser#forInStatement.
-    def visitForInStatement(self, ctx:BSParser.ForInStatementContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by BSParser#whileStatement.
     def visitWhileStatement(self, ctx:BSParser.WhileStatementContext):
         return self.visitChildren(ctx)
@@ -125,6 +120,11 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by BSParser#forInStatement.
+    def visitForInStatement(self, ctx:BSParser.ForInStatementContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by BSParser#dispose.
     def visitDispose(self, ctx:BSParser.DisposeContext):
         return self.visitChildren(ctx)
@@ -137,6 +137,41 @@ class BSParserVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by BSParser#usein.
     def visitUsein(self, ctx:BSParser.UseinContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#useinType.
+    def visitUseinType(self, ctx:BSParser.UseinTypeContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#sle.
+    def visitSle(self, ctx:BSParser.SleContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#seq.
+    def visitSeq(self, ctx:BSParser.SeqContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#sge.
+    def visitSge(self, ctx:BSParser.SgeContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#fle.
+    def visitFle(self, ctx:BSParser.FleContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#feq.
+    def visitFeq(self, ctx:BSParser.FeqContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BSParser#fge.
+    def visitFge(self, ctx:BSParser.FgeContext):
         return self.visitChildren(ctx)
 
 

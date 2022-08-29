@@ -180,9 +180,21 @@ mix
     : (usein)? variableDefinition MIX (unitTracker)? variable WITH (unitTracker)? variable (FOR timeIdentifier)?
     ;
 
-usein
-    : ATSIGN USEIN timeIdentifier
-    ;
+usein : ATSIGN useinType timeIdentifier ;
+
+useinType : sle | seq | sge | fle | feq | fge ;
+
+sle : USE DOT IN ;
+
+seq : USE DOT AT ;
+
+sge : USE DOT AFTER ;
+
+fle : FINISH DOT IN ;
+
+feq : FINISH DOT AT ;
+
+fge : FINISH DOT AFTER ;
 
 /********************************************************
 The first one is intentionally an IDENTIFIER.  It has

@@ -41,13 +41,18 @@ ON:             'on';
 OF:             'of';
 IN:             'in';
 UNITS:          'units';
-USEIN:          'usein';
+USE:            'use';
+FINISH:         'finish';
+AFTER:          'after';
 
 // Typing
 NAT:            'nat';
 REAL:           'real';
 MAT:            'mat';
 BOOL:           'bool';
+
+// Usein Types
+
 
 
 // Literals
