@@ -149,6 +149,7 @@ statements
     | store
     | math
     | numberAssignment
+    | renameVarStatement
     ;
 
 ifStatement
@@ -157,6 +158,10 @@ ifStatement
 
 whileStatement
     : WHILE parExpression blockStatement
+    ;
+
+renameVarStatement
+    : variableDefinition variable
     ;
 
 repeat

@@ -189,6 +189,15 @@ class BSParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by BSParser#renameVarStatement.
+    def enterRenameVarStatement(self, ctx:BSParser.RenameVarStatementContext):
+        pass
+
+    # Exit a parse tree produced by BSParser#renameVarStatement.
+    def exitRenameVarStatement(self, ctx:BSParser.RenameVarStatementContext):
+        pass
+
+
     # Enter a parse tree produced by BSParser#repeat.
     def enterRepeat(self, ctx:BSParser.RepeatContext):
         pass

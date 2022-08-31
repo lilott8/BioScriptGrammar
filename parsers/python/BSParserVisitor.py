@@ -110,6 +110,11 @@ class BSParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by BSParser#renameVarStatement.
+    def visitRenameVarStatement(self, ctx:BSParser.RenameVarStatementContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by BSParser#repeat.
     def visitRepeat(self, ctx:BSParser.RepeatContext):
         return self.visitChildren(ctx)
